@@ -2,14 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://www.mehran-ahmadi.com/index.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
       <image:loc>http://www.mehran-ahmadi.com/images/mehran%20ahmadi%20photo%20004.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-006960x600.jpg</image:loc>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi_death_pictorial_representatio222.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi_pig_a_pictorial_representatio-007.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-aiart-099.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-001.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-002.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-003.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-009.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-010.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-011.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-012.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-0024.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-0061.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-0999.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>http://www.mehran-ahmadi.com/images/mehran%20ahmadi%20photo%20003.jpg</image:loc>
@@ -35,7 +74,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/sound.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -53,7 +92,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/blog.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -71,7 +110,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/time-in-photography.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -89,7 +128,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/code-and-photo.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -110,7 +149,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/portraits.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -149,7 +188,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/current-project.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -179,7 +218,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/projects.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -215,7 +254,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/about.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -233,7 +272,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/contact.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -251,7 +290,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/wall.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -289,8 +328,8 @@
     </image:image>
   </url>
   <url>
-    <loc>http://www.mehran-ahmadi.com/2.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <loc>http://www.mehran-ahmadi.com/portraits2.html</loc>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -320,9 +359,12 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/swimmer.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
+    </image:image>
     <image:image>
       <image:loc>http://www.mehran-ahmadi.com/images/facebook.png</image:loc>
     </image:image>
@@ -335,13 +377,10 @@
     <image:image>
       <image:loc>http://www.mehran-ahmadi.com/images/linkedin.png</image:loc>
     </image:image>
-    <image:image>
-      <image:loc>http://www.mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/3major.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -368,7 +407,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/empty-space.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -392,7 +431,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/a-place-to-stay.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -474,6 +513,87 @@
       <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi23-crop-u5451.jpg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi02-crop-u9616.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi03-crop-u9636.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi04-crop-u9656.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi05-crop-u9676.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi06-crop-u9696.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi07-crop-u9716.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi08-crop-u9736.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi09-crop-u9756.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi10-crop-u9776.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi11-crop-u9796.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi12-crop-u9816.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi13-crop-u9836.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi14-crop-u9856.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi15-crop-u9876.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi16-crop-u9896.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi17-crop-u9916.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi18-crop-u9936.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi19-crop-u9956.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi20-crop-u9976.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi21-crop-u9996.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi22-crop-u10016.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi23-crop-u10036.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi24-crop-u10056.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi25-crop-u10076.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi26-crop-u10096.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi27-crop-u10116.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>http://www.mehran-ahmadi.com/images/mehran_ahmadi24-crop-u5471.jpg</image:loc>
     </image:image>
     <image:image>
@@ -488,7 +608,7 @@
   </url>
   <url>
     <loc>http://www.mehran-ahmadi.com/brambles.html</loc>
-    <lastmod>2024-09-14</lastmod>
+    <lastmod>2024-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <image:image>
