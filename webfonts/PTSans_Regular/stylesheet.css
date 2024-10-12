@@ -1,0 +1,47 @@
+@font-face {
+	font-family: 'PTSans Regular';
+	src: url('PTSans-Regular.ttf') format('truetype');
+}body {
+}
+.container-fluid .navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #FFFFFF;
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(255,255,255,1.00) 100%);
+    font-family: "PTSans Regular";
+    font-size: large;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+}
+.slideshow img {
+    display: none;
+}
+.slideshow img.visible {
+    display: block;
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: whitesmoke; /* Change text color to light gray on hover */
+  background-color: #575757; /* Light background for the hovered item */
+  border-radius: 0px; /* Optional: round the corners */
+}
+.navbar-nav .nav-item {
+  margin-right: 25px; /* Add space between menu items */
+}
+.horizontal-gallery {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 90px;
+  padding: 50px;
+}
+
+.gallery-item img {
+  height: 640px;
+  width: auto;
+  display: inline-block;
+}
+.navbar-toggler {
+  border-radius: 0; /* Remove rounded corners */
+}
+

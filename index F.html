@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <style type="text/css">
+      @import url("webfonts/PTSans_Regular/stylesheet.css");
+      a {
+        font-family: "PTSans Regular";
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      /* Slideshow images */
+      .slideshow-container img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: none;
+      }
+
+      /* Display the first image by default */
+      .slideshow-container img.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body style="padding-top: 70px">
+    <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mehran Ahmadi</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portraits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">&nbsp;Projects&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">&nbsp;Blog&nbsp;</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Fullscreen Slideshow -->
+    <div class="slideshow-container">
+      <img src="images/mehran-ahmadi-photo-001.jpg" class="active" alt="Image 1">
+      <img src="images/mehran-ahmadi-photo-0061.jpg" alt="Image 2">
+      <img src="images/mehran-ahmadi-photo-003.jpg" alt="Image 3">
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+
+    <script>
+      // Simple Slideshow Functionality
+      let currentIndex = 0;
+      const images = document.querySelectorAll(".slideshow-container img");
+
+      function showNextImage() {
+        images[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add("active");
+      }
+
+      setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+  </body>
+</html>

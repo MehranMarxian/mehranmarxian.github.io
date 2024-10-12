@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <style>
+      /* Fullscreen background image */
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'PTSans Regular', sans-serif;
+      }
+
+      .bg {
+        background-image: url('images/mehran-ahmadi-photo-001.jpg');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      /* Centered content */
+      .centered-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+
+      .centered-content h1 {
+        font-size: 60px;
+        font-weight: bold;
+      }
+
+      .enter-btn {
+        padding: 15px 30px;
+        background-color: white;
+        color: black;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .enter-btn:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Fullscreen background -->
+    <div class="bg">
+      <!-- Centered content -->
+      <div class="centered-content">
+        <h1>Welcome to Mehran Ahmadi’s Portfolio</h1>
+        <button class="enter-btn" onclick="location.href='main.html'">Enter</button>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
