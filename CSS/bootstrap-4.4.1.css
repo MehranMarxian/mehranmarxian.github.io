@@ -4633,7 +4633,11 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+    color: rgba(35,35,35,0.9);
+    font-size: 8rem;
+    font-weight: 200;
+    font-style: normal;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
 
 .navbar-light .navbar-nav .nav-link {
