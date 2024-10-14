@@ -1,31 +1,32 @@
-
 .slideshow-container img {
-  width: 100%;
   height: 100vh;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  width: 100%;
 }
 
-.slideshow-container img.active {
+.active {
   opacity: 1;
 }
+
 .navbar-nav .nav-item .nav-link:hover {
-  color: lightgray; /* Change text color to light gray on hover */
   background-color: #f8f9fa; /* Light background for the hovered item */
-  border-radius: 0px; /* Optional: round the corners */
+  border-radius: 0; /* Optional: round the corners */
+  color: lightgray; /* Change text color to light gray on hover */
 }
+
 .enter-btn {
-  padding: 15px 30px;
   background-color: black;
-  color: white;
   border: none;
-  font-size: 28px;
+  color: white;
   cursor: pointer;
-  margin-top: 20px;
-  position: relative;
-  top: 200px;  /* Moves the button down */
+  font-size: 28px;
   left: -200px; /* Moves the button to the left */
+  margin-top: 20px;
+  padding: 15px 30px;
+  position: relative;
+  top: 200px; /* Moves the button down */
 }
 
 .enter-btn:hover {
