@@ -1,112 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+@font-face {
+    font-family: 'PTSans Regular';
+    src: url('PTSans-Regular.ttf') format('truetype');
+}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mehran Ahmadi | Portfolio</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet">
-    <style>
-        /* Additional inline styles */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'PTSans Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
+.container-fluid .navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1.00) 0%, rgba(255, 255, 255, 1.00) 100%);
+    font-family: 'PTSans Regular';
+    font-size: large;
+    box-shadow: 0px 0px;
+}
 
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
+/* Main content must expand to fill the remaining space */
+main {
+    flex: 1; /* Pushes the footer to the bottom */
+}
 
-<body style="padding-top: 70px">
-    <div class="container-fluid">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp;&nbsp;&nbsp;</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portraits.html">Portraits</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projects.html">&nbsp;Projects&nbsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">&nbsp;Blog&nbsp;</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+/* Slideshow container */
+.slideshow img {
+    display: none;
+    width: 100%;
+    height: auto; /* Ensures responsiveness */
+}
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Explore my latest works below:</p>
+.slideshow img.visible {
+    display: block;
+}
 
-            <!-- Modern Gallery -->
-            <div class="gallery">
-                <img src="img/photo1.jpg" alt="Artwork 1">
-                <img src="img/photo2.jpg" alt="Artwork 2">
-                <img src="img/photo3.jpg" alt="Artwork 3">
-                <img src="img/photo4.jpg" alt="Artwork 4">
-            </div>
-        </div>
-    </main>
+/* Navbar hover styles */
+.navbar-nav .nav-item .nav-link:hover {
+    color: whitesmoke; /* Change text color to light gray on hover */
+    background-color: #646464; /* Light background for the hovered item */
+    border-radius: 0px; /* Optional: round the corners */
+}
 
-    <!-- Footer Section -->
-    <footer>
-        <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
-        <div class="footer-icons">
-            <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
-                <img src="icons/facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank">
-                <img src="icons/insta.png" alt="Instagram">
-            </a>
-            <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank">
-                <img src="icons/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://behance.net" target="_blank">
-                <img src="icons/behance.png" alt="Behance">
-            </a>
-            <a href="https://github.com/MehranMarxian" target="_blank">
-                <img src="icons/github.png" alt="GitHub">
-            </a>
-        </div>
-    </footer>
+.navbar-nav .nav-item {
+    margin-right: 25px; /* Space between menu items */
+}
 
-    <!-- JavaScript and Bootstrap -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.4.1.js"></script>
-</body>
+/* Navbar toggler */
+.navbar-toggler {
+    border-radius: 0; /* Remove rounded corners */
+}
 
-</html>
+/* Footer centered and sticky */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    position: sticky; /* Sticks to the bottom of the viewport */
+    bottom: 0;
+}
+
+@font-face {
+    font-family: 'PTSans Regular';
+    src: url('PTSans-Regular.ttf') format('truetype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'PTSans Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid .navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1.00) 0%, rgba(255, 255, 255, 1.00) 100%);
+    font-family: 'PTSans Regular';
+    font-size: large;
+    box-shadow: 0px 0px;
+}
+
+/* Main content must expand to fill the remaining space */
+main {
+    flex: 1; /* Pushes the footer to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Blog list styles */
+.blog-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-list li {
+    margin-bottom: 20px;
+}
+
+.blog-list li a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.blog-list li a:hover {
+    color: #575757; /* Change the color on hover */
+}
+
+/* Footer centered and sticky */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    position: sticky;
+    bottom: 0;
+}
