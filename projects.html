@@ -2,207 +2,143 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Untitled Document</title>
     <!-- Bootstrap -->
-	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-	<style type="text/css">
-	@import url("webfonts/PTSans_Regular/stylesheet.css");
-@import url("webfonts/PTSans_Regular/stylesheet.css");
-a {
-    font-family: "PTSans Regular";
-}
-    body,td,th {
-    font-family: "PTSans Regular";
-    font-style: normal;
-}
-    </style>
-  </head>
-  <body style="padding-top: 70px">
-<div class="container-fluid">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp; &nbsp; &nbsp;&nbsp;</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-  	    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-  	      <ul class="navbar-nav mr-auto">
-  	        <li class="nav-item active"> <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a> </li>
-  	        <li class="nav-item"> <a class="nav-link" href="portraits.html">Portraits</a> </li>
-  	        <li class="nav-item"> <a class="nav-link" href="projects.html">&nbsp;Projects&nbsp;</a></li>
-  	        <li class="nav-item"> <a class="nav-link" href="blog.html">&nbsp;Blog&nbsp;</a></li>
-  	        
-<li class="nav-item"> <a class="nav-link" href="Contanct.html">Contact</a></li>
-  	        <li class="nav-item"> <a class="nav-link" href="About.html">About</a></li>
-  	        
-  	        <li class="nav-item"> </li>
-          </ul>
-</div>
-  </nav>
-  </div>
-  	<!-- body code goes here -->
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="js/jquery-3.4.1.min.js"></script>
-
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/popper.min.js"></script> 
-	<script src="js/bootstrap-4.4.1.js"></script>
-</body>
-  <head>
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Untitled Document</title>
-    <!-- Bootstrap -->
-	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-	<style type="text/css">
-	@import url("webfonts/PTSans_Regular/stylesheet.css");
-a {
-    font-family: "PTSans Regular";
-}
-		  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mehran Ahmadi | Portfolio</title>
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <style>
-      /* Hero Section */
-      .hero {
-        height: 100vh;
-        background: url('images/hero-background.jpg') no-repeat center center/cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
+    <style type="text/css">
+      @import url("webfonts/PTSans_Regular/stylesheet.css");
+      a {
+        font-family: "PTSans Regular";
       }
-      .hero h1 {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 20px;
+      body, td, th {
+        font-family: "PTSans Regular";
+        font-style: normal;
       }
-      .hero button {
-        background-color: black;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-      }
-
-      /* Portfolio Section */
-      .portfolio-grid {
+      .gallery {
         display: flex;
         flex-wrap: wrap;
-        gap: 125px;
+        gap: 15px;
         justify-content: center;
-        padding: 50px;
       }
-      .portfolio-item {
-        width: 300px;
-        height: 300px;
-        background-color: gray;
-        position: relative;
-        overflow: hidden;
-      }
-      .portfolio-item img {
+      .gallery img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
       }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        opacity: 0;
-        transition: opacity 0.3s;
+      .gallery img:hover {
+        transform: scale(1.05);
       }
-      .portfolio-item:hover .overlay {
-        opacity: 1;
+      .gallery-item {
+        flex: 1 1 calc(25% - 30px); /* 4 images per row */
+        max-width: calc(25% - 30px);
+        margin-bottom: 20px;
+      }
+      @media (max-width: 768px) {
+        .gallery-item {
+          flex: 1 1 calc(50% - 20px); /* 2 images per row on tablet */
+          max-width: calc(50% - 20px);
+        }
+      }
+      @media (max-width: 576px) {
+        .gallery-item {
+          flex: 1 1 100%; /* 1 image per row on mobile */
+          max-width: 100%;
+        }
       }
     </style>
   </head>
-  <body>
-<!-- Portfolio Section -->
-<div class="portfolio-grid">
-	<div class="portfolio-item">
-        <img src="images/Mehran_Ahmadi_DEATH_AI.jpg" alt="Project 1">
-        <div class="overlay">AI WORKS</div>
-      </div>
-    <div class="portfolio-item">
-        <img src="images/mehran_ahmadi01-crop-u4777.jpg" alt="Project 1">
-        <div class="overlay">Documentry</div>
-      </div>
-	        <div class="portfolio-item">
-        <img src="images/mehran ahmadi portrait 33.jpg" alt="Photogrammetry">
-        <div class="overlay">You</div>
-      </div>
-      <div class="portfolio-item">
-        <img src="images//afshin mehran ahmadi portrait.jpg" alt="Image Processing">
-        <div class="overlay">Brambels</div>
-      </div>
-	    <div class="portfolio-item">
-        <img src="images/mehran-ahmadi-photography-art-digital-lowlight.png" alt="Photography">
-        <div class="overlay">Empty Space</div>
-      </div>
-	  <div class="portfolio-item">
-        <img src="images/4.jpg" alt="WALLS">
-        <div class="overlay">Portraits</div>
-      </div>
-	  <div class="portfolio-item">
-        <img src="images/mehran-ahmadi-wall.jpg" alt="AI WORKS">
-        <div class="overlay">WALLS</div>
-      </div>
-      <!-- Add more portfolio items as needed -->
-    </div>
-
-    <script src="js/bootstrap-4.4.1.js"></script>
-  </body>
   <body style="padding-top: 70px">
-<!-- body code goes here -->
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="js/jquery-3.4.1.min.js"></script>
-
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/popper.min.js"></script> 
-	<script src="js/bootstrap-4.4.1.js"></script>
-  </body>
-</html>
-<html lang="en">
-<!-- Footer Section -->
-<!-- Footer Section -->
-<footer>
-  <div style="display: flex; justify-content: space-between; align-items: center; padding: 00 55px;">
-    <!-- Icons aligned to the left -->
-    <div style="display: flex;">
-      <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
-        <img src="icons/facebook.png" alt="Facebook" style="width: 17px; margin-right: 10px;">
-      </a>
-      <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank">
-        <img src="icons/insta.png" alt="Instagram" style="width: 17px; margin-right: 10px;">
-      </a>
-      <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank">
-        <img src="icons/linkedin.png" alt="LinkedIn" style="width: 17px; margin-right: 10px;">
-      </a>
-      <a href="https://behance.net" target="_blank">
-        <img src="icons/behance.png" alt="Behance" style="width: 17px; margin-right: 10px;">
-      </a>
-      <a href="https://github.com/mehranmarxian" target="_blank">
-        <img src="icons/github.png" alt="GitHub" style="width: 17px; margin-right: 10px;">
-      </a>
-		
+    <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
+        <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp; &nbsp; &nbsp;&nbsp;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"> 
+              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a> 
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="portraits.html">Portraits</a> 
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="projects.html">&nbsp;Projects&nbsp;</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="blog.html">&nbsp;Blog&nbsp;</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="Contanct.html">Contact</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
-    <!-- Footer text aligned to the right -->
-    <p class="text-center">&copy; Mehran Ahmadi. All rights reserved 2024 </p>
-  </div>
-</footer>
+    <!-- Gallery Section -->
+    <section class="container mt-5">
+      <h2 class="text-center mb-4">PROJECTS</h2>
+      <div class="gallery">
+	    <div class="gallery-item">
+          <img src="images/Mehran_Ahmadi_DEATH_AI.jpg" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+          <img src="images/3.jpg" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+          <img src="images/mehran ahmadi color.jpg" alt="Gallery Image 3">
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/mehran_ahmadi01-crop-u4777.jpg" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+          <img src="images/oh me.jpg" alt="Gallery Image 5">
+			</div>
+		<div class="gallery-item">
+          <img src="images/brambles mehran ahmadi selfportrait.jpg" alt="Gallery Image 6">
+        </div>
+		  		<div class="gallery-item">
+          <img src="images/mehran-ahmadi-photo-012.jpg" alt="Gallery Image 6">
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.4.1.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+      <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
+          <img src="icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank">
+          <img src="icons/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://behance.net" target="_blank">
+          <img src="icons/behance.png" alt="Behance">
+        </a>
+      </div>
+    </footer>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
 </html>
