@@ -112,7 +112,7 @@ footer {
     width: 100%; /* Keeps the images responsive */
     height: auto; /* Maintains the aspect ratio */
     padding: 10px; /* Adds padding around each image */
-    border-radius: 14px !important; /* Adds round corners with a 15px radius and ensures no override */
+    border-radius: 15px !important; /* Adds round corners with a 15px radius and ensures no override */
 }
 .gallery {
     margin: 40px 0; /* Increases spacing around the gallery section */
