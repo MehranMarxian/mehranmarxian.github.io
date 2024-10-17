@@ -1,4 +1,4 @@
-@font-face {
+@font-face { 
     font-family: 'PTSans Regular';
     src: url('PTSans-Regular.ttf') format('truetype');
 }
@@ -98,6 +98,7 @@ footer {
     font-family: "PTSans Regular";
 }
 
+/* Footer icons */
 .footer-icons {
     margin-top: 10px;
 }
@@ -105,4 +106,5 @@ footer {
 .footer-icons img {
     width: 24px;
     height: 24px;
-    margin: 
+    margin: 0 5px; /* Adds space between the icons */
+}
