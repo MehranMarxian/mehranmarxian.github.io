@@ -22,7 +22,11 @@ body, html {
 
 /* Main content must expand to fill the remaining space */
 main {
-    flex: 1; /* Pushes the footer to the bottom */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Slideshow container */
@@ -40,7 +44,7 @@ main {
 .navbar-nav .nav-item .nav-link:hover {
     color: whitesmoke; /* Change text color to light gray on hover */
     background-color: #646464; /* Light background for the hovered item */
-    border-radius: 0px; /* Optional: round the corners */
+    border-radius: 0; /* Optional: round the corners */
 }
 
 .navbar-nav .nav-item {
@@ -50,47 +54,6 @@ main {
 /* Navbar toggler */
 .navbar-toggler {
     border-radius: 0; /* Remove rounded corners */
-}
-
-/* Footer centered and sticky */
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    position: sticky; /* Sticks to the bottom of the viewport */
-    bottom: 0;
-}
-
-@font-face {
-    font-family: 'PTSans Regular';
-    src: url('PTSans-Regular.ttf') format('truetype');
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'PTSans Regular', sans-serif;
-    display: flex;
-    flex-direction: column;
-}
-
-.container-fluid .navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light {
-    background-color: #FFFFFF;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1.00) 0%, rgba(255, 255, 255, 1.00) 100%);
-    font-family: 'PTSans Regular';
-    font-size: large;
-    box-shadow: 0px 0px;
-}
-
-/* Main content must expand to fill the remaining space */
-main {
-    flex: 1; /* Pushes the footer to the bottom */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 /* Blog list styles */
