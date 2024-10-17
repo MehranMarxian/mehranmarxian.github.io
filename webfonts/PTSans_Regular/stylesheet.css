@@ -108,3 +108,12 @@ footer {
     height: 24px;
     margin: 0 5px; /* Adds space between the icons */
 }
+.gallery img {
+    width: 100%; /* Keeps the images responsive */
+    height: auto; /* Maintains the aspect ratio */
+    padding: 10px; /* Adds padding around each image */
+}
+
+.gallery {
+    margin: 40px 0; /* Increases spacing around the gallery section */
+}
