@@ -85,28 +85,35 @@ main {
 
 /* Footer styles */
 footer {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    margin-top: auto; /* Pushes the footer to the bottom of the page after the content */
+    display: flex;
+    justify-content: space-between; /* Align text and icons on opposite sides */
+    align-items: center; /* Vertically center the content */
+    padding: 10px 20px; /* Smaller padding for a more compact look */
+    background-color: #ffffff; /* Footer background color */
+    font-family: 'PTSans Regular', sans-serif;
+    font-size: 12px; /* Smaller text */
 }
 
-/* Footer text */
+/* Footer text on the left side */
 .footer-text {
-    margin: 0;
-    font-family: "PTSans Regular";
+    margin: 10px ;
+	margin-bottom: -40px ;
+    font-family: 'PTSans Regular';
+    color: #333;
+    text-align: left; /* Align text to the left */
 }
 
-/* Footer icons */
+/* Footer icons on the right side */
 .footer-icons {
-    margin-top: 10px;
+    display: flex;
+    margin: 20px ;
+    justify-content: flex-end; /* Align icons to the right */
 }
 
 .footer-icons img {
     width: 24px;
     height: 24px;
-    margin: 0 5px; /* Adds space between the icons */
+    margin-left: 25px; /* Adds space between the icons */
 }
 .gallery img {
     width: 100%; /* Keeps the images responsive */
