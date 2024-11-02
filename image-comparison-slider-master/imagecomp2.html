@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <style>
+        body, td, th {
+            font-family: "PT Sans", sans-serif;
+            font-style: normal;
+        }
+
+        a {
+            font-family: "PT Sans", sans-serif;
+        }
+
+        .img-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .artwork-statement {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body style="padding-top: 70px">
+    <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Mehran Ahmadi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="artwork-statement">
+        <h2 style="text-align: center;">IMAGE TO IMAGE PROCESSING</h2>
+        <h3 style="text-align: center;">AI / ComfyUI to Photoshop</h3>
+        <p>
+            From Photoshop to ComfyUI: Integrating Creativity and Flexibility. Photoshop is the go-to tool for precise editing, design flexibility, and creative enhancements, but for AI-based image generation and editing, ComfyUI introduces a new realm of possibilities. This seamless transition from Photoshop to ComfyUI allows users to integrate traditional design skills with AI-driven image generation, opening the door to workflows that combine artistic control with computational power.
+        </p>
+        
+        <figure class="cd-image-container">
+            <img src="img/PSTOCOMFY/31.png" alt="Original Image">
+            <span class="cd-image-label" data-type="original">INPUT</span>
+            <div class="cd-resize-img">
+                <img src="img/PSTOCOMFY/33.png" alt="Modified Image">
+                <span class="cd-image-label" data-type="modified">OUTPUT</span>
+            </div>
+            <span class="cd-handle"></span>
+        </figure>
+
+        <p>
+            Photoshop’s layering, masking, and adjustment tools provide a solid base for developing visuals. Moving assets to ComfyUI allows for AI-assisted transformations, enhancing images with unique effects and styles. With ComfyUI’s node-based interface, designers can automate steps like image enhancement and style transfer.
+        </p>
+        
+        <figure class="cd-image-container">
+            <img src="img/PSTOCOMFY/361.png" alt="Original Image">
+            <span class="cd-image-label" data-type="original">INPUT</span>
+            <div class="cd-resize-img">
+                <img src="img/PSTOCOMFY/362.png" alt="Modified Image">
+                <span class="cd-image-label" data-type="modified">OUTPUT</span>
+            </div>
+            <span class="cd-handle"></span>
+        </figure>
+    </div>
+
+    <footer>
+        <p class="footer-text text-left">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/Mehran.Photography/" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank"><img src="icons/insta.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://behance.net" target="_blank"><img src="icons/behance.png" alt="Behance"></a>
+            <a href="https://github.com/MehranMarxian" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
