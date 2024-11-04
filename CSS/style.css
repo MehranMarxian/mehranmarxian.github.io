@@ -167,3 +167,33 @@ header {
     -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0s 0.7s;
     -moz-transition: -moz-transform 0.3s 0.7s, opacity 0s 0.7s;
     transition: transform 0.3s 0.7s, opacity 0s 0.7s; }
+
+
+body {
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: #445b7c;
+  background-color: #445b7c;
+  overflow-x: hidden;
+}
+header {
+  position: relative;
+  min-height: 160px; /* Replace height with min-height */
+  line-height: 1.4; /* Adjust line-height for better spacing */
+  text-align: center;
+}
+.cd-image-container {
+  position: relative;
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+  overflow: hidden; /* Ensure no overflow */
+}
+@media only screen and (max-width: 767px) {
+  .cd-handle {
+    height: 32px;
+    width: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+  }
+}
