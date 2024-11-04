@@ -200,3 +200,30 @@ header {
 body, html {
   overflow-x: hidden;
 }
+
+footer {
+  text-align: center; /* Centers footer content */
+  padding: 20px; /* Adds padding around the footer */
+  background-color: #445b7c; /* Adjust the background color if needed */
+  color: #fff; /* Makes text color white */
+}
+
+.footer-text {
+  margin-bottom: 10px; /* Adds some spacing below the text */
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center; /* Centers icons horizontally */
+  gap: 15px; /* Adds space between the icons */
+}
+
+.footer-icons a {
+  display: inline-block;
+  padding: 5px; /* Adds padding inside each icon link */
+}
+
+.footer-icons img {
+  width: 24px; /* Adjust the icon size if necessary */
+  height: 24px;
+}
