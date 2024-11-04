@@ -1,104 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI / LineArtProcessor</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-  
-  <!-- Custom Font -->
-  <style type="text/css">
-    @import url("webfonts/PTSans_Regular/stylesheet.css");
-    body, td, th, a {
-      font-family: "PTSans Regular";
-      font-style: normal;
-    }
-    .img-container {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .img-container img {
-      max-width: 100%;
-      height: auto;
-    }
-    .artwork-statement {
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 800px;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-  </style>
-  
-  <!-- Image Comparison Slider CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/modernizr.js"></script>
-</head>
-
-<body style="padding-top: 70px">
-  <div class="container-fluid">
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
-      <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp;</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"> 
-        <span class="navbar-toggler-icon"></span> 
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"> <a class="nav-link" href="home.html">Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="portraits.html">Portraits</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="projects.html">Projects</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="blog.html">Blog</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="Contact.html">Contact</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="About.html">About</a> </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  
-  <!-- Artwork Statement Section -->
-  <div class="artwork-statement">
-    <h3>AI / ComfyUI to Photoshop</h3>
-    <p><strong>LineArtProcessor:</strong> Integrating Creativity and Flexibility between Photoshop and AI tools.</p>
-    <p>Photoshop’s powerful tools combined with ComfyUI's AI-assisted generation provide an enhanced workflow for artists, merging traditional design with modern AI capabilities.</p>
-  </div>
-
-  <!-- Image Comparison Sliders -->
-  <figure class="cd-image-container">
-    <img src="img/PSTOCOMFY/31.png" alt="Original Image">
-    <span class="cd-image-label" data-type="original">INPUT</span>
-    <div class="cd-resize-img">
-      <img src="img/PSTOCOMFY/33.png" alt="Modified Image">
-      <span class="cd-image-label" data-type="modified">OUTPUT</span>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image2Image Workflow for Creative Professionals</title>
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+    <!-- Custom Fonts and Styles -->
+    <link rel="stylesheet" href="webfonts/PTSans_Regular/stylesheet.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      a, body, td, th {
+        font-family: "PTSans Regular";
+        font-style: normal;
+      }
+      .img-container {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .img-container img {
+        max-width: 100%;
+        height: auto;
+      }
+      .artwork-statement {
+        margin: 30px auto;
+        padding: 20px;
+        max-width: 800px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+    </style>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+  </head>
+  <body style="padding-top: 70px">
+    <!-- Navigation Bar -->
+    <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp;&nbsp;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <span class="cd-handle"></span>
-  </figure>
 
-  <figure class="cd-image-container">
-    <img src="img/PSTOCOMFY/361.png" alt="Original Image">
-    <span class="cd-image-label" data-type="original">INPUT</span>
-    <div class="cd-resize-img">
-      <img src="img/PSTOCOMFY/362.png" alt="Modified Image">
-      <span class="cd-image-label" data-type="modified">OUTPUT</span>
+    <!-- Content Section -->
+    <div class="artwork-statement">
+      <h2 style="text-align: center;"><strong>AI / Advanced Image2Image Workflow for Creative Professionals</strong></h2>
+      <p style="text-align: center;">ComfyUI to Photoshop / LineArtProcessor</p>
+      <p>Photoshop is the go-to tool for precise editing, design flexibility, and creative enhancements. However, when it comes to AI-based image generation, it has limitations. ComfyUI opens a new realm of possibilities, enabling users to integrate traditional design skills with AI-driven image generation. This seamless transition from Photoshop to ComfyUI combines artistic control with computational power, creating workflows that push creative boundaries.</p>
+
+      <!-- Image Comparison Slider -->
+      <figure class="cd-image-container">
+        <img src="img/PSTOCOMFY/31.png" alt="Original Image">
+        <span class="cd-image-label" data-type="original">INPUT</span>
+        <div class="cd-resize-img">
+          <img src="img/PSTOCOMFY/33.png" alt="Modified Image">
+          <span class="cd-image-label" data-type="modified">OUTPUT</span>
+        </div>
+        <span class="cd-handle"></span>
+      </figure>
+      
+      <p>Photoshop’s layering, masking, and adjustment tools provide a solid base for developing visuals...</p>
+
+      <!-- Additional Image Comparison Sliders -->
+      <figure class="cd-image-container">
+        <img src="img/PSTOCOMFY/361.png" alt="Original Image">
+        <span class="cd-image-label" data-type="original">INPUT</span>
+        <div class="cd-resize-img">
+          <img src="img/PSTOCOMFY/362.png" alt="Modified Image">
+          <span class="cd-image-label" data-type="modified">OUTPUT</span>
+        </div>
+        <span class="cd-handle"></span>
+      </figure>
+
+      <!-- Further Details -->
+      <h3>Special Thanks</h3>
+      <p>Thanks to my friend <strong>Nima</strong>, who made this plugin available. Check his <a href="https://github.com/NimaNzrii/comfyui-photoshop" class="github-link" target="_blank">GitHub page</a>.</p>
+      <p>The LineArtProcessor opens up new creative possibilities...</p>
     </div>
-    <span class="cd-handle"></span>
-  </figure>
 
-  <!-- Additional Text Section -->
-  <p class="artwork-statement">This setup combines elements ideal for stylized artwork, maintaining line integrity and providing detailed transformations. Special thanks to <a href="https://github.com/NimaNzrii/comfyui-photoshop" target="_blank">Nima's GitHub</a> for making the integration with Photoshop possible.</p>
-
-  <!-- JavaScript for Image Slider -->
-  <script src="js/jquery-2.1.1.js"></script>
-  <script src="js/jquery.mobile.custom.min.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Bootstrap JavaScript -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
-</body>
+    <!-- jQuery and Bootstrap Scripts -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
+	<!-- Footer Section -->
+	    <!-- Footer Section -->
+    <footer>
+      <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
+          <img src="icons/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank">
+          <img src="icons/insta.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://behance.net" target="_blank">
+          <img src="icons/behance.png" alt="Behance">
+        </a>
+        <a href="https://github.com/MehranMarxian" target="_blank">
+          <img src="icons/github.png" alt="GitHub">
+        </a>
+      </div>
+</footer>
+
