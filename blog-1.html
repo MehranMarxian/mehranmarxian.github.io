@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Image Processing</title>
+  
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Web Fonts -->
+  <style type="text/css">
+    @import url("webfonts/PTSans_Regular/stylesheet.css");
+    body, td, th {
+      font-family: "PTSans Regular", sans-serif;
+      font-style: normal;
+      text-align: center;
+      margin: 40px;
+      padding: 0;
+    }
+    a {
+      font-family: "PTSans Regular", sans-serif;
+    }
+    .container-fluid, .container {
+      margin-top: 20px;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background-color: #FFFFFF;
+      padding: 10px 0;
+    }
+    footer .footer-text, footer .footer-icons {
+      margin: 0 5px;
+    }
+    footer .footer-icons a img {
+      width: 25px;
+      margin: 0 5px;
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+<body style="padding-top: 70px;">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Mehran Ahmadi</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <header>
+      <h3>Image Processing</h3>
+    </header>
+
+    <figure class="cd-image-container">
+      <img src="images/mehran-ahmadi-photo-006.jpg" alt="Original Mehran Ahmadi photo">
+      <span class="cd-image-label" data-type="original">Modified</span>
+      <div class="cd-resize-img">
+        <img src="images/imagebymehranahmadiswimer.jpg" alt="Modified version of Mehran Ahmadi photo">
+        <span class="cd-image-label" data-type="modified">Original</span>
+      </div>
+      <span class="cd-handle"></span>
+    </figure>
+
+    <p><strong>Image Processing based on Chaos Theory</strong></p>
+    <p>Chaos theory is a branch of mathematics focusing on the behavior of dynamical systems that are highly sensitive to initial conditions...</p>
+    <p><a href="images/mehran-ahmadi-photo-006.jpg">Click here for the high-resolution image *</a></p>
+    
+    <div class="clip_frame" id="u8790">
+      <img src="images/double-compound-pendulum.gif" alt="Double Compound Pendulum Animation">
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/Mehran.Photography/" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank"><img src="icons/insta.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://behance.net" target="_blank"><img src="icons/behance.png" alt="Behance"></a>
+      <a href="https://github.com/MehranMarxian" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
