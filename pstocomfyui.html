@@ -34,6 +34,8 @@
     }
     </style>
   </head>
+	    <!-- body code goes here -->
+    
   <body style="padding-top: 70px">
     <div class="container-fluid">
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
@@ -54,8 +56,7 @@
       </nav>
     </div>
     
-    <!-- body code goes here -->
-    
+
    <html lang="en" class="no-js">
 <head>
 	<meta charset="UTF-8">
@@ -72,14 +73,14 @@
 <body>
 	   <div class="artwork-statement">
 		<br>
-		<span style="text-align: center; font-style: normal; font-size: 18px; font-weight: bolder;"><strong>AI / ComfyUI to Photoshop</strong></span>
+		<span style="text-align: center; font-style: normal; font-size: 18px; font-weight: bolder;"><strong>Advanced Image2Image workflow for creative profesionals </strong></span>
 		<br>
-		<span style="text-align: center; font-style: normal;">LineArtProcessor</span><br>
+		<span style="text-align: center; font-style: normal;">LineArtProcessor / ComfyUI to Photoshop</span><br>
 		   <br>
 
 
 	Photoshop is the go-to tool for precise editing, design flexibility, and creative enhancements, but for AI-based image generation and editing, ComfyUI introduces a new realm of possibilities. This seamless transition from Photoshop to ComfyUI allows users to integrate traditional design skills with AI-driven image generation, opening the door to workflows that combine artistic control with computational power. 
-	<br><br>
+  <br><br>
 	<figure class="cd-image-container">
 		<img src="img/PSTOCOMFY/31.png" alt="Original Image">
 		<span class="cd-image-label" data-type="original">INPUT</span>
@@ -106,11 +107,11 @@
       <br><br>
 	
 		<figure class="cd-image-container">
-		<img src="img/PSTOCOMFY/361.png" alt="Original Image">
+		<img src="img/PSTOCOMFY/31.png" alt="Original Image">
 		<span class="cd-image-label" data-type="original">INPUT</span>
 
 		<div class="cd-resize-img"> <!-- the resizable image on top -->
-		  <img src="img/PSTOCOMFY/362.png" alt="Modified Image">
+			<img src="img/PSTOCOMFY/33.png" alt="Modified Image">
 			<span class="cd-image-label" data-type="modified">OUTPUT</span>
 		</div>
 
@@ -119,8 +120,13 @@
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script> <!-- Resource jQuery -->
 <script src="js/main.js"></script> <!-- Resource jQuery -->
-</body>
-</html>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+	<script src="js/bootstrap-4.4.1.js"></script>
 	<br>
 	The ComfyUI Photoshop plugin integrates ComfyUI's AI generation capabilities directly into Adobe Photoshop, enhancing the creative workflow. Version 1.9 includes features like crop over selection with padding, port change support, and improved functionality for image processing. It requires a minimum of 6GB VRAM and Photoshop 2022 or newer. Users can install it easily and access various models and nodes to customize their AI experience.
 <br><br>
@@ -161,55 +167,8 @@ The LineArtProcessor is a component often used in image processing workflows to 
         </p>
 <p>The LineArtProcessor opens up new creative possibilities, making it easier than ever to transform sketches and outlines into polished, stylized art. Whether for comics, animations, or concept art, this tool is a game-changer for artists and designers seeking to bring their line art to life.</p>
 
-<!DOCTYPE html>
-<!-- saved from url=(0045)http://127.0.0.1:10531/preview/app/index.html -->
-<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_68nMHz"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./pstocomfyui_files/socket.io.js.download"></script><script src="chrome-extension://fgddmllnllkalaagkghckoinaemmogpe/scripts/content/gps.js"></script>
-    <!-- Copyright 2015 Adobe Systems Incorporated.  All rights reserved. -->
-    
-    
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=9" ><![endif]-->
-    <title>Mehran Ahmadi YOU</title>
-    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, maximum-scale = 1.0, minimum-scale=1.0,initial-scale=1.0">
-   
-	<script src="./pstocomfyui_files/DevicePreviewMain.js.download"></script>
-    <link rel="stylesheet" type="text/css" href="./pstocomfyui_files/main.css">
-<style>
-@keyframes slide-in-one-tap {
-  from {
-    transform: translateY(80px);
-  }
-  to {
-    transform: translateY(0px);
-  }
-}
 
-</style>
-
-    <iframe id="previewApp" allowfullscreen="" src="./pstocomfyui_files/3qd1HQb.html"></iframe>
-    <div class="overlay" style="display: none;">
-        <table class="container">
-            <tbody><tr>
-                <td>
-                    <div class="centerAlign margin2x"><img src="./pstocomfyui_files/dw_logo.png"></div>
-                    <div class="centerAlign margin2x deviceInfo"></div>
-                    <div class="centerAlign margin1x browserInfo"></div>
-                    <div class="centerAlign margin1x osInfo"></div>
-                    <div class="centerAlign margin1x viewportSize"></div>
-                    <div class="centerAlign margin1x devicePixelRatio"></div>
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-
-	 
-            
-  
-	 
-	    <!-- Footer Section -->
-		<!-- Footer Section -->
-	    <!-- Footer Section -->
-    <footer>
-      <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+	<p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
       <div class="footer-icons">
         <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
           <img src="icons/facebook.png" alt="Facebook">
@@ -227,7 +186,6 @@ The LineArtProcessor is a component often used in image processing workflows to 
           <img src="icons/github.png" alt="GitHub">
         </a>
       </div>
-</footer>
 
 	
 	

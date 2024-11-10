@@ -43,8 +43,10 @@ header {
       height: 240px;
       line-height: 240px; }
       header h1 {
-        font-size: 32px;
-        font-size: 2rem; } }
+    font-size: 32px;
+    font-size: 2rem;
+    color: #000000;
+} }
 
 .cd-image-container {
   position: relative;
