@@ -92,6 +92,9 @@
   </style>
 </head>
 <body>
+  <!-- Flexbox container -->
+  
+  <div class="flex-container">
     <!-- Preloader -->
     <div id="preloader">Loading...</div>
 
@@ -107,51 +110,35 @@
 
     <!-- Centered content -->
     <div class="centered-content">
-<button class="enter-btn" onclick="location.href='home.html'">Enter</button>
-<div id="quote-container">
-<p id="quote"></p>
-  <p id="author"></p>
+      <button class="enter-btn" onclick="location.href='home.html'">Enter</button>
+      <div id="quote-container">
+        <p id="quote"></p>
+        <p id="author"></p>
+      </div>
+    </div>
 </div>
 
-    <!-- Footer text -->
-    
-    <!-- Scripts -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap-4.4.1.js"></script>
-    <script>
-// Quotes and their authors
-const quotes = [
-  { text: "Art should comfort the disturbed and disturb the comfortable.", author: "Banksy" },
-  { text: "Creativity takes courage.", author: "Henri Matisse" },
-  { text: "Art is the lie that enables us to realize the truth.", author: "Pablo Picasso" },
-  { text: "Every artist was first an amateur.", author: "Ralph Waldo Emerson" },
-  { text: "Art is not what you see, but what you make others see.", author: "Edgar Degas" },
-  { text: "The purpose of art is washing the dust of daily life off our souls.", author: "Pablo Picasso" }
-];
-
-// Display a random quote
-const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-document.getElementById("quote").textContent = `"${randomQuote.text}"`;
-document.getElementById("author").textContent = `– ${randomQuote.author}`;
-
-
-      // Simple Slideshow Functionality
-      let currentIndex = 0;
-      const images = document.querySelectorAll(".slideshow-container img");
-
-      function showNextImage() {
-        images[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add("active");
-      }
-
-      setInterval(showNextImage, 3000); // Change image every 3 seconds
-
-      // Preloader logic
-      window.addEventListener("load", function() {
-        document.getElementById("preloader").style.display = "none";
-      });
-    </script>
+  <!-- Footer text -->
 <div class="footer-text copyright">All Rights Reserved | Mehran Ahmadi | 2024</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Hide preloader
+    document.getElementById("preloader").style.display = "none";
+  });
+
+  // Slideshow Logic
+  let currentIndex = 0;
+  const images = document.querySelectorAll(".slideshow-container img");
+
+  function showNextImage() {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+  }
+
+  setInterval(showNextImage, 3000); // Change image every 3 seconds
+</script>
+
 </body>
+
 </html>

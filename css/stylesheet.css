@@ -119,3 +119,48 @@ footer {
   background-color: #fff;
   cursor: ew-resize;
 }
+
+/* Quote styles */
+#quote-container {
+  margin-top: 200px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to text */
+}
+
+#quote {
+  font-size: 18px;
+	margin-top: 200px;
+	animation-delay: 1
+  font-style: italic; /* Makes the quote text italic */
+}
+
+#author {
+  font-size: 14px;
+  margin-top: 5px;
+  font-style: normal; /* Normal text style for author */
+  color: #ccc; /* Light gray for author */
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container {
+  flex: 1; /* Push the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: auto; /* Push footer to the bottom */
+  padding: 10px 0;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+}
+

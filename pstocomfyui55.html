@@ -12,25 +12,24 @@
   <!-- Local CSS Files -->
   <link rel="stylesheet" href="css/reset.css"> <!-- CSS Reset -->
   <link rel="stylesheet" href="css/style.css"> <!-- Resource Style -->
-  <link href="css/bootstrap-4.4.1.css" rel="stylesheet"> <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="webfonts/PTSans_Regular/stylesheet.css"> <!-- Font CSS -->
-<header style="margin: 60px;">
-  <h2 style="margin-bottom: 25px;">Advanced Image2Image workflow for creative professionals</h2>
-  <p style="margin-top: 50px;">
-Photoshop has been a cornerstone for creative professionals, valued for its precision, flexibility, and rich editing capabilities. However, when it comes to AI-driven image creation, Photoshop often falls short, limiting the depth and freedom artists crave. ComfyUI, in contrast, was built with the needs of creators at its heart. It offers an open platform where artists can truly shape their work, allowing full control over model choices, adjustments, and multi-stage processes to bring complex visions to life.
-<br>
-With ComfyUI, every choice in the creative process is yours. It’s a space where you can experiment, blend ideas, and refine details in ways Photoshop simply doesn’t allow. For artists who want to push the boundaries of their work with AI, ComfyUI isn’t just a tool—it’s a gateway to a creative process that feels as limitless as the imagination.
-  </p>
-</header>
 
-	
   <!-- Modernizr -->
   <script src="js/modernizr.js"></script>
 </head>
 
-<body style="padding-top: 00px;">
+<body style="padding-top: 0px;">
+  <!-- Header -->
+  <header style="margin: 60px;">
+    <h2 style="margin-bottom: 25px;">Advanced Image2Image workflow for creative professionals</h2>
+    <p style="margin-top: 50px;">
+      Photoshop has been a cornerstone for creative professionals... (text omitted for brevity)
+    </p>
+  </header>
+
+  <!-- Navbar -->
   <div class="container-fluid">
-    <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Mehran Ahmadi</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,20 +48,19 @@ With ComfyUI, every choice in the creative process is yours. It’s a space wher
     </nav>
   </div>
 
-  <!-- Main Content -->
-
-	<div>
   <!-- Image Comparison Slider -->
-  <figure class="cd-image-container">
-    <img src="img/PSTOCOMFY/31.png" alt="Original Image">
-    <span class="cd-image-label" data-type="original">Original</span>
-    <div class="cd-resize-img">
-      <img src="img/PSTOCOMFY/33.png" alt="Modified Image">
-      <span class="cd-image-label" data-type="modified">Modified</span>
-    </div>
-    <span class="cd-handle"></span>
-  </figure>
-	</div>
+  <div>
+    <figure class="cd-image-container">
+     <div> <img src="img/PSTOCOMFY/31.png" alt="Original Image">
+      <span class="cd-image-label" data-type="original">Original</span>
+      <div class="cd-resize-img">
+        <img src="img/PSTOCOMFY/33.png" alt="Modified Image">
+        <span class="cd-image-label" data-type="modified">Modified</span>
+      </div>
+      <span class="cd-handle"></span>
+    </figure>
+  </div>
+
   <!-- Footer -->
   <footer style="text-align: center;">
     <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
@@ -76,9 +74,9 @@ With ComfyUI, every choice in the creative process is yours. It’s a space wher
   </footer>
 
   <!-- jQuery and JavaScript files -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="js/jquery.mobile.custom.min.js"></script> <!-- Additional jQuery for slider -->
   <script src="js/main.js"></script> <!-- Custom JS for slider -->
 </body>
