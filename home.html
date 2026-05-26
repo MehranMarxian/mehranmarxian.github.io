@@ -1,162 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mehran Ahmadi</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <style type="text/css">
-      @import url("webfonts/PTSans_Regular/stylesheet.css");
-      a {
-        font-family: "PTSans Regular";
-      }
-      body, td, th {
-        font-family: "PTSans Regular";
-        font-style: normal;
-      }
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-      }
-      .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        transition: transform 0.3s ease;
-      }
-      .gallery img:hover {
-        transform: scale(1.05);
-      }
-      .gallery-item {
-        flex: 1 1 calc(25% - 30px); /* 4 images per row */
-        max-width: calc(25% - 30px);
-        margin-bottom: 20px;
-      }
-      @media (max-width: 768px) {
-        .gallery-item {
-          flex: 1 1 calc(50% - 20px); /* 2 images per row on tablet */
-          max-width: calc(50% - 20px);
-        }
-      }
-      @media (max-width: 576px) {
-        .gallery-item {
-          flex: 1 1 100%; /* 1 image per row on mobile */
-          max-width: 100%;
-        }
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A curated series-based portfolio home for MEHRAN AHMADI, featuring recent work, portraits, AI works, WALLS, YOU, and realtime sculptures."
+    />
+    <title>Home | Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
   </head>
-  <body style="padding-top: 70px">
-    <div class="container-fluid">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
-        <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp; &nbsp; &nbsp;&nbsp;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"> 
-              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a> 
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="portraits.html">Portraits</a> 
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="projects.html">&nbsp;Projects&nbsp;</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="blog.html">&nbsp;Blog&nbsp;</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-
-    <!-- Gallery Section -->
-    <section class="container mt-5">
-      <h2 class="text-center mb-4">&nbsp;</h2>
-      <div class="gallery">
-	    <div class="gallery-item">
-			<a href="wall.html">
-          <img src="images/img_07101.jpg" alt="Gallery Image 1">	
-			</a>	
-        </div>
-        <div class="gallery-item">
-			<a href="portraits.html">
-          <img src="images/8.jpg" alt="Gallery Image 2"> 
-			</a>
-        </div>
-        <div class="gallery-item">
-			<a href="you.html">
-          <img src="images/mehran ahmadi portrait 33.jpg" alt="Gallery Image 3">
-				</a>
-        </div>
-
-        <div class="gallery-item">
-			
-          <img src="images/afshin mehran ahmadi portrait.jpg" alt="Gallery Image 4">
-				
-        </div>
-        <div class="gallery-item">
-          <img src="images/blackbold.jpg" alt="Gallery Image 5">
-			</div>
-		<div class="gallery-item">
-          <img src="images/mehran-ahmadi-photography-art-digital-lowlight.png" alt="Gallery Image 6">
-        </div>
-		  		<div class="gallery-item">
-          <img src="images/mehran_ahmadi01-crop-u4777.jpg" alt="Gallery Image 7">
-        </div>
-		  		<div class="gallery-item">
-					<a href="AI WORKS.html">
-          <img src="Images/mehran-ahmadi-photo-013.png" alt="Gallery Image 8">
-	    </a>
-        </div>
-		  <div class="gallery-item">
-					<a href="https://youtu.be/7L12Cd_4bPk?si=PiFct_Mt40LMm9Pb">
-          <img src="Images/thumbnail uemehran.png" alt="Gallery Image 8">
-	    </a>
-        </div>
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="portraits.html">Portraits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
       </div>
-    </section>
+    </nav>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script> 
-    <script src="js/bootstrap-4.4.1.js"></script>
+    <main class="series-home">
+      <section class="series-home__grid" aria-label="Selected visual series">
+        <a class="series-card" href="portraits.html">
+          <img
+            src="Images/1.JPG"
+            alt="Portrait series by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>Portraits</h2>
+            <p>2005-2017</p>
+          </span>
+        </a>
 
-    <!-- Footer Section -->
-    <footer>
-      <p class="footer-text">&copy; 2024 Mehran Ahmadi</p>
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
-          <img src="icons/facebook.png" alt="Facebook">
+                <a class="series-card" href="photography.html">
+          <img
+            src="Images/mehran_ahmadi27.jpg"
+            alt="Documentary photography project by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>Documentary</h2>
+            <p>Documentary / Photography</p>
+          </span>
         </a>
-        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank">
-          <img src="icons/insta.png" alt="Instagram">
+
+        <a class="series-card" href="you.html">
+          <img
+            src="Images/mehran ahmadi color.jpg"
+            alt="YOU digital art and photogrammetry project by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>YOU</h2>
+            <p>Digital Art / Photogrammetry</p>
+          </span>
         </a>
-        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn">
+
+        <a
+          class="series-card"
+          href="https://youtu.be/7L12Cd_4bPk?si=PiFct_Mt40LMm9Pb"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="Images/thumbnail uemehran.png"
+            alt="Video thumbnail for a Mehran Ahmadi visual artwork"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>Realtime sculptures</h2>
+            <p>Video work</p>
+          </span>
         </a>
-        <a href="https://behance.net" target="_blank">
-          <img src="icons/behance.png" alt="Behance">
+
+        <a class="series-card" href="AI WORKS.html">
+          <img
+            src="Images/home/mehran-ahmadi-visual-artist-home-05.jpg"
+            alt="AI Works series by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>COMPUTER VISION</h2>
+            <p>Synthetic Image processing</p>
+          </span>
         </a>
-      </div>
+
+        <a class="series-card" href="AI WORKS.html">
+          <img
+            src="Images/SELF MEHRAN AHMADI 3DSCAN.png"
+            alt="3DSCANS series by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>Photogrametery</h2>
+            <p>Head 3D Scan processors</p>
+          </span>
+        </a>
+
+        <a class="series-card" href="wall.html">
+          <img
+            src="Images/wall/mehran_ahmad-wall-1.jpg"
+            alt="WALLS photography series by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>WALLS</h2>
+            <p>2005-2007</p>
+          </span>
+        </a>
+
+        <a class="series-card" href="you.html">
+          <img
+            src="Images/mehran ahmadi photogrametry.png"
+            alt="YOU digital art and photogrammetry project by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>Time</h2>
+            <p>Digital Art / Photogrammetry</p>
+          </span>
+        </a>
+
+        <a class="series-card" href="experiments.html">
+          <img
+            src="Images/mehran ahmadi arnold maya.png"
+            alt="YOU digital art and photogrammetry project by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>Experiments</h2>
+            <p>Digital Art / Photogrammetry</p>
+          </span>
+        </a>
+
+        <a class="series-card" href="photography.html">
+          <img
+            src="Images/mehran-ahmadi-photo-003.jpg"
+            alt="Documentary photography project by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>UNDER CONSTRUCTION</h2>
+            <p>
+              This website is under construction right now. Some links might be
+              broken and some features might not work as expected.
+            </p>
+          </span>
+        </a>
+
+	<a class="series-card" href="archive/projects.html">
+          <img
+            src="Images/PS_TO_Z_Image 27.png"
+            alt="New Series preview artwork by MEHRAN AHMADI"
+            loading="lazy"
+          />
+          <span class="series-card__text">
+            <h2>PStoLocalAI</h2>
+            <p>Recent workflow</p>
+          </span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
     </footer>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/site-nav.js"></script>
   </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="../">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Image Comparison Slider | Mehran Ahmadi</title>
+
+  <!-- Google Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet">
+
+  <!-- Local CSS Files -->
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS Reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource Style -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet"> <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="webfonts/PTSans_Regular/stylesheet.css"> <!-- Font CSS -->
+
+  <!-- TwentyTwenty CSS (Image Comparison Slider) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twentytwenty/1.3.1/twentytwenty.min.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+  <style>
+    /* Optional: Adjust size of the images if needed */
+    .twentytwenty-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .twentytwenty-overlay {
+      z-index: 10;
+    }
+  </style>
+
+</head>
+<body style="padding-top: 70px;">
+  <div class="container-fluid">
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Mehran Ahmadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <header style="margin: 60px;">
+    <h2 style="margin-bottom: 25px;">Advanced Image2Image workflow for creative professionals</h2>
+    <p style="margin-top: 50px;">
+      Photoshop has been a cornerstone for creative professionals, valued for its precision, flexibility, and rich editing capabilities. However, when it comes to AI-driven image creation, Photoshop often falls short, limiting the depth and freedom artists crave. ComfyUI, in contrast, was built with the needs of creators at its heart. It offers an open platform where artists can truly shape their work, allowing full control over model choices, adjustments, and multi-stage processes to bring complex visions to life.
+      <br> With ComfyUI, every choice in the creative process is yours. It’s a space where you can experiment, blend ideas, and refine details in ways Photoshop simply doesn’t allow. For artists who want to push the boundaries of their work with AI, ComfyUI isn’t just a tool—it’s a gateway to a creative process that feels as limitless as the imagination.
+    </p>
+  </header>
+
+  <!-- Image Comparison Slider -->
+  <div class="twentytwenty-container">
+    <img src="img/PSTOCOMFY/31.png" alt="Original Image">
+    <img src="img/PSTOCOMFY/33.png" alt="Modified Image">
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align: center;">
+    <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/Mehran.Photography/" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank"><img src="icons/insta.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://behance.net" target="_blank"><img src="icons/behance.png" alt="Behance"></a>
+      <a href="https://github.com/MehranMarxian" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+    </div>
+  </footer>
+
+<!-- jQuery and JavaScript files -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twentytwenty/1.3.1/twentytwenty.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+
+<!-- Initialize the TwentyTwenty slider -->
+<script>
+  $(window).on("load", function() {
+    $(".twentytwenty-container").twentytwenty();
+  });
+</script>
+</body>
+</html>

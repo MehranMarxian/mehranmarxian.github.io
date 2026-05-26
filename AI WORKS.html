@@ -1,160 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mehran Ahmadi's AI Works</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <style type="text/css">
-      @import url("webfonts/PTSans_Regular/stylesheet.css");
-      a {
-        font-family: "PTSans Regular";
-      }
-      body, td, th {
-        font-family: "PTSans Regular";
-        font-style: normal;
-      }
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-      }
-      .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        transition: transform 0.3s ease;
-      }
-      .gallery img:hover {
-        transform: scale(1.05);
-      }
-      .gallery-item {
-        flex: 1 1 calc(25% - 30px); /* 4 images per row */
-        max-width: calc(25% - 30px);
-        margin-bottom: 20px;
-      }
-      @media (max-width: 768px) {
-        .gallery-item {
-          flex: 1 1 calc(50% - 20px); /* 2 images per row on tablet */
-          max-width: calc(50% - 20px);
-        }
-      }
-      @media (max-width: 576px) {
-        .gallery-item {
-          flex: 1 1 100%; /* 1 image per row on mobile */
-          max-width: 100%;
-        }
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AI-generated and algorithmic visual artworks by Mehran Ahmadi."
+    />
+    <title>AI Works | Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
   </head>
-<body style="padding-top: 70px">
-    <div class="container-fluid">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> 
-        <a class="navbar-brand" href="#">Mehran Ahmadi&nbsp; &nbsp; &nbsp;&nbsp;</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"> 
-              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a> 
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="portraits.html">Portraits</a> 
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="projects.html">&nbsp;Projects&nbsp;</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="blog.html">&nbsp;Blog&nbsp;</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-            <li class="nav-item"> 
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- Gallery Section -->
-  <section class="container mt-5">
-    <h2 class="text-center mb-4">AI WORKS&nbsp;</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="Images/AI/Mehran_Ahmadi_AIART_visual_algorithmic.jpg" alt="Gallery Image 1">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/AI/Mehran_Ahmadi_pig_A_pictorial_representatio.jpg" alt="Gallery Image 2"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Images/AI/Mehran_Ahmadi_AIART_pigs.png" alt="Gallery Image 3">
-      </div>
+    <main class="series-home project-page">
+      <header class="project-statement">
+        <h1>COMPUTER VISION</h1>
+        <p>Algorithmic, synthetic, and surreal image experiments.</p>
+      </header>
 
-      <div class="gallery-item">
-        <img src="Images/AI/AIART_VVALL.jpg" alt="Gallery Image 4">
-      </div>
-      <div class="gallery-item">
-        <img src="Images/AI/Mehran_Ahmadi_AIART_HeadStudy.jpg" alt="Gallery Image 5">
-		  </div>
-	  <div class="gallery-item">
-        <img src="Images/AI/Mehran_Ahmadi_AIART_BALL.png" alt="Gallery Image 6">
-      </div>
-	  		  <div class="gallery-item">
-          <img src="Images/AI/Mehran_Ahmadi_as-doomed-1_AIART.jpg" width="auto" height="auto" alt="Gallery Image 7">
-      </div>
-			  		  <div class="gallery-item">
-          <img src="Images/AI/Mehran_Ahmadi_ocean_AIART.png" width="auto" height="auto" alt="Gallery Image 8">
-      </div>
-			  		  <div class="gallery-item">
-          <img src="Images/AI/Mehran_Ahmadi_portrait_AIART.jpg" width="auto" height="auto" alt="Gallery Image 9">
-      </div>
-	  		  		  <div class="gallery-item">
-          <img src="Images/mehran-ahmadi-photo-013.jpg" alt="Gallery Image 10">
-      </div>
-	  <div class="gallery-item">
-        <img src="Images/Mehran_Ahmadi_DEATH_AI.jpg" alt="Gallery Image 11">
-      </div>
-			  <div class="gallery-item">
-        <img src="Images/AI/Mehran_Ahmadi_p_AIART.jpg" alt="Gallery Image 12">
-      </div>
-		
-    </div>
-  </section>
+      <section class="gallery project-gallery" aria-label="AI works gallery">
+        <figure class="gallery-item"><img src="Images/AI/faces/10157993574576292.jpg" alt="Algorithmic AI artwork by Mehran Ahmadi" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/Houses/10157990475516292.jpg" alt="Pictorial AI artwork by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/Mehran_Ahmadi_AIART_pigs.png" alt="Surreal AI image study by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/self/10159713470706292.jpg" alt="AI wall composition by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/Mehran_Ahmadi_AIART_HeadStudy.jpg" alt="AI-generated head study by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/algorthmic gan by mehran.jpg" alt="AI-generated spherical visual artwork by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/Mehran_Ahmadi_as-doomed-1_AIART.jpg" alt="Doomed figure AI artwork by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/disolves/PS_TO_Z_Image 3885.png" alt="Oceanic AI artwork by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/mehran.jpg" alt="AI portrait artwork by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/mehran-ahmadi-photo-013.jpg" alt="Photographic source image for AI visual work" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/Mehran_Ahmadi_DEATH_AI.jpg" alt="Death-themed AI artwork by Mehran Ahmadi" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/AI/AI GENERATED ART MEHRAN AHMADI.png" alt="Surreal AI visual artwork by Mehran Ahmadi" loading="lazy" /></figure>
+      </section>
+    </main>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-  <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/popper.min.js"></script> 
-    <script src="js/bootstrap-4.4.1.js"></script>
-
-    <!-- Footer Section -->
-    <footer>
-      <p class="footer-text">&copy; Mehran Ahmadi. All rights reserved 2024</p>
+    <footer class="site-footer">
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
       <div class="footer-icons">
-        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank">
-          <img src="icons/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank">
-          <img src="icons/insta.png" alt="Instagram">
-        </a>
-        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank">
-          <img src="icons/linkedin.png" alt="LinkedIn">
-        </a>
-        <a href="https://behance.net" target="_blank">
-          <img src="icons/behance.png" alt="Behance">
-        </a>
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/insta.png" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/behance.png" alt="Behance" /></a>
       </div>
     </footer>
 
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/site-nav.js"></script>
+    <script src="js/gallery-lightbox.js"></script>
   </body>
 </html>
