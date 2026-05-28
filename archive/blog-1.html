@@ -48,13 +48,14 @@
   </style>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
   <script src="js/modernizr.js"></script> <!-- Modernizr -->
   <!-- archive-blog-dark-fix -->
   <style>
+    html,
     body {
       color: #f2f2f2 !important;
-      background: #050505 !important;
+      background: #181a1b !important;
     }
     .navbar,
     .bg-light {
@@ -75,9 +76,15 @@
       color: #f2f2f2 !important;
       background: transparent !important;
     }
+    body::before,
+    body::after,
+    .cd-image-container,
+    .cd-resize-img {
+      background: transparent !important;
+    }
     footer {
       color: #ffffff !important;
-      background: #050505 !important;
+      background: #181a1b !important;
       border-top: 1px solid #1d1d1d;
     }
   </style></head>
