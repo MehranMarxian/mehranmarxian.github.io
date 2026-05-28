@@ -125,7 +125,7 @@ p {
 }
 
 .site-nav.navbar-light .navbar-toggler-icon {
-  filter: invert(1);
+  filter: none;
 }
 
 .site-nav.navbar-light .navbar-toggler:focus,
@@ -181,6 +181,7 @@ p {
   width: 24px;
   height: 2px;
   background: var(--text);
+  background-image: none !important;
 }
 
 .site-nav .navbar-toggler-icon::before,
