@@ -77,7 +77,27 @@ p {
   margin: 0 0 1rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   border-bottom: 0;
   background: var(--nav-bg) !important;
   backdrop-filter: blur(12px);
@@ -116,12 +136,69 @@ p {
 }
 
 .site-nav .navbar-brand {
+  display: inline-block;
+  margin-right: 1.4rem;
   font-weight: 400;
   letter-spacing: 0;
+  text-decoration: none;
+}
+
+.site-nav .navbar-collapse {
+  display: flex;
+  flex-basis: auto;
+  align-items: center;
+}
+
+.site-nav .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav .nav-item {
+  margin: 0;
 }
 
 .site-nav .nav-link {
+  display: block;
   padding-inline: 0.9rem !important;
+  text-decoration: none;
+}
+
+.site-nav .navbar-toggler {
+  display: none;
+  margin-left: auto;
+  background: transparent;
+}
+
+.site-nav .navbar-toggler-icon {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+}
+
+.site-nav .navbar-toggler-icon::before,
+.site-nav .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+}
+
+.site-nav .navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.site-nav .navbar-toggler-icon::after {
+  top: 7px;
 }
 
 .page-shell {
@@ -491,6 +568,31 @@ p {
 }
 
 @media (max-width: 991.98px) {
+  .site-nav .navbar-toggler {
+    display: block;
+  }
+
+  .site-nav .navbar-collapse {
+    display: none;
+    flex-basis: 100%;
+    width: 100%;
+    padding-top: 0.8rem;
+  }
+
+  .site-nav .navbar-collapse.show {
+    display: block;
+  }
+
+  .site-nav .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.12rem;
+  }
+
+  .site-nav .nav-link {
+    padding: 0.34rem 0 !important;
+  }
+
   .series-home__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
