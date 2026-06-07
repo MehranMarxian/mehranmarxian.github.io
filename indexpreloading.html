@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mehran Ahmadi is a visual artist working with photography, AI-generated imagery, and conceptual surreal visuals."
+    />
+    <title>Mehran Ahmadi | Visual Artist</title>
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+      body.is-preloading {
+        background: #181a1b;
+      }
+
+      body.is-preloading .slideshow-container img,
+      body.is-preloading .centered-content,
+      body.is-preloading .hero-footer-text {
+        opacity: 0;
+      }
+
+      .entrance-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 20;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        color: rgba(255, 255, 255, 0.78);
+        background: #181a1b;
+        transition: opacity 420ms ease, visibility 420ms ease;
+      }
+
+      .entrance-loader.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .entrance-loader__inner {
+        display: grid;
+        justify-items: center;
+        gap: 18px;
+        width: min(220px, 64vw);
+      }
+
+      .entrance-loader__mark {
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-top-color: rgba(255, 255, 255, 0.86);
+        border-radius: 50%;
+        animation: entrance-loader-spin 900ms linear infinite;
+      }
+
+      .entrance-loader__bar {
+        width: 100%;
+        height: 1px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.16);
+      }
+
+      .entrance-loader__progress {
+        display: block;
+        width: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.88);
+        transition: width 180ms ease;
+      }
+
+      .entrance-loader__text {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.54);
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      @keyframes entrance-loader-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .entrance-loader__mark {
+          animation: none;
+        }
+
+        .entrance-loader,
+        .entrance-loader__progress {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="is-preloading">
+    <div class="entrance-loader" role="status" aria-live="polite" aria-label="Loading selected works">
+      <div class="entrance-loader__inner">
+        <span class="entrance-loader__mark" aria-hidden="true"></span>
+        <span class="entrance-loader__bar" aria-hidden="true">
+          <span class="entrance-loader__progress"></span>
+        </span>
+        <p class="entrance-loader__text">Loading</p>
+      </div>
+    </div>
+
+    <main class="slideshow-container" aria-label="Selected works by Mehran Ahmadi">
+      <img
+        src="Images/home/mehran-ahmadi-visual-artist-home-01.jpg"
+        class="active"
+        alt="Atmospheric photographic artwork by MEHRAN AHMADI"
+        fetchpriority="high"
+      />
+      <img
+        src="Images/home/mehran-ahmadi-visual-artist-home-02.jpg"
+        alt="Surreal photographic artwork by MEHRAN AHMADI"
+        loading="lazy"
+      />
+      <img
+        src="Images/home/mehran-ahmadi-visual-artist-home-03.jpg"
+        alt="Conceptual visual artwork by MEHRAN AHMADI"
+        loading="lazy"
+      />
+      <img
+        src="Images/home/mehran-ahmadi-visual-artist-home-04.jpg"
+        alt="Low-light photographic artwork by MEHRAN AHMADI"
+        loading="lazy"
+      />
+      <img
+        src="Images/home/mehran-ahmadi-visual-artist-home-05.jpg"
+        alt="Portrait-based visual artwork by MEHRAN AHMADI"
+        loading="lazy"
+      />
+      <img
+        src="Images/home/mehran-ahmadi-visual-artist-home-06.jpg"
+        alt="Minimal photographic composition by MEHRAN AHMADI"
+        loading="lazy"
+      />
+
+      <div class="centered-content">
+        <button class="enter-btn" type="button" onclick="location.href = 'home.html'">
+          Enter
+        </button>
+      </div>
+
+      <p class="hero-footer-text">All Rights Reserved | Mehran Ahmadi | 2026</p>
+    </main>
+
+    <script>
+      const images = document.querySelectorAll(".slideshow-container img");
+      const loader = document.querySelector(".entrance-loader");
+      const progress = document.querySelector(".entrance-loader__progress");
+      let currentIndex = 0;
+      let slideshowTimer;
+      let loaderHidden = false;
+
+      function startSlideshow() {
+        if (images.length <= 1 || slideshowTimer) {
+          return;
+        }
+
+        slideshowTimer = window.setInterval(() => {
+          images[currentIndex].classList.remove("active");
+          currentIndex = (currentIndex + 1) % images.length;
+          images[currentIndex].classList.add("active");
+        }, 3600);
+      }
+
+      function updateProgress(loadedCount) {
+        const percent = images.length ? Math.round((loadedCount / images.length) * 100) : 100;
+        progress.style.width = `${percent}%`;
+      }
+
+      function hideLoader() {
+        if (loaderHidden) {
+          return;
+        }
+
+        loaderHidden = true;
+        updateProgress(images.length);
+        document.body.classList.remove("is-preloading");
+        window.setTimeout(() => {
+          loader.classList.add("is-hidden");
+          startSlideshow();
+        }, 240);
+      }
+
+      function preloadEntranceImages() {
+        if (!images.length) {
+          hideLoader();
+          return;
+        }
+
+        let loadedCount = 0;
+        let firstImageReady = images[0].complete && images[0].naturalWidth > 0;
+
+        const markLoaded = (image) => {
+          loadedCount += 1;
+          updateProgress(loadedCount);
+
+          if (image === images[0]) {
+            firstImageReady = true;
+            hideLoader();
+          }
+        };
+
+        images.forEach((image) => {
+          if (image.complete && image.naturalWidth > 0) {
+            markLoaded(image);
+            return;
+          }
+
+          image.addEventListener("load", () => markLoaded(image), { once: true });
+          image.addEventListener("error", () => markLoaded(image), { once: true });
+        });
+
+        window.setTimeout(() => {
+          if (!firstImageReady) {
+            hideLoader();
+          }
+        }, 6500);
+      }
+
+      preloadEntranceImages();
+    </script>
+  </body>
+</html>

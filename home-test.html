@@ -48,16 +48,54 @@
       }
 
       .archive-hero {
-        display: flex;
-        min-height: 148px;
-        align-items: center;
-        justify-content: space-between;
-        gap: 32px;
-        padding: 34px clamp(22px, 4.2vw, 72px);
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.34fr);
+        min-height: clamp(560px, 78svh, 820px);
+        overflow: hidden;
         border-bottom: 1px solid var(--archive-line);
       }
 
+      .archive-hero__grid,
+      .archive-hero__grid::before,
+      .archive-hero__grid::after {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        content: "";
+      }
+
+      .archive-hero__grid {
+        opacity: 0.5;
+        background-image:
+          linear-gradient(to right, transparent calc(25% - 1px), var(--archive-line) 25%, transparent calc(25% + 1px)),
+          linear-gradient(to right, transparent calc(50% - 1px), var(--archive-line) 50%, transparent calc(50% + 1px)),
+          linear-gradient(to right, transparent calc(75% - 1px), var(--archive-line) 75%, transparent calc(75% + 1px));
+      }
+
+      .archive-hero__grid::before {
+        background-image:
+          linear-gradient(to bottom, transparent calc(33.333% - 1px), var(--archive-line) 33.333%, transparent calc(33.333% + 1px)),
+          linear-gradient(to bottom, transparent calc(66.666% - 1px), var(--archive-line) 66.666%, transparent calc(66.666% + 1px));
+      }
+
+      .archive-hero__grid::after {
+        inset: 18px;
+        border: 1px solid rgba(241, 240, 236, 0.07);
+      }
+
+      .archive-hero__content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+        padding: clamp(38px, 5.4vw, 92px);
+      }
+
       .archive-kicker,
+      .archive-coordinate,
       .archive-section-label,
       .archive-card__eyebrow,
       .archive-card__counter,
@@ -85,12 +123,85 @@
         content: "";
       }
 
+      .archive-hero h1 {
+        max-width: 920px;
+        margin: auto 0 22px;
+        color: var(--archive-ink);
+        font-size: clamp(4rem, 10.5vw, 10rem);
+        font-weight: 400;
+        line-height: 0.82;
+        letter-spacing: 0;
+      }
+
+      .archive-hero__disciplines {
+        max-width: 760px;
+        margin: 0 0 24px;
+        color: var(--archive-ink);
+        font-size: clamp(1rem, 1.55vw, 1.42rem);
+        font-weight: 400;
+        line-height: 1.45;
+      }
+
+      .archive-hero__description {
+        max-width: 690px;
+        margin: 0;
+        color: #b8b9b6;
+        font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+        line-height: 1.72;
+      }
+
+      .archive-hero__aside {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: clamp(30px, 3.8vw, 64px);
+        border-left: 1px solid var(--archive-line);
+      }
+
+      .archive-hero__aside::before,
+      .archive-hero__aside::after {
+        position: absolute;
+        left: -5px;
+        width: 9px;
+        height: 9px;
+        border: 1px solid var(--archive-line-strong);
+        background: var(--archive-bg);
+        content: "";
+      }
+
+      .archive-hero__aside::before {
+        top: 25%;
+      }
+
+      .archive-hero__aside::after {
+        bottom: 25%;
+      }
+
+      .archive-coordinate {
+        display: grid;
+        gap: 7px;
+      }
+
+      .archive-coordinate span {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid var(--archive-line);
+      }
+
+      .archive-coordinate b {
+        color: var(--archive-ink);
+        font-weight: 400;
+      }
+
       .archive-hero__index-link {
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        gap: 36px;
-        min-width: min(260px, 40vw);
+        gap: 20px;
         padding: 14px 0;
         color: var(--archive-ink);
         font-size: 0.85rem;
@@ -115,19 +226,43 @@
 
       .archive-index {
         width: 100%;
-        padding: clamp(24px, 3.4vw, 56px) clamp(16px, 3.4vw, 60px) clamp(64px, 8vw, 120px);
+        padding: clamp(52px, 7vw, 110px) clamp(16px, 3.4vw, 60px);
+      }
+
+      .archive-index__header {
+        display: grid;
+        grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+        gap: 32px;
+        align-items: end;
+        margin: 0 auto clamp(28px, 4vw, 58px);
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--archive-line);
+      }
+
+      .archive-index__header h2 {
+        margin: 0;
+        color: var(--archive-ink);
+        font-size: clamp(2rem, 4.4vw, 5.4rem);
+        font-weight: 400;
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .archive-index__header p {
+        max-width: 620px;
+        margin: 0 0 2px auto;
+        color: var(--archive-muted);
+        font-size: 0.9rem;
+        line-height: 1.65;
       }
 
       .archive-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 64px;
+        gap: 1px;
         width: 100%;
-        background: transparent;
-      }
-
-      .archive-card--wide {
-        grid-column: span 2;
+        background: var(--archive-line);
+        border: 1px solid var(--archive-line);
       }
 
       .archive-card {
@@ -138,7 +273,6 @@
         overflow: hidden;
         isolation: isolate;
         background: var(--archive-panel);
-        cursor: pointer;
       }
 
       .archive-card__media,
@@ -259,14 +393,6 @@
         letter-spacing: 0;
       }
 
-      .archive-card__subtitle {
-        display: block;
-        margin-top: 6px;
-        color: rgba(255, 255, 255, 0.68);
-        font-size: 0.5em;
-        line-height: 1.1;
-      }
-
       .archive-card__description {
         max-width: 38rem;
         min-height: 4.5em;
@@ -311,8 +437,6 @@
       }
 
       .archive-card__controls {
-        position: relative;
-        z-index: 3;
         display: inline-flex;
         flex-shrink: 0;
         gap: 5px;
@@ -389,12 +513,6 @@
         line-height: 1.65;
       }
 
-      .archive-statement__copy > .archive-statement__credit {
-        margin-top: 28px;
-        color: var(--archive-muted);
-        font-size: 0.88rem;
-      }
-
       .archive-methods {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -453,7 +571,6 @@
       @media (max-width: 1199.98px) {
         .archive-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 24px;
         }
 
         .archive-card {
@@ -467,39 +584,81 @@
         }
 
         .archive-hero {
-          min-height: 126px;
+          grid-template-columns: 1fr;
+          min-height: min(760px, calc(100svh - 64px));
+        }
+
+        .archive-hero__content {
+          min-height: 520px;
+          padding: 34px 20px 30px;
+        }
+
+        .archive-hero h1 {
+          max-width: 95%;
+          margin-top: auto;
+          font-size: clamp(3.8rem, 19vw, 6.4rem);
+        }
+
+        .archive-hero__disciplines {
+          max-width: 92%;
+          font-size: 0.98rem;
+        }
+
+        .archive-hero__description {
+          max-width: 92%;
+          font-size: 0.82rem;
+          line-height: 1.62;
+        }
+
+        .archive-hero__aside {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           gap: 20px;
-          padding: 24px 16px;
+          padding: 20px;
+          border-top: 1px solid var(--archive-line);
+          border-left: 0;
         }
 
-        .archive-kicker {
-          gap: 8px;
-          font-size: 0.58rem;
-          white-space: nowrap;
+        .archive-hero__aside::before,
+        .archive-hero__aside::after {
+          display: none;
         }
 
-        .archive-kicker::before {
-          width: 20px;
+        .archive-coordinate {
+          font-size: 0.61rem;
         }
 
         .archive-hero__index-link {
-          min-width: 124px;
-          font-size: 0.6rem;
-          white-space: nowrap;
+          align-self: end;
+          font-size: 0.68rem;
         }
 
         .archive-index {
-          padding: 8px 8px 70px;
+          padding: 46px 8px 70px;
+        }
+
+        .archive-index__header {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-bottom: 22px;
+          padding: 0 8px 18px;
+        }
+
+        .archive-index__header h2 {
+          font-size: clamp(2.2rem, 11vw, 4.2rem);
+        }
+
+        .archive-index__header p {
+          margin-left: 0;
+          font-size: 0.78rem;
         }
 
         .archive-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
         }
 
         .archive-card {
-          min-height: 0;
-          aspect-ratio: 1 / 1;
+          min-height: clamp(330px, 89vw, 440px);
         }
 
         .archive-card__content {
@@ -521,7 +680,7 @@
         }
 
         .archive-card__bottom {
-          padding-top: 0;
+          padding-top: 86%;
         }
 
         .archive-card h3 {
@@ -600,7 +759,7 @@
 
       @media (max-width: 380px) {
         .archive-card {
-          min-height: 0;
+          min-height: 340px;
         }
 
         .archive-card__content {
@@ -608,26 +767,11 @@
         }
 
         .archive-card__description {
-          display: none;
+          -webkit-line-clamp: 2;
         }
 
         .archive-card__link {
           max-width: 90px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .archive-card .archive-card__description {
-          display: none;
-        }
-
-        .archive-card h3 {
-          margin-bottom: 10px;
-          font-size: clamp(0.95rem, 4.7vw, 1.18rem);
-        }
-
-        .archive-card .archive-card__actions {
-          padding-top: 7px;
         }
       }
 
@@ -673,51 +817,48 @@
 
     <main>
       <header class="archive-hero">
-        <p class="archive-kicker">Visual archive / 2005-2026</p>
-        <a class="archive-hero__index-link" href="#selected-fields">
-          <span>Enter selected fields</span>
-          <span aria-hidden="true">↓</span>
-        </a>
+        <div class="archive-hero__grid" aria-hidden="true"></div>
+        <div class="archive-hero__content">
+          <p class="archive-kicker">Visual archive / Tehran / 2005-2026</p>
+          <div>
+            <h1>Mehran<br />Ahmadi</h1>
+            <p class="archive-hero__disciplines">
+              Photography · Computer Vision · Photogrammetry · AI
+            </p>
+            <p class="archive-hero__description">
+              A visual archive exploring identity, reconstruction, perception,
+              and the unstable border between physical and computational images.
+            </p>
+          </div>
+        </div>
+        <aside class="archive-hero__aside" aria-label="Archive coordinates">
+          <div class="archive-coordinate">
+            <span><b>LAT</b> 35.6892 N</span>
+            <span><b>LONG</b> 51.3890 E</span>
+            <span><b>INDEX</b> 001-006</span>
+            <span><b>STATUS</b> EVOLVING</span>
+          </div>
+          <a class="archive-hero__index-link" href="#selected-fields">
+            <span>Enter selected fields</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+        </aside>
       </header>
 
-      <section class="archive-index" id="selected-fields" aria-label="Selected archive fields">
-        <div class="archive-grid">
-          <article class="archive-card archive-card--wide" data-slideshow data-delay="0">
-            <div class="archive-card__media">
-              <img class="is-active" src="Images/15-mehran-ahmadi-portrait.jpg" alt="Portrait study by Mehran Ahmadi" />
-              <img src="Images/8.jpg" alt="Portrait photograph by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/3.jpg" alt="Portrait from Mehran Ahmadi's portrait archive" loading="lazy" />
-            </div>
-            <div class="archive-card__shade" aria-hidden="true"></div>
-            <div class="archive-card__geometry" aria-hidden="true"></div>
-            <div class="archive-card__content">
-              <div class="archive-card__top">
-                <p class="archive-card__eyebrow">01 / Photography / Portrait / 2005-2017</p>
-                <p class="archive-card__counter" aria-live="polite">01 / 03</p>
-              </div>
-              <div class="archive-card__bottom">
-                <h3>
-                  Photography
-                  <span class="archive-card__subtitle">Portrait</span>
-                </h3>
-                <p class="archive-card__description">
-                  Portrait studies exploring presence, silence, light, and the
-                  unstable surface of identity.
-                </p>
-                <div class="archive-card__actions">
-                  <a class="archive-card__link" href="portraits.html">
-                    View portraits <span aria-hidden="true">→</span>
-                  </a>
-                  <div class="archive-card__controls">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous Portraits image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next Portraits image">→</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
+      <section class="archive-index" id="selected-fields" aria-labelledby="archive-index-title">
+        <header class="archive-index__header">
+          <div>
+            <p class="archive-section-label">Archive index / 06 fields</p>
+            <h2 id="archive-index-title">Selected fields</h2>
+          </div>
+          <p>
+            Six connected bodies of work. Each field is treated as a portal:
+            images advance quietly, while the archive remains open to revision.
+          </p>
+        </header>
 
-          <article class="archive-card" data-slideshow data-delay="600">
+        <div class="archive-grid">
+          <article class="archive-card" data-slideshow data-delay="0">
             <div class="archive-card__media">
               <img class="is-active" src="Images/mehran_ahmadi27.jpg" alt="Documentary photograph by Mehran Ahmadi" />
               <img src="Images/mehran_ahmadi01-crop-u9596.jpg" alt="Black and white portrait from A Place to Stay by Mehran Ahmadi" loading="lazy" />
@@ -727,14 +868,11 @@
             <div class="archive-card__geometry" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">02 / Photography / Documentry / 2005-2026</p>
+                <p class="archive-card__eyebrow">01 / Photography / 2005-2026</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
-                <h3>
-                  Photography
-                  <span class="archive-card__subtitle">Documentry</span>
-                </h3>
+                <h3>Photography</h3>
                 <p class="archive-card__description">
                   Documentary and constructed photographic works exploring
                   surfaces, silence, memory, and the human trace.
@@ -752,7 +890,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="1200">
+          <article class="archive-card" data-slideshow data-delay="700">
             <div class="archive-card__media">
               <img class="is-active" src="Images/home/mehran-ahmadi-visual-artist-home-05.jpg" alt="Computer vision artwork by Mehran Ahmadi" />
               <img src="Images/AI/faces/10157993574576292.jpg" alt="Machine-generated face study by Mehran Ahmadi" loading="lazy" />
@@ -762,7 +900,7 @@
             <div class="archive-card__geometry" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">03 / Machine perception / 2019-2026</p>
+                <p class="archive-card__eyebrow">02 / Machine perception / 2019-2026</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
@@ -784,7 +922,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="1800">
+          <article class="archive-card" data-slideshow data-delay="1400">
             <div class="archive-card__media">
               <img class="is-active" src="Images/Experiments/Black out - Photogrammetry.jpg" alt="Black out photogrammetry study by Mehran Ahmadi" />
               <img src="Images/Experiments/Head Study - photogrammetry.jpg" alt="Photogrammetry head study by Mehran Ahmadi" loading="lazy" />
@@ -794,7 +932,7 @@
             <div class="archive-card__geometry" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">04 / Spatial capture / 2014-2026</p>
+                <p class="archive-card__eyebrow">03 / Spatial capture / 2014-2026</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
@@ -816,7 +954,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="2400">
+          <article class="archive-card" data-slideshow data-delay="2100">
             <div class="archive-card__media">
               <img class="is-active" src="Images/Melancholic toons/Melancholic toons (1).jpg" alt="Melancholic Toons AI artwork by Mehran Ahmadi" />
               <img src="Images/Melancholic toons/Melancholic toons (11).jpg" alt="Melancholic cartoon character reconstructed with AI by Mehran Ahmadi" loading="lazy" />
@@ -826,7 +964,7 @@
             <div class="archive-card__geometry" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">05 / AI image systems / 2022-2026</p>
+                <p class="archive-card__eyebrow">04 / AI image systems / 2022-2026</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
@@ -848,7 +986,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="3000">
+          <article class="archive-card" data-slideshow data-delay="2800">
             <div class="archive-card__media">
               <img class="is-active" src="Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg" alt="Cinematic MetaHuman portrait by Mehran Ahmadi" />
               <img src="Images/blog/metahumans/mehran-ahmadi-metahuman-front-portrait.jpg" alt="Front portrait of a MetaHuman by Mehran Ahmadi" loading="lazy" />
@@ -858,7 +996,7 @@
             <div class="archive-card__geometry" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">06 / Unreal Engine / 2024</p>
+                <p class="archive-card__eyebrow">05 / Unreal Engine / 2024</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
@@ -880,9 +1018,9 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="3600">
+          <article class="archive-card" data-slideshow data-delay="3500">
             <div class="archive-card__media">
-              <img class="is-active" src="images/mehran-ahmadi-photo-006.jpg" alt="Source photograph for Mehran Ahmadi's image processing study" loading="lazy" />
+              <img class="is-active" src="images/mehran-ahmadi-photo-0061.jpg" alt="Source photograph for Mehran Ahmadi's image processing study" />
               <img src="images/imagebymehranahmadiswimer.jpg" alt="Processed photographic image by Mehran Ahmadi" loading="lazy" />
               <img src="images/double-compound-pendulum.gif" alt="Double compound pendulum animation illustrating chaos theory" loading="lazy" />
             </div>
@@ -890,7 +1028,7 @@
             <div class="archive-card__geometry" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">07 / Writing / Process note 01</p>
+                <p class="archive-card__eyebrow">06 / Writing / Process note 01</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
@@ -917,14 +1055,12 @@
       <section class="archive-statement" aria-labelledby="archive-statement-title">
         <p class="archive-section-label">Index note / Version 2026.01</p>
         <div class="archive-statement__copy">
-          <h2 id="archive-statement-title">
-            This website is a personal archive of my images, projects, and experiments.
-          </h2>
+          <h2 id="archive-statement-title">An archive in motion.</h2>
           <p>
-            It changes as my work changes — through photography, computer graphics,
-            computer vision, and AI.
+            This website functions as an evolving archive. Works may shift,
+            disappear, reappear, or be reconstructed as the practice develops
+            across photography, computer graphics, AI systems, and computer vision.
           </p>
-          <p class="archive-statement__credit">Designed, built, and maintained by Mehran Ahmadi.</p>
           <div class="archive-methods" aria-label="Methods represented in the archive">
             <span>Photography</span>
             <span>Computer vision</span>
@@ -938,7 +1074,7 @@
     </main>
 
     <footer class="archive-footer">
-      <p class="archive-footer__index">MA / Visual archive</p>
+      <p class="archive-footer__index">MA / Visual archive / Tehran</p>
       <p class="archive-footer__copyright">&copy; 2026 Mehran Ahmadi</p>
       <nav class="archive-footer__social" aria-label="Social links">
         <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener">Instagram</a>
@@ -1025,17 +1161,6 @@
           next.addEventListener("click", function () {
             render(index + 1);
             start();
-          });
-
-          card.addEventListener("click", function (event) {
-            if (event.target.closest("a, button")) {
-              return;
-            }
-
-            var destination = card.querySelector(".archive-card__link");
-            if (destination) {
-              window.location.href = destination.href;
-            }
           });
 
           card.addEventListener("mouseenter", stop);

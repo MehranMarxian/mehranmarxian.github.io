@@ -1,5 +1,7 @@
 (function () {
-  const targets = Array.from(document.querySelectorAll(".gallery img, .artwork-statement img"));
+  const targets = Array.from(
+    document.querySelectorAll(".gallery img, .artwork-statement img, .meta-figure img")
+  );
 
   if (!targets.length) {
     return;
