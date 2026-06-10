@@ -1,12 +1,12 @@
 @import url("../webfonts/PTSans_Regular/stylesheet.css");
 
 :root {
-  --page-bg: #181a1b;
+  --page-bg: #111213;
   --text: #f2f2f2;
   --muted: #a8a8a8;
   --line: #1d1d1d;
-  --nav-bg: rgba(24, 26, 27, 0.94);
-  --footer-bg: #181a1b;
+  --nav-bg: rgba(17, 18, 19, 0.94);
+  --footer-bg: #111213;
   --footer-text: #ffffff;
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
@@ -830,21 +830,44 @@ p {
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-icons a {
   display: inline-flex;
-  width: 28px;
-  height: 28px;
+  width: 42px;
+  height: 42px;
   align-items: center;
   justify-content: center;
+  color: var(--footer-text);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  transition: transform 180ms ease;
 }
 
 .footer-icons img {
-  width: 22px;
-  height: 22px;
+  width: 17px;
+  height: 17px;
   object-fit: contain;
+  filter: invert(86%);
+  opacity: 0.82;
+  transition:
+    filter 180ms ease,
+    opacity 180ms ease;
+}
+
+.footer-icons a:hover,
+.footer-icons a:focus-visible {
+  background: transparent;
+  transform: translateY(-1px);
+}
+
+.footer-icons a:hover img,
+.footer-icons a:focus-visible img {
+  filter: invert(100%);
+  opacity: 1;
 }
 
 .blog-article {
