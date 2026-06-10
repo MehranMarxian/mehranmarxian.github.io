@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="False Restorations by Mehran Ahmadi: painterly AI-assisted artworks made from archived images, Photoshop, ComfyUI, and Z-Image Turbo."
+    />
+    <meta name="author" content="Mehran Ahmadi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mehran-ahmadi.com/False-Restorations.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="False Restorations | Mehran Ahmadi" />
+    <meta
+      property="og:description"
+      content="An AI-assisted visual series where archived images become unstable painterly reconstructions."
+    />
+    <meta property="og:url" content="https://mehran-ahmadi.com/False-Restorations.html" />
+    <meta
+      property="og:image"
+      content="https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp"
+    />
+
+    <title>False Restorations | AI-Assisted Art by Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <style>
+      .false-restorations-page {
+        display: block !important;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 clamp(72px, 10vw, 150px);
+      }
+
+      .false-restorations-hero {
+        position: relative;
+        display: grid;
+        min-height: min(82svh, 980px);
+        align-items: end;
+        overflow: hidden;
+        background: #090a0a;
+      }
+
+      .false-restorations-hero__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 !important;
+        border: 0;
+        border-radius: 0 !important;
+        object-fit: cover;
+        object-position: center 48%;
+      }
+
+      .false-restorations-hero::after {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 34%, rgba(0, 0, 0, 0.86) 100%);
+        pointer-events: none;
+      }
+
+      .false-restorations-hero__content {
+        position: relative;
+        z-index: 1;
+        width: min(1380px, calc(100% - 64px));
+        margin: 0 auto;
+        padding-bottom: clamp(36px, 7vw, 96px);
+      }
+
+      .false-restorations-hero h1 {
+        max-width: 1100px;
+        margin: 0 0 14px;
+        color: #ffffff;
+        font-size: clamp(3rem, 8vw, 7.5rem);
+        font-weight: 400;
+        line-height: 0.95;
+      }
+
+      .false-restorations-hero__intro {
+        max-width: 660px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: clamp(1rem, 1.5vw, 1.18rem);
+      }
+
+      .false-restorations-intro {
+        display: grid;
+        grid-template-columns: minmax(0, 0.34fr) minmax(0, 1fr);
+        gap: clamp(32px, 8vw, 132px);
+        max-width: 1280px;
+        margin: 0 auto clamp(48px, 8vw, 110px);
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding-top: clamp(64px, 9vw, 132px);
+      }
+
+      .false-restorations-index {
+        margin: 0;
+        color: rgba(242, 242, 242, 0.52);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .false-restorations-lead {
+        max-width: 920px;
+        margin-bottom: clamp(28px, 4vw, 52px);
+        color: rgba(242, 242, 242, 0.9);
+        font-size: clamp(1.12rem, 1.9vw, 1.55rem);
+        line-height: 1.55;
+      }
+
+      .false-restorations-statement {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(22px, 4vw, 58px);
+        max-width: 1020px;
+      }
+
+      .false-restorations-statement p {
+        margin: 0;
+        color: rgba(242, 242, 242, 0.64);
+        font-size: clamp(0.96rem, 1.25vw, 1.08rem);
+        line-height: 1.72;
+      }
+
+      .false-restorations-gallery {
+        display: block;
+      }
+
+      .false-restorations-gallery figure {
+        margin: 0;
+        overflow: visible !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+
+      .false-restorations-gallery img {
+        width: 100%;
+        height: auto;
+        padding: 0 !important;
+        border: 0;
+        border-radius: 0 !important;
+        object-fit: contain;
+        background: #111314;
+        cursor: zoom-in;
+      }
+
+      .false-restorations-columns {
+        width: min(1540px, calc(100% - 32px));
+        margin: 0 auto;
+        columns: 3 330px;
+        column-gap: clamp(14px, 2vw, 30px);
+      }
+
+      .false-restorations-columns .gallery-item {
+        break-inside: avoid;
+        margin-bottom: clamp(14px, 2vw, 30px);
+      }
+
+      .false-restorations-gallery .gallery-item img {
+        transition: filter 220ms ease;
+      }
+
+      .false-restorations-gallery .gallery-item:hover img,
+      .false-restorations-gallery .gallery-item:focus-within img {
+        filter: brightness(1.05);
+      }
+
+      .false-restorations-note {
+        display: grid;
+        grid-template-columns: minmax(0, 0.34fr) minmax(0, 1fr);
+        gap: clamp(32px, 8vw, 132px);
+        max-width: 1280px;
+        margin: clamp(58px, 10vw, 145px) auto 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+        padding-top: clamp(22px, 3vw, 38px);
+      }
+
+      .false-restorations-note blockquote {
+        max-width: 900px;
+        margin: 0;
+        color: rgba(242, 242, 242, 0.78);
+        font-size: clamp(1.15rem, 2.2vw, 2rem);
+        font-weight: 400;
+        line-height: 1.48;
+      }
+
+      .false-restorations-note blockquote span {
+        display: block;
+        margin-top: 1.4em;
+        color: rgba(242, 242, 242, 0.48);
+        font-size: 0.66em;
+      }
+
+      @media (max-width: 767.98px) {
+        .false-restorations-page {
+          width: 100%;
+        }
+
+        .false-restorations-hero {
+          min-height: 72svh;
+        }
+
+        .false-restorations-hero__image {
+          object-position: 52% center;
+        }
+
+        .false-restorations-hero__content {
+          width: min(100% - 32px, 1380px);
+          padding-bottom: 34px;
+        }
+
+        .false-restorations-hero h1 {
+          font-size: clamp(2.4rem, 12vw, 3.5rem);
+          line-height: 1;
+        }
+
+        .false-restorations-intro,
+        .false-restorations-note {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .false-restorations-statement {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .false-restorations-columns {
+          width: min(100% - 20px, 1540px);
+          columns: 2;
+          column-gap: 10px;
+        }
+
+        .false-restorations-columns .gallery-item {
+          margin-bottom: 10px;
+        }
+
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "False Restorations",
+        "url": "https://mehran-ahmadi.com/False-Restorations.html",
+        "description": "A collection of painterly AI-assisted works created from archived source images, reworked in Photoshop and regenerated through ComfyUI with Z-Image Turbo.",
+        "creator": {
+          "@type": "Person",
+          "name": "Mehran Ahmadi",
+          "url": "https://mehran-ahmadi.com/"
+        },
+        "keywords": [
+          "Mehran Ahmadi",
+          "False Restorations",
+          "AI-assisted art",
+          "ComfyUI",
+          "Z-Image Turbo",
+          "digital painting"
+        ]
+      }
+    </script>
+  </head>
+
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="false-restorations-page">
+      <header class="false-restorations-hero">
+        <img
+          class="false-restorations-hero__image"
+          src="Images/False-Restorations/false-restorations-09-figures-on-bed.webp"
+          alt="Two dreamlike reconstructed figures and a black cat arranged on a bed by Mehran Ahmadi"
+          width="1920"
+          height="1280"
+          fetchpriority="high"
+        />
+        <div class="false-restorations-hero__content">
+          <p class="false-restorations-index">Series / AI-assisted archive / 2025-2026</p>
+          <h1>False Restorations</h1>
+          <p class="false-restorations-hero__intro">
+            Archived images reassembled through Photoshop, ComfyUI, Z-Image Turbo, memory, and machine interpretation.
+          </p>
+        </div>
+      </header>
+
+      <section class="false-restorations-intro" aria-label="False Restorations statement">
+        <p class="false-restorations-index">Series / AI-assisted archive / 2025-2026</p>
+        <div class="false-restorations-copy">
+          <p class="false-restorations-lead">
+            A collection of painterly AI-assisted works created from old archived source images,
+            reworked in Photoshop and regenerated through ComfyUI with Z-Image Turbo. The series
+            transforms archival material into intimate, unstable interior scenes where bodies,
+            memory, and machine reconstruction merge into fictional paintings.
+          </p>
+          <div class="false-restorations-statement">
+            <p>
+              These works are not attempts to restore the archive, but to disturb it. The images
+              move between painting, memory, and machine reconstruction. Figures appear inside
+              quiet rooms, surrounded by portraits, furniture, windows, animals, and fragments of
+              domestic life.
+            </p>
+            <p>
+              I am interested in the moment where an image stops being a document and becomes a
+              ghost of itself. The archive here is alive, corrupted, theatrical, and uncertain:
+              beauty, error, intimacy, and distortion exist together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery false-restorations-gallery" aria-label="False Restorations gallery">
+        <div class="false-restorations-columns">
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-02-woman-by-window.webp"
+              alt="Painterly reconstructed figure reclining beneath a window in the False Restorations series by Mehran Ahmadi"
+              width="1152"
+              height="2048"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp"
+              alt="Two reconstructed figures and a black cat seated in an unstable painted interior by Mehran Ahmadi"
+              width="1920"
+              height="1280"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-04-fragmented-standing-figure.webp"
+              alt="Fragmented standing figure rendered as an imperfect AI-assisted painting by Mehran Ahmadi"
+              width="968"
+              height="1920"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-05-quiet-room-and-reflection.webp"
+              alt="Quiet reconstructed room with a seated figure, mirror, and fading figures by Mehran Ahmadi"
+              width="1280"
+              height="1920"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-06-theatrical-room-reconstruction.webp"
+              alt="Theatrical interior of layered figures, paintings, and machine artifacts by Mehran Ahmadi"
+              width="1920"
+              height="1280"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-07-portrait-by-window.webp"
+              alt="Intimate painterly portrait reconstructed beside a window by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-08-figure-among-portraits.webp"
+              alt="Standing figure surrounded by painted portraits and a black cat in an AI-assisted interior by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-01-archival-room.webp"
+              alt="Painterly AI-assisted archival interior with a seated figure, framed painting, and distorted sculpture by Mehran Ahmadi"
+              width="1920"
+              height="1280"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-10-seated-figure-and-mirror.webp"
+              alt="Seated figure beside a mirror and plant in a muted fictional painting by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-11-room-of-portraits.webp"
+              alt="Figures assembled inside a room filled with unstable painted portraits by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-12-figure-with-black-cat.webp"
+              alt="Reconstructed seated figure merging with a black cat and machine artifacts by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-13-two-figures-on-sofa.webp"
+              alt="Two pale figures seated together beneath a distorted framed body by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="Images/False-Restorations/false-restorations-14-figure-and-painted-archive.webp"
+              alt="Figure viewed from behind among portraits, a window, and altered furniture by Mehran Ahmadi"
+              width="1600"
+              height="2400"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="false-restorations-note" aria-label="False Restorations process note">
+        <p class="false-restorations-index">Process note / Archive reassembled</p>
+        <blockquote>
+          The body is not restored; it is reassembled through paint, artifact, memory, and machine
+          interpretation.
+          <span>Technology becomes atmosphere, like dust on an unfinished painting.</span>
+        </blockquote>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/insta.png" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/behance.png" alt="Behance" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/github.png" alt="GitHub" /></a>
+      </div>
+    </footer>
+
+    <script src="js/site-nav.js"></script>
+    <script src="js/gallery-lightbox.js"></script>
+  </body>
+</html>

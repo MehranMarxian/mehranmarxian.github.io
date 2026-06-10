@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="The Animal Machine by Mehran Ahmadi is a series of anatomical animal studies exploring human cruelty, industrial control, machine vision, and the transformation of living bodies into systems."
+    />
+    <meta property="og:title" content="The Animal Machine | Mehran Ahmadi" />
+    <meta
+      property="og:description"
+      content="An anatomical image series about flesh, technology, data, and the violence of human design."
+    />
+    <meta
+      property="og:image"
+      content="https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mehran-ahmadi.com/the_animal_machine.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://mehran-ahmadi.com/the_animal_machine.html" />
+    <title>The Animal Machine | Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+      .animal-page .meta-hero {
+        min-height: min(84svh, 980px);
+      }
+
+      .animal-page .meta-hero__image {
+        object-position: center;
+      }
+
+      .animal-page .meta-hero::after {
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.08) 30%, rgba(0, 0, 0, 0.88) 100%),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent 56%);
+      }
+
+      .animal-page .meta-hero h1 {
+        max-width: 1180px;
+      }
+
+      .animal-page .meta-hero__intro {
+        max-width: 710px;
+      }
+
+      .animal-story {
+        width: min(1480px, calc(100% - 32px));
+      }
+
+      .animal-introduction {
+        grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.4fr);
+      }
+
+      .animal-copy {
+        max-width: 660px;
+      }
+
+      .animal-figure {
+        margin: 0;
+        overflow: hidden;
+        background: #e9e5da;
+      }
+
+      .animal-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 0;
+        border-radius: 0;
+        cursor: zoom-in;
+      }
+
+      .animal-wide {
+        width: min(1320px, 100%);
+        margin: clamp(88px, 12vw, 180px) auto 0;
+      }
+
+      .animal-pair {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(14px, 2vw, 30px);
+        margin-top: clamp(64px, 8vw, 110px);
+        align-items: start;
+      }
+
+      .animal-statement {
+        max-width: 770px;
+      }
+
+      .animal-atlas {
+        margin-top: clamp(80px, 12vw, 180px);
+      }
+
+      .animal-atlas > .animal-wide:first-child,
+      .animal-atlas > .animal-pair:first-child {
+        margin-top: 0;
+      }
+
+      .animal-closing {
+        max-width: 860px;
+      }
+
+      .animal-site-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .animal-site-footer .footer-text {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      .animal-site-footer .footer-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 28px);
+        justify-content: center;
+        gap: 14px;
+        width: max-content;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 767.98px) {
+        .animal-page .meta-hero {
+          min-height: 72svh;
+        }
+
+        .animal-page .meta-hero__image {
+          object-position: center;
+          transform: none;
+        }
+
+        .animal-page .meta-hero h1 span {
+          display: block;
+        }
+
+        .animal-story {
+          width: min(100% - 20px, 1480px);
+        }
+
+        .animal-introduction {
+          grid-template-columns: 1fr;
+        }
+
+        .animal-pair {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          margin-top: 48px;
+        }
+
+        .animal-wide {
+          margin-top: 56px;
+        }
+
+        .animal-atlas {
+          margin-top: 72px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .animal-page *,
+        .animal-page *::before,
+        .animal-page *::after {
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VisualArtwork",
+        "name": "The Animal Machine",
+        "creator": {
+          "@type": "Person",
+          "name": "Mehran Ahmadi",
+          "url": "https://mehran-ahmadi.com/"
+        },
+        "artform": "Digital art and anatomical image study",
+        "description": "A series of anatomical animal studies about human cruelty, industrial control, and the transformation of living beings into systems.",
+        "image": "https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp",
+        "url": "https://mehran-ahmadi.com/the_animal_machine.html"
+      }
+    </script>
+  </head>
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="meta-page animal-page">
+      <header class="meta-hero">
+        <img
+          class="meta-hero__image"
+          src="Images/The-Animal-Machine/the-animal-machine-header.webp"
+          alt="The Animal Machine anatomical pig study by Mehran Ahmadi"
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+        />
+        <div class="meta-hero__content">
+          <p class="meta-kicker">Anatomical studies / Flesh, systems, control</p>
+          <h1><span>The</span> <span>Animal Machine</span></h1>
+          <p class="meta-hero__intro">
+            A series about human cruelty, industrial control, and the
+            transformation of living beings into systems.
+          </p>
+        </div>
+      </header>
+
+      <div class="meta-story animal-story">
+        <section class="meta-introduction animal-introduction">
+          <div class="meta-copy animal-copy">
+            <p class="meta-section-number">01 / The engineered body</p>
+            <h2>Living matter becomes an object.</h2>
+            <p>
+              In <em>The Animal Machine</em>, the animal body is shown as both
+              living matter and engineered object. The pig is no longer
+              represented as a natural being, but as something measured,
+              opened, mapped, processed, and redesigned by human systems.
+            </p>
+            <p>
+              The pig becomes a body, a diagram, a machine, and a dataset,
+              caught between flesh, technology, and the violence of human
+              design.
+            </p>
+          </div>
+
+          <figure class="meta-figure animal-figure">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-01.webp"
+              alt="Anatomical pig body reconstructed as a dense organic system by Mehran Ahmadi"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+        </section>
+
+        <figure class="meta-figure animal-figure animal-wide">
+          <img
+            src="Images/The-Animal-Machine/the-animal-machine-02.webp"
+            alt="Pig anatomy transformed into flesh, cables, and machine-like structures"
+            width="1536"
+            height="1024"
+            loading="lazy"
+          />
+        </figure>
+
+        <section class="meta-copy meta-copy--center animal-statement">
+          <p class="meta-section-number">02 / Hidden infrastructure</p>
+          <h2>Veins, wounds, cables, routes.</h2>
+          <p>
+            The red lines move across the body like veins, wounds, cables,
+            surgical traces, factory routes, and machine-learning diagrams.
+            They suggest a hidden infrastructure of control: the systems humans
+            build to dominate animals, to consume them, to study them, and to
+            turn their bodies into products.
+          </p>
+        </section>
+
+        <div class="animal-pair">
+          <figure class="meta-figure animal-figure">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-03.webp"
+              alt="Anatomical animal diagram crossed by red vascular lines"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="meta-figure animal-figure">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-04.webp"
+              alt="Pig body reduced to ribs, routes, and exposed technical structures"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
+        <figure class="meta-figure animal-figure animal-wide">
+          <img
+            src="Images/The-Animal-Machine/the-animal-machine-05.webp"
+            alt="Layered anatomical pig study suggesting an industrial biological machine"
+            width="1536"
+            height="1024"
+            loading="lazy"
+          />
+        </figure>
+
+        <section class="meta-copy meta-copy--center animal-statement">
+          <p class="meta-section-number">03 / Cruelty as structure</p>
+          <p>
+            This series looks at cruelty not only as a physical act, but as a
+            structure. A machine can be a slaughterhouse, a laboratory, an
+            industrial farm, a camera, a scanner, or an artificial intelligence
+            model.
+          </p>
+          <p>
+            In the modern world, animals are not only trapped by metal and
+            concrete; they are also captured by images, data, algorithms, and
+            prediction systems.
+          </p>
+        </section>
+
+        <section class="animal-atlas" aria-label="The Animal Machine artwork series">
+          <div class="animal-pair">
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-06.webp"
+                alt="Anatomical pig form with an exposed network of ribs and organs"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-07.webp"
+                alt="Pig anatomy rendered as a pale technical study with red internal lines"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <figure class="meta-figure animal-figure animal-wide">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-08.webp"
+              alt="Animal body mapped as an anatomical and computational diagram"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="animal-pair">
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-09.webp"
+                alt="Anatomical pig study with flesh transformed into layered internal systems"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-10.webp"
+                alt="Pale pig body interrupted by red lines and exposed anatomical structures"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <figure class="meta-figure animal-figure animal-wide">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-11.webp"
+              alt="Animal anatomy reorganized into a violent network of bodies and cables"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="animal-pair">
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-12.webp"
+                alt="Technical pig study showing anatomy as a classified system"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-13.webp"
+                alt="Pig body crossed by vascular routes and diagrammatic marks"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <figure class="meta-figure animal-figure animal-wide">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-14.webp"
+              alt="Anatomical animal form with internal structures organized like machinery"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="animal-pair">
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-15.webp"
+                alt="Pig anatomy rendered as a network of ribs, veins, and machine routes"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="meta-figure animal-figure">
+              <img
+                src="Images/The-Animal-Machine/the-animal-machine-16.webp"
+                alt="Anatomical pig body transformed into an archive of flesh and pattern"
+                width="1536"
+                height="1024"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+
+          <figure class="meta-figure animal-figure animal-wide">
+            <img
+              src="Images/The-Animal-Machine/the-animal-machine-17.webp"
+              alt="Final Animal Machine study of a pig body controlled by repeated red systems"
+              width="1536"
+              height="1024"
+              loading="lazy"
+            />
+          </figure>
+        </section>
+
+        <section class="meta-copy meta-copy--center animal-statement">
+          <p class="meta-section-number">04 / Flesh as information</p>
+          <h2>The body becomes a technical drawing.</h2>
+          <p>
+            The pig becomes a symbol of the animal transformed into
+            information. Flesh becomes archive. Pain becomes pattern. The body
+            becomes a technical drawing made by a violent intelligence.
+          </p>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="site-footer animal-site-footer">
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/insta.png" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/github.png" alt="GitHub" /></a>
+      </div>
+    </footer>
+
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+    </script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/site-nav.js"></script>
+    <script src="js/gallery-lightbox.js"></script>
+  </body>
+</html>

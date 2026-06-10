@@ -615,261 +615,6 @@
           transition: none;
         }
       }
-
-      /* Experimental works grid inspired by compact, image-first portfolio indexes. */
-      .archive-index {
-        width: min(100%, 1560px);
-        margin: 0 auto;
-        padding: clamp(34px, 5vw, 76px) clamp(18px, 5vw, 78px) clamp(76px, 9vw, 130px);
-      }
-
-      .archive-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: clamp(24px, 3.2vw, 48px);
-      }
-
-      .archive-card,
-      .archive-card--wide {
-        grid-column: auto;
-        min-height: 0;
-        aspect-ratio: 1 / 1;
-        overflow: hidden;
-        background: #111314;
-      }
-
-      .archive-card__media img {
-        filter: saturate(0.96) contrast(1.02) brightness(0.98);
-        transform: scale(1.002);
-        transition:
-          opacity 720ms ease,
-          filter 520ms ease,
-          transform 850ms cubic-bezier(0.2, 0.72, 0.2, 1);
-      }
-
-      .archive-card__media img.is-active {
-        transform: scale(1.002);
-      }
-
-      .archive-card__shade {
-        background: rgba(8, 9, 10, 0.12);
-        opacity: 1;
-        transition: background-color 480ms ease;
-      }
-
-      .archive-card__content {
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        text-align: center;
-      }
-
-      .archive-card__top {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        left: 20px;
-        opacity: 0;
-        transform: translateY(-8px);
-        transition:
-          opacity 260ms ease,
-          transform 360ms ease;
-      }
-
-      .archive-card__bottom {
-        position: static;
-        display: flex;
-        width: min(100%, 34rem);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        pointer-events: none;
-      }
-
-      .archive-card h3 {
-        max-width: 100%;
-        margin: 0;
-        color: #ffffff;
-        font-size: 1.65rem;
-        font-weight: 400;
-        line-height: 1.08;
-        text-align: center;
-        text-shadow: 0 2px 22px rgba(0, 0, 0, 0.72);
-        text-transform: uppercase;
-        letter-spacing: 0.09em;
-        overflow-wrap: anywhere;
-        transform: translateY(0);
-        transition:
-          color 260ms ease,
-          transform 420ms cubic-bezier(0.2, 0.72, 0.2, 1);
-      }
-
-      .archive-card__subtitle {
-        max-height: 0;
-        margin-top: 0;
-        overflow: hidden;
-        color: rgba(255, 255, 255, 0.82);
-        font-size: 0.54em;
-        line-height: 1.35;
-        opacity: 0;
-        transform: translateY(8px);
-        transition:
-          max-height 360ms ease,
-          margin-top 360ms ease,
-          opacity 260ms ease,
-          transform 360ms ease;
-      }
-
-      .archive-card__description {
-        max-width: 28rem;
-        min-height: 0;
-        margin: 14px 0 0;
-        color: rgba(255, 255, 255, 0.82);
-        font-size: 0.8rem;
-        line-height: 1.5;
-        opacity: 0;
-        transform: translateY(10px);
-        transition:
-          opacity 260ms ease,
-          transform 380ms ease;
-      }
-
-      .archive-card__actions {
-        position: absolute;
-        right: 20px;
-        bottom: 18px;
-        left: 20px;
-        padding-top: 12px;
-        border-color: rgba(255, 255, 255, 0.3);
-        opacity: 0;
-        pointer-events: auto;
-        transform: translateY(10px);
-        transition:
-          opacity 260ms ease,
-          transform 380ms ease;
-      }
-
-      .archive-card__link {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.68rem;
-      }
-
-      .archive-card__controls {
-        opacity: 0.82;
-      }
-
-      .archive-card--single .archive-card__controls {
-        visibility: hidden;
-      }
-
-      .archive-card:hover .archive-card__media img.is-active,
-      .archive-card:focus-within .archive-card__media img.is-active {
-        filter: saturate(1) contrast(1.03) brightness(0.78);
-        transform: scale(1.075);
-      }
-
-      .archive-card:hover .archive-card__shade,
-      .archive-card:focus-within .archive-card__shade {
-        background: rgba(8, 9, 10, 0.34);
-      }
-
-      .archive-card:hover .archive-card__top,
-      .archive-card:focus-within .archive-card__top,
-      .archive-card:hover .archive-card__description,
-      .archive-card:focus-within .archive-card__description,
-      .archive-card:hover .archive-card__actions,
-      .archive-card:focus-within .archive-card__actions {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .archive-card:hover h3,
-      .archive-card:focus-within h3 {
-        transform: translateY(-8px);
-      }
-
-      .archive-card:hover .archive-card__subtitle,
-      .archive-card:focus-within .archive-card__subtitle {
-        max-height: 4em;
-        margin-top: 8px;
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @media (max-width: 1099.98px) {
-        .archive-index {
-          padding-right: 24px;
-          padding-left: 24px;
-        }
-
-        .archive-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 24px;
-        }
-
-        .archive-card h3 {
-          font-size: 1.3rem;
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        .archive-index {
-          padding: 12px 10px 72px;
-        }
-
-        .archive-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px;
-        }
-
-        .archive-card__content {
-          padding: 10px;
-        }
-
-        .archive-card__top,
-        .archive-card__description,
-        .archive-card__actions,
-        .archive-card__subtitle {
-          display: none;
-        }
-
-        .archive-card h3 {
-          margin: 0;
-          color: rgba(255, 255, 255, 0.9);
-          font-size: 0.86rem;
-          line-height: 1.15;
-          text-shadow: 0 2px 16px rgba(0, 0, 0, 0.86);
-          letter-spacing: 0.06em;
-        }
-
-        .archive-card:hover h3,
-        .archive-card:focus-within h3 {
-          transform: none;
-        }
-
-        .archive-card:hover .archive-card__media img.is-active,
-        .archive-card:focus-within .archive-card__media img.is-active {
-          filter: saturate(0.96) contrast(1.02) brightness(0.92);
-          transform: scale(1.035);
-        }
-
-        .archive-card__shade {
-          background: rgba(8, 9, 10, 0.2);
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .archive-card__media img,
-        .archive-card__shade,
-        .archive-card__top,
-        .archive-card h3,
-        .archive-card__subtitle,
-        .archive-card__description,
-        .archive-card__actions {
-          transition: none;
-        }
-      }
     </style>
   </head>
   <body class="has-fixed-nav archive-home">
@@ -900,9 +645,17 @@
     </nav>
 
     <main>
+      <header class="archive-hero">
+        <p class="archive-kicker">Visual archive / 2005-2026</p>
+        <a class="archive-hero__index-link" href="#selected-fields">
+          <span>Enter selected fields</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </header>
+
       <section class="archive-index" id="selected-fields" aria-label="Selected archive fields">
         <div class="archive-grid">
-          <article class="archive-card archive-card--wide" data-slideshow data-delay="0" tabindex="0" role="link">
+          <article class="archive-card archive-card--wide" data-slideshow data-delay="0">
             <div class="archive-card__media">
               <img class="is-active" src="Images/15-mehran-ahmadi-portrait.jpg" alt="Portrait study by Mehran Ahmadi" />
               <img src="Images/8.jpg" alt="Portrait photograph by Mehran Ahmadi" loading="lazy" />
@@ -936,7 +689,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="600" tabindex="0" role="link">
+          <article class="archive-card" data-slideshow data-delay="600">
             <div class="archive-card__media">
               <img class="is-active" src="Images/mehran_ahmadi27.jpg" alt="Documentary photograph by Mehran Ahmadi" />
               <img src="Images/mehran_ahmadi01-crop-u9596.jpg" alt="Black and white portrait from A Place to Stay by Mehran Ahmadi" loading="lazy" />
@@ -970,7 +723,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="1200" tabindex="0" role="link">
+          <article class="archive-card" data-slideshow data-delay="1200">
             <div class="archive-card__media">
               <img class="is-active" src="Images/home/mehran-ahmadi-visual-artist-home-05.jpg" alt="Computer vision artwork by Mehran Ahmadi" />
               <img src="Images/AI/faces/10157993574576292.jpg" alt="Machine-generated face study by Mehran Ahmadi" loading="lazy" />
@@ -1001,7 +754,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="1800" tabindex="0" role="link">
+          <article class="archive-card" data-slideshow data-delay="1800">
             <div class="archive-card__media">
               <img class="is-active" src="Images/Experiments/Black out - Photogrammetry.jpg" alt="Black out photogrammetry study by Mehran Ahmadi" />
               <img src="Images/Experiments/Head Study - photogrammetry.jpg" alt="Photogrammetry head study by Mehran Ahmadi" loading="lazy" />
@@ -1032,7 +785,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="2400" tabindex="0" role="link">
+          <article class="archive-card" data-slideshow data-delay="2400">
             <div class="archive-card__media">
               <img class="is-active" src="Images/Melancholic toons/Melancholic toons (1).jpg" alt="Melancholic Toons AI artwork by Mehran Ahmadi" />
               <img src="Images/Melancholic toons/Melancholic toons (11).jpg" alt="Melancholic cartoon character reconstructed with AI by Mehran Ahmadi" loading="lazy" />
@@ -1045,7 +798,7 @@
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
-                <h3>Melancholic Toons</h3>
+                <h3>AI Works</h3>
                 <p class="archive-card__description">
                   Image-to-image experiments, melancholic characters, neural
                   artifacts, and hybrid visual systems.
@@ -1063,7 +816,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="3000" tabindex="0" role="link">
+          <article class="archive-card" data-slideshow data-delay="3000">
             <div class="archive-card__media">
               <img class="is-active" src="Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg" alt="Cinematic MetaHuman portrait by Mehran Ahmadi" />
               <img src="Images/blog/metahumans/mehran-ahmadi-metahuman-front-portrait.jpg" alt="Front portrait of a MetaHuman by Mehran Ahmadi" loading="lazy" />
@@ -1094,7 +847,7 @@
             </div>
           </article>
 
-          <article class="archive-card" data-slideshow data-delay="3600" tabindex="0" role="link">
+          <article class="archive-card" data-slideshow data-delay="3600">
             <div class="archive-card__media">
               <img class="is-active" src="images/mehran-ahmadi-photo-006.jpg" alt="Source photograph for Mehran Ahmadi's image processing study" loading="lazy" />
               <img src="images/imagebymehranahmadiswimer.jpg" alt="Processed photographic image by Mehran Ahmadi" loading="lazy" />
@@ -1124,173 +877,40 @@
               </div>
             </div>
           </article>
-
-          <article class="archive-card" data-slideshow data-delay="4200" tabindex="0" role="link">
-            <div class="archive-card__media">
-              <img class="is-active" src="Images/False-Restorations/false-restorations-09-figures-on-bed.webp" alt="False Restorations painterly reconstruction by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/False-Restorations/false-restorations-01-archival-room.webp" alt="Archival room reconstructed through AI-assisted image processes by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp" alt="Figures and a black cat from False Restorations by Mehran Ahmadi" loading="lazy" />
-            </div>
-            <div class="archive-card__shade" aria-hidden="true"></div>
-            <div class="archive-card__content">
-              <div class="archive-card__top">
-                <p class="archive-card__eyebrow">08 / AI-assisted archive / 2025-2026</p>
-                <p class="archive-card__counter" aria-live="polite">01 / 03</p>
-              </div>
-              <div class="archive-card__bottom">
-                <h3>False Restorations</h3>
-                <p class="archive-card__description">
-                  Archived images disturbed and reassembled through painting,
-                  memory, Photoshop, ComfyUI, and machine interpretation.
-                </p>
-                <div class="archive-card__actions">
-                  <a class="archive-card__link" href="False-Restorations.html">
-                    View series <span aria-hidden="true">→</span>
-                  </a>
-                  <div class="archive-card__controls">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous False Restorations image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next False Restorations image">→</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="archive-card" data-slideshow data-delay="4500" tabindex="0" role="link">
-            <div class="archive-card__media">
-              <img class="is-active" src="Images/The-Animal-Machine/the-animal-machine-header.webp" alt="The Animal Machine anatomical animal study by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/The-Animal-Machine/the-animal-machine-01.webp" alt="Anatomical pig reconstructed as a biological system by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/The-Animal-Machine/the-animal-machine-02.webp" alt="Pig anatomy transformed into flesh, cables, and machine structures" loading="lazy" />
-            </div>
-            <div class="archive-card__shade" aria-hidden="true"></div>
-            <div class="archive-card__content">
-              <div class="archive-card__top">
-                <p class="archive-card__eyebrow">09 / Anatomical systems / 2026</p>
-                <p class="archive-card__counter" aria-live="polite">01 / 03</p>
-              </div>
-              <div class="archive-card__bottom">
-                <h3>The Animal Machine</h3>
-                <p class="archive-card__description">
-                  Anatomical animal studies exploring flesh, industrial control,
-                  machine vision, and the violence of human design.
-                </p>
-                <div class="archive-card__actions">
-                  <a class="archive-card__link" href="the_animal_machine.html">
-                    View series <span aria-hidden="true">→</span>
-                  </a>
-                  <div class="archive-card__controls">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous Animal Machine image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next Animal Machine image">→</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="archive-card" data-slideshow data-delay="4800" tabindex="0" role="link">
-            <div class="archive-card__media">
-              <img class="is-active" src="images/mehran ahmadi color.jpg" alt="YOU digital artwork by Mehran Ahmadi" loading="lazy" />
-              <img src="images/othersider mehran ahmadi.jpg" alt="Fragmented figure from the YOU project by Mehran Ahmadi" loading="lazy" />
-              <img src="images/mehran ahmadi detil love.jpg" alt="Close detail from the YOU digital artwork by Mehran Ahmadi" loading="lazy" />
-            </div>
-            <div class="archive-card__shade" aria-hidden="true"></div>
-            <div class="archive-card__content">
-              <div class="archive-card__top">
-                <p class="archive-card__eyebrow">09 / Digital art / Photogrammetry</p>
-                <p class="archive-card__counter" aria-live="polite">01 / 03</p>
-              </div>
-              <div class="archive-card__bottom">
-                <h3>YOU</h3>
-                <p class="archive-card__description">
-                  A fragmented digital body moving between photographic source,
-                  photogrammetry, duplication, and unstable identity.
-                </p>
-                <div class="archive-card__actions">
-                  <a class="archive-card__link" href="you.html">
-                    Open project <span aria-hidden="true">→</span>
-                  </a>
-                  <div class="archive-card__controls">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous YOU image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next YOU image">→</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="archive-card" data-slideshow data-delay="5400" tabindex="0" role="link">
-            <div class="archive-card__media">
-              <img class="is-active" src="Images/wall/mehran_ahmad-wall-1.jpg" alt="WALLS photographic series by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/wall/mehran_ahmad-wall-2.jpg" alt="Weathered wall surface photographed by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/wall/mehran_ahmad-wall-3.jpg" alt="Architectural surface from the WALLS series by Mehran Ahmadi" loading="lazy" />
-            </div>
-            <div class="archive-card__shade" aria-hidden="true"></div>
-            <div class="archive-card__content">
-              <div class="archive-card__top">
-                <p class="archive-card__eyebrow">10 / Photography / 2005-2007</p>
-                <p class="archive-card__counter" aria-live="polite">01 / 03</p>
-              </div>
-              <div class="archive-card__bottom">
-                <h3>WALLS</h3>
-                <p class="archive-card__description">
-                  Photographs of worn surfaces, architectural traces, pigment,
-                  silence, and accidental abstraction.
-                </p>
-                <div class="archive-card__actions">
-                  <a class="archive-card__link" href="wall.html">
-                    View series <span aria-hidden="true">→</span>
-                  </a>
-                  <div class="archive-card__controls">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous WALLS image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next WALLS image">→</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="archive-card archive-card--single" data-slideshow data-delay="6000" tabindex="0" role="link">
-            <div class="archive-card__media">
-              <img class="is-active" src="Images/thumbnail uemehran.png" alt="Digital Sculptures video artwork by Mehran Ahmadi" loading="lazy" />
-            </div>
-            <div class="archive-card__shade" aria-hidden="true"></div>
-            <div class="archive-card__content">
-              <div class="archive-card__top">
-                <p class="archive-card__eyebrow">11 / Video work / Realtime sculpture</p>
-                <p class="archive-card__counter" aria-live="polite">01 / 01</p>
-              </div>
-              <div class="archive-card__bottom">
-                <h3>Digital Sculptures</h3>
-                <p class="archive-card__description">
-                  Realtime sculptural forms, moving images, and digital bodies
-                  presented as a video work.
-                </p>
-                <div class="archive-card__actions">
-                  <a class="archive-card__link" href="https://youtu.be/7L12Cd_4bPk?si=PiFct_Mt40LMm9Pb" target="_blank" rel="noopener">
-                    Watch video <span aria-hidden="true">→</span>
-                  </a>
-                  <div class="archive-card__controls" aria-hidden="true">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous Digital Sculptures image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next Digital Sculptures image">→</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 
+      <section class="archive-statement" aria-labelledby="archive-statement-title">
+        <p class="archive-section-label">Index note / Version 2026.01</p>
+        <div class="archive-statement__copy">
+          <h2 id="archive-statement-title">
+            This website is a personal archive of my images, projects, and experiments.
+          </h2>
+          <p>
+            It changes as my work changes — through photography, computer graphics,
+            computer vision, AI workflows and more.
+          </p>
+          <p class="archive-statement__credit">Designed, built, and maintained by Mehran Ahmadi.</p>
+          <div class="archive-methods" aria-label="Methods represented in the archive">
+            <span>Photography</span>
+            <span>Computer vision</span>
+            <span>Photogrammetry</span>
+            <span>Machine learning</span>
+            <span>Realtime rendering</span>
+            <span>Writing / research</span>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
-      <div class="footer-icons">
-        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook" /></a>
-        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/insta.png" alt="Instagram" /></a>
-        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn" /></a>
-        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/behance.png" alt="Behance" /></a>
-        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/github.png" alt="GitHub" /></a>
-      </div>
+    <footer class="archive-footer">
+      <p class="archive-footer__index">MA / Visual archive</p>
+      <p class="archive-footer__copyright">&copy; 2026 Mehran Ahmadi</p>
+      <nav class="archive-footer__social" aria-label="Social links">
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener">GitHub</a>
+      </nav>
     </footer>
 
     <script src="js/site-nav.js"></script>
@@ -1373,32 +993,14 @@
             start();
           });
 
-          function openDestination() {
-            var destination = card.querySelector(".archive-card__link");
-            if (!destination) {
-              return;
-            }
-
-            if (destination.target === "_blank") {
-              window.open(destination.href, "_blank", "noopener");
-              return;
-            }
-
-            window.location.href = destination.href;
-          }
-
           card.addEventListener("click", function (event) {
             if (event.target.closest("a, button")) {
               return;
             }
 
-            openDestination();
-          });
-
-          card.addEventListener("keydown", function (event) {
-            if ((event.key === "Enter" || event.key === " ") && !event.target.closest("a, button")) {
-              event.preventDefault();
-              openDestination();
+            var destination = card.querySelector(".archive-card__link");
+            if (destination) {
+              window.location.href = destination.href;
             }
           });
 
