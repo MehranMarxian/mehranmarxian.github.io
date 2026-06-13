@@ -8,7 +8,7 @@
   --nav-bg: rgba(14, 15, 15, 0.94);
   --footer-bg: #0e0f0f;
   --footer-text: #ffffff;
-  --site-version: "2026.20";
+  --site-version: "26.30";
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
 }
@@ -1025,7 +1025,7 @@ p {
 
 .site-footer:not(.contact-footer)::before {
   content: "Version " var(--site-version);
-  order: 2;
+  order: 3;
   width: 100%;
   margin: 2px 0 0;
   color: rgba(255, 255, 255, 0.42);
@@ -1035,7 +1035,7 @@ p {
 }
 
 .footer-text {
-  order: 3;
+  order: 2;
   width: 100%;
   margin: 0;
   color: rgba(255, 255, 255, 0.52);
@@ -1163,13 +1163,15 @@ p {
     font-size: 1.12rem;
   }
 
+  .contact-page .contact-shell {
+    min-height: calc(100svh - 64px - 62px);
+  }
+}
+
+@media (min-width: 1920px) {
   body:not(.contact-page) .site-footer .footer-icons img {
     width: 22px;
     height: 22px;
-  }
-
-  .contact-page .contact-shell {
-    min-height: calc(100svh - 64px - 62px);
   }
 }
 
