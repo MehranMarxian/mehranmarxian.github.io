@@ -8,7 +8,7 @@
   --nav-bg: rgba(14, 15, 15, 0.94);
   --footer-bg: #0e0f0f;
   --footer-text: #ffffff;
-  --site-version: "26.35";
+  --site-version: "26.40";
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
 }
@@ -1127,8 +1127,8 @@ p {
 }
 
 .contact-page .contact-links img {
-  width: 19px;
-  height: 19px;
+  width: 22.8px;
+  height: 22.8px;
 }
 
 .contact-page .contact-footer {
@@ -1196,8 +1196,8 @@ p {
   }
 
   .contact-page .contact-links img {
-    width: 17px;
-    height: 17px;
+    width: 20.4px;
+    height: 20.4px;
   }
 }
 
