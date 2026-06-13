@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A visual redesign experiment for Mehran Ahmadi's writing, process notes, and image-based projects."
+    />
+    <title>Blog Redesign | Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+  </head>
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item active"><a class="nav-link" href="blog-redesign.html">Blog <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-shell blog-redesign">
+      <header class="page-intro">
+        <h1>Blog</h1>
+        <p>Process notes, visual experiments, and project writing.</p>
+      </header>
+
+      <section class="blog-card-grid" aria-label="Blog projects">
+        <article class="blog-card">
+          <div class="blog-card__visual">
+            <div class="blog-card__slides" data-slideshow>
+              <img class="blog-card__slide is-active" src="Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg" alt="Cinematic MetaHuman portrait by Mehran Ahmadi" />
+              <img class="blog-card__slide" src="Images/blog/metahumans/mehran-ahmadi-metahuman-front-portrait.jpg" alt="" loading="lazy" />
+              <img class="blog-card__slide" src="Images/blog/metahumans/mehran-ahmadi-metahuman-realtime-night-lighting.jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__eyebrow">Unreal Engine / digital bodies</span>
+            <h2>The MetaHumans</h2>
+            <p>Digital bodies, synthetic identity, and experiments with virtual human presence, cinematic light, and realtime rendering.</p>
+            <a class="blog-card__link" href="archive/the-metahumans.html">Read project</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__visual">
+            <div class="blog-card__slides" data-slideshow>
+              <img class="blog-card__slide is-active" src="Images/Melancholic toons/Melancholic toons (1).jpg" alt="Melancholic Toons artwork" />
+              <img class="blog-card__slide" src="Images/Melancholic toons/Melancholic toons (6).jpg" alt="" loading="lazy" />
+              <img class="blog-card__slide" src="Images/Melancholic toons/Melancholic toons (10).jpg" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__eyebrow">Image-to-image / character studies</span>
+            <h2>Melancholic Toons</h2>
+            <p>Characters caught between memory, cartoon logic, and machine-assisted transformation.</p>
+            <a class="blog-card__link" href="Melancholictoons.html">View series</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__visual">
+            <div class="blog-card__comparison" data-comparison>
+              <img src="Images/mehran-ahmadi-photo-006.jpg" alt="Original photograph" />
+              <img class="blog-card__comparison-after" src="Images/imagebymehranahmadiswimer.jpg" alt="Processed photograph" />
+              <span class="blog-card__label blog-card__label--left">Processed</span>
+              <span class="blog-card__label blog-card__label--right">Original</span>
+              <span class="blog-card__comparison-line" aria-hidden="true"></span>
+              <input class="blog-card__range" type="range" min="0" max="100" value="50" aria-label="Compare processed and original images" />
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__eyebrow">Chaos / photography / transformation</span>
+            <h2>Image Processing</h2>
+            <p>A photographic experiment shaped by chaos theory and the sensitivity of images to small changes.</p>
+            <a class="blog-card__link" href="archive/blog-1.html">Read article</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__visual">
+            <div class="blog-card__comparison" data-comparison>
+              <img src="img/PSTOCOMFY/31.png" alt="Photoshop input image" />
+              <img class="blog-card__comparison-after" src="img/PSTOCOMFY/33.png" alt="ComfyUI output image" />
+              <span class="blog-card__label blog-card__label--left">ComfyUI</span>
+              <span class="blog-card__label blog-card__label--right">Photoshop</span>
+              <span class="blog-card__comparison-line" aria-hidden="true"></span>
+              <input class="blog-card__range" type="range" min="0" max="100" value="50" aria-label="Compare Photoshop input and ComfyUI output" />
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__eyebrow">Workflow / AI / line processing</span>
+            <h2>Photoshop to ComfyUI</h2>
+            <p>Moving between precise image editing and node-based AI generation while preserving the structure of the original artwork.</p>
+            <a class="blog-card__link" href="archive/pstocomfyui3.html">Read workflow</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card__visual">
+            <div class="blog-card__slides" data-slideshow>
+              <img class="blog-card__slide is-active" src="Images/mehran-ahmadi-photo-013.png" alt="Image Notes photograph by Mehran Ahmadi" />
+              <img class="blog-card__slide" src="Images/PS_TO_Z_Image 27.png" alt="" loading="lazy" />
+              <img class="blog-card__slide" src="Images/PS_TO_Z_Image 29.png" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__eyebrow">Archive / fragments / observations</span>
+            <h2>Image Notes</h2>
+            <p>A loose visual notebook of photographs, generated fragments, and unfinished image thoughts.</p>
+            <a class="blog-card__link" href="archive/imgs.html">Open notes</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+
+    <footer class="site-footer">
+      <div class="footer-icons" aria-label="Social links">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/site-nav.js"></script>
+    <script src="js/blog-preview.js"></script>
+  </body>
+</html>
