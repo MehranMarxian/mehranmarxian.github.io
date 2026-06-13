@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="EMPTY SPACE by Mehran Ahmadi, a long-exposure photographic series about absence, time, light, and neglected interiors."
+    />
+    <meta name="author" content="Mehran Ahmadi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mehran-ahmadi.com/empty-space.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="EMPTY SPACE | Mehran Ahmadi" />
+    <meta
+      property="og:description"
+      content="A long-exposure photographic series in which moving light slowly reveals dark, unused spaces and traces of absent human presence."
+    />
+    <meta property="og:url" content="https://mehran-ahmadi.com/empty-space.html" />
+    <meta
+      property="og:image"
+      content="https://mehran-ahmadi.com/Images/Empty-Space/empty-space-01.png"
+    />
+
+    <title>EMPTY SPACE | Photography by Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <style>
+      .empty-space-page {
+        display: block !important;
+        width: 100%;
+        padding: clamp(42px, 7vw, 110px) 0 clamp(72px, 10vw, 150px);
+        background: #0e0f0f;
+      }
+
+      .empty-space-hero {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.72fr) minmax(430px, 1.28fr);
+        align-items: center;
+        gap: clamp(38px, 7vw, 120px);
+        width: min(1380px, calc(100% - 64px));
+        min-height: calc(100svh - 140px);
+        margin: 0 auto;
+      }
+
+      .empty-space-copy {
+        max-width: 560px;
+      }
+
+      .empty-space-index {
+        margin: 0 0 clamp(28px, 5vw, 64px);
+        color: rgba(242, 242, 242, 0.48);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .empty-space-title {
+        margin: 0 0 clamp(30px, 5vw, 58px);
+        color: #ffffff;
+        font-size: clamp(2.7rem, 6vw, 6.25rem);
+        font-weight: 400;
+        line-height: 0.96;
+        letter-spacing: 0.12em;
+      }
+
+      .empty-space-lead {
+        margin: 0;
+        color: rgba(242, 242, 242, 0.88);
+        font-size: clamp(1.08rem, 1.7vw, 1.42rem);
+        line-height: 1.62;
+      }
+
+      .empty-space-figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        min-height: min(82svh, 1040px);
+        overflow: hidden;
+        background: #0a0b0b;
+      }
+
+      .empty-space-figure img {
+        width: 100%;
+        height: min(82svh, 1040px);
+        padding: 0 !important;
+        border: 0;
+        border-radius: 0 !important;
+        object-fit: contain;
+        object-position: center;
+        background: #0a0b0b;
+      }
+
+      .empty-space-statement {
+        display: grid;
+        grid-template-columns: minmax(0, 0.34fr) minmax(0, 1fr);
+        gap: clamp(32px, 8vw, 132px);
+        width: min(1280px, calc(100% - 64px));
+        margin: clamp(78px, 11vw, 168px) auto 0;
+        padding-top: clamp(26px, 4vw, 48px);
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .empty-space-statement__copy {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(24px, 4vw, 58px);
+        max-width: 980px;
+      }
+
+      .empty-space-statement p {
+        margin: 0;
+        color: rgba(242, 242, 242, 0.64);
+        font-size: clamp(0.98rem, 1.25vw, 1.08rem);
+        line-height: 1.76;
+      }
+
+      .empty-space-statement p:first-child {
+        color: rgba(242, 242, 242, 0.86);
+      }
+
+      @media (max-width: 991.98px) {
+        .empty-space-hero {
+          grid-template-columns: minmax(230px, 0.65fr) minmax(360px, 1fr);
+          width: min(100% - 40px, 1120px);
+          gap: 34px;
+        }
+
+        .empty-space-title {
+          font-size: clamp(2.4rem, 6vw, 4.6rem);
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .empty-space-page {
+          padding-top: 36px;
+        }
+
+        .empty-space-hero {
+          grid-template-columns: 1fr;
+          width: calc(100% - 32px);
+          min-height: 0;
+          gap: 38px;
+        }
+
+        .empty-space-copy {
+          max-width: none;
+        }
+
+        .empty-space-index {
+          margin-bottom: 24px;
+        }
+
+        .empty-space-title {
+          margin-bottom: 28px;
+          font-size: clamp(2.25rem, 12vw, 3.45rem);
+          letter-spacing: 0.09em;
+        }
+
+        .empty-space-figure,
+        .empty-space-figure img {
+          height: auto;
+          min-height: 0;
+        }
+
+        .empty-space-statement {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          width: calc(100% - 32px);
+          margin-top: 76px;
+        }
+
+        .empty-space-statement__copy {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "EMPTY SPACE",
+        "url": "https://mehran-ahmadi.com/empty-space.html",
+        "description": "A long-exposure photographic series about absence, time, moving light, and neglected interiors.",
+        "creator": {
+          "@type": "Person",
+          "name": "Mehran Ahmadi",
+          "url": "https://mehran-ahmadi.com/"
+        },
+        "dateCreated": "2014",
+        "keywords": [
+          "Mehran Ahmadi",
+          "EMPTY SPACE",
+          "long exposure photography",
+          "conceptual photography",
+          "absence",
+          "time"
+        ]
+      }
+    </script>
+  </head>
+
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="empty-space-page">
+      <section class="empty-space-hero" aria-labelledby="empty-space-title">
+        <div class="empty-space-copy">
+          <p class="empty-space-index">Photography / Long exposure / 2014-present</p>
+          <h1 class="empty-space-title" id="empty-space-title">EMPTY SPACE</h1>
+          <p class="empty-space-lead">
+            A photographic series about absence, darkness, and the slow discovery of spaces left outside
+            daily life.
+          </p>
+        </div>
+
+        <figure class="empty-space-figure">
+          <img
+            src="Images/Empty-Space/empty-space-01.png"
+            alt="Stacked chairs and covered furniture slowly revealed inside a dark, unused room"
+            width="1055"
+            height="1491"
+            fetchpriority="high"
+          />
+        </figure>
+      </section>
+
+      <section class="empty-space-statement" aria-label="EMPTY SPACE series statement">
+        <p class="empty-space-index">Series statement</p>
+        <div class="empty-space-statement__copy">
+          <p>
+            <strong>EMPTY SPACE</strong> is a photographic series about absence. The project began in
+            2014, when my work became more deeply invested in the concept of time in photography.
+          </p>
+          <p>
+            The series was created through long exposure photography, using a single moving light source
+            to slowly illuminate dark and unused spaces. I chose interiors that are usually forgotten,
+            ignored, or left outside daily life: rooms that exist quietly, without attention.
+          </p>
+          <p>
+            During the long exposure, light becomes an active presence inside the image. It moves through
+            the space, touching objects, revealing surfaces, and creating a dramatic tension between
+            darkness and visibility. The room is not simply photographed; it is slowly discovered over
+            time.
+          </p>
+          <p>
+            In <strong>EMPTY SPACE</strong>, the absence of people becomes central. The abandoned objects,
+            empty interiors, and traces of use suggest a human presence that has disappeared. Through
+            darkness, movement, and time, the series transforms ordinary neglected spaces into quiet
+            psychological landscapes.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-icons" aria-label="Social links">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/site-nav.js"></script>
+  </body>
+</html>

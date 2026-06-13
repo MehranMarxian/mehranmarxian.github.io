@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Works by Mehran Ahmadi across photography, computer vision, photogrammetry, digital bodies, and visual experiments."
+    />
+    <title>Works | Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+      :root {
+        --works-bg: #0e0f0f;
+        --works-text: #f2f2f2;
+        --works-muted: rgba(242, 242, 242, 0.5);
+        --works-line: rgba(242, 242, 242, 0.16);
+        --works-gap: clamp(4px, 0.45vw, 8px);
+      }
+
+      body.works-page {
+        background: var(--works-bg);
+      }
+
+      .works-main {
+        display: block;
+        flex: 1 0 auto;
+        width: 100%;
+        color: var(--works-text);
+        background: var(--works-bg);
+      }
+
+      .works-masthead {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 32px;
+        padding: clamp(28px, 4.5vw, 76px) clamp(16px, 2.4vw, 42px) clamp(24px, 3vw, 46px);
+      }
+
+      .works-title {
+        margin: 0;
+        font-size: clamp(4.4rem, 11vw, 12rem);
+        font-weight: 400;
+        line-height: 0.75;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+      }
+
+      .works-intro {
+        max-width: 420px;
+        margin: 0;
+        color: var(--works-muted);
+        font-size: clamp(0.76rem, 0.9vw, 0.9rem);
+        line-height: 1.5;
+        text-align: right;
+      }
+
+      .works-catalog {
+        display: grid;
+        grid-template-columns: minmax(148px, 11vw) minmax(0, 1fr);
+        gap: clamp(18px, 2vw, 36px);
+        padding: 0 clamp(10px, 1.4vw, 24px) clamp(64px, 8vw, 130px);
+      }
+
+      .works-index {
+        position: sticky;
+        top: 82px;
+        align-self: start;
+        padding-top: 2px;
+      }
+
+      .works-index__label,
+      .works-count {
+        margin: 0 0 18px;
+        color: var(--works-muted);
+        font-size: 0.65rem;
+        font-weight: 400;
+        line-height: 1.3;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .works-filters {
+        display: grid;
+        gap: 2px;
+      }
+
+      .works-filter {
+        width: fit-content;
+        padding: 2px 0;
+        color: rgba(242, 242, 242, 0.58);
+        font: inherit;
+        font-size: clamp(0.68rem, 0.72vw, 0.78rem);
+        line-height: 1.35;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        transition: color 160ms ease, transform 160ms ease;
+      }
+
+      .works-filter:hover,
+      .works-filter:focus-visible,
+      .works-filter.is-active {
+        color: #ffffff;
+        transform: translateX(4px);
+        outline: 0;
+      }
+
+      .works-count {
+        margin-top: 24px;
+        margin-bottom: 0;
+      }
+
+      .works-grid {
+        columns: 7 150px;
+        column-gap: var(--works-gap);
+        min-width: 0;
+      }
+
+      .work-tile {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 var(--works-gap);
+        min-width: 0;
+        overflow: hidden;
+        color: #ffffff;
+        background: #171919;
+        isolation: isolate;
+        break-inside: avoid;
+        vertical-align: top;
+      }
+
+      .work-tile[hidden] {
+        display: none;
+      }
+
+      .work-tile img {
+        width: 100%;
+        height: auto;
+        filter: saturate(0.82) contrast(1.03) brightness(0.85);
+        transition: filter 360ms ease;
+      }
+
+      .work-tile::after {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(to top, rgba(5, 6, 6, 0.84), transparent 54%);
+        opacity: 0;
+        content: "";
+        transition: opacity 240ms ease;
+      }
+
+      .work-tile__caption {
+        position: absolute;
+        z-index: 2;
+        right: 12px;
+        bottom: 10px;
+        left: 12px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 12px;
+        opacity: 0;
+        transform: translateY(7px);
+        transition: opacity 220ms ease, transform 220ms ease;
+      }
+
+      .work-tile__title,
+      .work-tile__meta {
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(0.65rem, 0.75vw, 0.82rem);
+        font-weight: 400;
+        line-height: 1.25;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+
+      .work-tile__meta {
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.59rem;
+        white-space: nowrap;
+      }
+
+      .work-tile:hover,
+      .work-tile:focus-visible {
+        color: #ffffff;
+        outline: 1px solid rgba(255, 255, 255, 0.72);
+        outline-offset: -1px;
+      }
+
+      .work-tile:hover img,
+      .work-tile:focus-visible img {
+        filter: saturate(1) contrast(1.02) brightness(0.98);
+      }
+
+      .work-tile:hover::after,
+      .work-tile:focus-visible::after,
+      .work-tile:hover .work-tile__caption,
+      .work-tile:focus-visible .work-tile__caption {
+        opacity: 1;
+      }
+
+      .work-tile:hover .work-tile__caption,
+      .work-tile:focus-visible .work-tile__caption {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1199.98px) {
+        .works-grid {
+          columns: 5 140px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .works-masthead {
+          display: block;
+          padding-top: 30px;
+        }
+
+        .works-title {
+          font-size: clamp(4.2rem, 24vw, 7rem);
+          line-height: 0.82;
+        }
+
+        .works-intro {
+          max-width: 330px;
+          margin-top: 24px;
+          text-align: left;
+        }
+
+        .works-catalog {
+          display: block;
+          padding-right: 8px;
+          padding-left: 8px;
+        }
+
+        .works-index {
+          position: static;
+          margin-bottom: 18px;
+          padding: 0 8px;
+          overflow-x: auto;
+          scrollbar-width: none;
+        }
+
+        .works-index::-webkit-scrollbar {
+          display: none;
+        }
+
+        .works-index__label,
+        .works-count {
+          display: none;
+        }
+
+        .works-filters {
+          display: flex;
+          width: max-content;
+          gap: 18px;
+        }
+
+        .works-filter {
+          padding: 8px 0;
+          white-space: nowrap;
+        }
+
+        .works-filter:hover,
+        .works-filter:focus-visible,
+        .works-filter.is-active {
+          transform: none;
+        }
+
+        .works-grid {
+          columns: 4;
+          column-gap: 3px;
+        }
+
+        .work-tile {
+          margin-bottom: 3px;
+        }
+
+        .work-tile__caption {
+          right: 5px;
+          bottom: 4px;
+          left: 5px;
+          display: none;
+        }
+
+        .work-tile::after {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .work-tile img,
+        .work-tile__caption,
+        .works-filter {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="has-fixed-nav works-page">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="works-main">
+      <header class="works-masthead">
+        <h1 class="works-title">Works</h1>
+        <p class="works-intro">
+          An index of photographs, reconstructed bodies, machine images, spatial captures, and visual experiments.
+        </p>
+      </header>
+
+      <section class="works-catalog" aria-label="Selected works">
+        <aside class="works-index" aria-label="Filter works">
+          <p class="works-index__label">Index</p>
+          <div class="works-filters" role="group" aria-label="Work categories">
+            <button class="works-filter is-active" type="button" data-filter="all" aria-pressed="true">All works</button>
+            <button class="works-filter" type="button" data-filter="photography" aria-pressed="false">Photography</button>
+            <button class="works-filter" type="button" data-filter="portrait" aria-pressed="false">Portraits</button>
+            <button class="works-filter" type="button" data-filter="documentary" aria-pressed="false">Documentary</button>
+            <button class="works-filter" type="button" data-filter="walls" aria-pressed="false">Walls</button>
+            <button class="works-filter" type="button" data-filter="computer-vision" aria-pressed="false">Computer Vision</button>
+            <button class="works-filter" type="button" data-filter="photogrammetry" aria-pressed="false">Photogrammetry</button>
+            <button class="works-filter" type="button" data-filter="digital-bodies" aria-pressed="false">Digital Bodies</button>
+          </div>
+          <p class="works-count" aria-live="polite"><span data-visible-count>47</span> works visible</p>
+        </aside>
+
+        <div class="works-grid">
+          <a class="work-tile work-tile--large" href="photography.html" data-category="photography portrait" style="--object-position: center 34%;">
+            <img src="Images/15-mehran-ahmadi-portrait.jpg" alt="Portrait photography by Mehran Ahmadi" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portraits</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--tall" href="experiments.html" data-category="photogrammetry digital-bodies" style="--object-position: center 42%;">
+            <img src="Images/Experiments/Head Study - photogrammetry.jpg" alt="Photogrammetry head study" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Head Study</span><span class="work-tile__meta">Photogrammetry</span></span>
+          </a>
+          <a class="work-tile" href="photography.html" data-category="photography portrait">
+            <img src="images/8.jpg" alt="Portrait photograph by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Untitled Portrait</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--panorama" href="the_animal_machine.html" data-category="computer-vision digital-bodies" style="--object-position: center 44%;">
+            <img src="Images/The-Animal-Machine/the-animal-machine-header.webp" alt="The Animal Machine" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">The Animal Machine</span><span class="work-tile__meta">Digital Bodies</span></span>
+          </a>
+          <a class="work-tile work-tile--wide" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi03-crop-u5071.jpg" alt="Documentary photograph by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="wall.html" data-category="photography walls">
+            <img src="Images/wall/mehran_ahmad-wall-1.jpg" alt="Walls photography series" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Walls I</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--tall" href="False-Restorations.html" data-category="computer-vision" style="--object-position: center 38%;">
+            <img src="Images/False-Restorations/false-restorations-09-figures-on-bed.webp" alt="False Restorations artwork" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">False Restorations</span><span class="work-tile__meta">Computer Vision</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait" style="--object-position: center 28%;">
+            <img src="images/3.jpg" alt="Portrait from Mehran Ahmadi's archive" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait Archive</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--panorama" href="wall.html" data-category="photography walls">
+            <img src="Images/wall/mehran_ahmad-wall-2.jpg" alt="Wall surface photograph" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Walls II</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--tall" href="experiments.html" data-category="photogrammetry digital-bodies" style="--object-position: center 30%;">
+            <img src="Images/Experiments/Black out - Photogrammetry.jpg" alt="Black Out photogrammetry study" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Black Out</span><span class="work-tile__meta">Photogrammetry</span></span>
+          </a>
+          <a class="work-tile work-tile--wide" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi06-crop-u9696.jpg" alt="Documentary image by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Observed Lives</span><span class="work-tile__meta">Documentary</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait" style="--object-position: center 26%;">
+            <img src="images/10-mehran-ahmadi-portrait.jpg" alt="Portrait by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait X</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--panorama" href="False-Restorations.html" data-category="computer-vision" style="--object-position: center 46%;">
+            <img src="Images/False-Restorations/false-restorations-01-archival-room.webp" alt="False Restorations archival room" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Archival Room</span><span class="work-tile__meta">False Restorations</span></span>
+          </a>
+          <a class="work-tile" href="wall.html" data-category="photography walls">
+            <img src="Images/wall/mehran_ahmad-wall-5.jpg" alt="Wall photograph by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Walls V</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile work-tile--wide" href="experiments.html" data-category="photogrammetry digital-bodies">
+            <img src="Images/Experiments/SELFPORTRAIT 3DSCAN- Photogrammetry.png" alt="3D scanned self portrait" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Self Portrait Scan</span><span class="work-tile__meta">Photogrammetry</span></span>
+          </a>
+          <a class="work-tile" href="photography.html" data-category="photography portrait">
+            <img src="images/maria portrait mehran ahmadi.jpg" alt="Maria portrait by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Maria</span><span class="work-tile__meta">Portrait</span></span>
+          </a>
+          <a class="work-tile work-tile--wide" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi12-crop-u5251.jpg" alt="Documentary photography series" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary XII</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="False-Restorations.html" data-category="computer-vision">
+            <img src="Images/False-Restorations/false-restorations-02-woman-by-window.webp" alt="Woman by window from False Restorations" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Woman by Window</span><span class="work-tile__meta">False Restorations</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/11-mehran-ahmadi-portrait.jpg" alt="Portrait XI by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait XI</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi04-crop-u5091.jpg" alt="Documentary photograph IV" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary IV</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="wall.html" data-category="photography walls">
+            <img src="Images/wall/mehran_ahmad-wall-3.jpg" alt="Walls series III" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Walls III</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="False-Restorations.html" data-category="computer-vision">
+            <img src="Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp" alt="Figures and black cat from False Restorations" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Figures and Black Cat</span><span class="work-tile__meta">False Restorations</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/12-mehran-ahmadi-portrait.jpg" alt="Portrait XII by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait XII</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi08-crop-u9736.jpg" alt="Documentary photograph VIII" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary VIII</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="wall.html" data-category="photography walls">
+            <img src="Images/wall/mehran_ahmad-wall-4.jpg" alt="Walls series IV" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Walls IV</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="False-Restorations.html" data-category="computer-vision">
+            <img src="Images/False-Restorations/false-restorations-07-portrait-by-window.webp" alt="Portrait by window from False Restorations" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait by Window</span><span class="work-tile__meta">False Restorations</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/13-mehran-ahmadi-portrait.jpg" alt="Portrait XIII by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait XIII</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi14-crop-u5291.jpg" alt="Documentary photograph XIV" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary XIV</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="wall.html" data-category="photography walls">
+            <img src="Images/wall/mehran_ahmad-wall-6.jpg" alt="Walls series VI" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Walls VI</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/14-mehran-ahmadi-portrait.jpg" alt="Portrait XIV by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait XIV</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="False-Restorations.html" data-category="computer-vision">
+            <img src="Images/False-Restorations/false-restorations-14-figure-and-painted-archive.webp" alt="Figure and painting from False Restorations" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Figure and Painting</span><span class="work-tile__meta">False Restorations</span></span>
+          </a>
+          <a class="work-tile" href="head-reconstruction.html" data-category="computer-vision digital-bodies">
+            <img src="Images/Head-Reconstruction/head-reconstruction-wire-grid.jpg" alt="Head Reconstruction wire-grid portrait" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Wire Grid</span><span class="work-tile__meta">Head Reconstruction</span></span>
+          </a>
+          <a class="work-tile" href="head-reconstruction.html" data-category="computer-vision digital-bodies">
+            <img src="Images/Head-Reconstruction/head-reconstruction-line-map.jpg" alt="Head Reconstruction line-map portrait" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Line Map</span><span class="work-tile__meta">Head Reconstruction</span></span>
+          </a>
+          <a class="work-tile" href="head-reconstruction.html" data-category="computer-vision digital-bodies">
+            <img src="Images/Head-Reconstruction/head-reconstruction-contour-profile.jpg" alt="Head Reconstruction contour profile" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Contour Profile</span><span class="work-tile__meta">Head Reconstruction</span></span>
+          </a>
+          <a class="work-tile" href="head-reconstruction.html" data-category="computer-vision digital-bodies">
+            <img src="Images/Head-Reconstruction/head-reconstruction-folded-shell.jpg" alt="Head Reconstruction folded shell" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Folded Shell</span><span class="work-tile__meta">Head Reconstruction</span></span>
+          </a>
+          <a class="work-tile" href="head-reconstruction.html" data-category="computer-vision digital-bodies">
+            <img src="Images/Head-Reconstruction/head-reconstruction-script-mask.jpg" alt="Head Reconstruction script mask" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Script Mask</span><span class="work-tile__meta">Head Reconstruction</span></span>
+          </a>
+          <a class="work-tile" href="experiments.html" data-category="photogrammetry digital-bodies">
+            <img src="Images/Experiments/Head Study 2 - Photogrammetry.png" alt="Second photogrammetry head study" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Head Study II</span><span class="work-tile__meta">Photogrammetry</span></span>
+          </a>
+          <a class="work-tile" href="experiments.html" data-category="photogrammetry digital-bodies">
+            <img src="Images/Experiments/SELFPORTRAIT - photogrammetry  Discplacement Maps.png" alt="Photogrammetry displacement-map self portrait" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Displacement Map</span><span class="work-tile__meta">Photogrammetry</span></span>
+          </a>
+          <a class="work-tile" href="experiments.html" data-category="photogrammetry digital-bodies">
+            <img src="Images/Experiments/Brambles mehran ahmadi selfportrait.jpg" alt="Brambles self portrait experiment" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Brambles</span><span class="work-tile__meta">Experiment</span></span>
+          </a>
+          <a class="work-tile" href="experiments.html" data-category="photogrammetry digital-bodies">
+            <img src="Images/Experiments/oh me.jpg" alt="Experimental self portrait by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Oh Me</span><span class="work-tile__meta">Experiment</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi05-crop-u9676.jpg" alt="Documentary photograph V" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary V</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi07-crop-u9716.jpg" alt="Documentary photograph VII" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary VII</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi09-crop-u9756.jpg" alt="Documentary photograph IX" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary IX</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="Documentryphotography.html" data-category="photography documentary">
+            <img src="Images/UnusedImages/Documentry/mehran_ahmadi11.jpg" alt="Documentary photograph XI" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Documentary XI</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/16-mehran-ahmadi-portrait.JPG" alt="Portrait XVI by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait XVI</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/17-mehran-ahmadi-portrait.JPG" alt="Portrait XVII by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Portrait XVII</span><span class="work-tile__meta">Photography</span></span>
+          </a>
+          <a class="work-tile" href="portraits.html" data-category="photography portrait">
+            <img src="images/afshin mehran ahmadi portrait.jpg" alt="Afshin portrait by Mehran Ahmadi" loading="lazy" />
+            <span class="work-tile__caption"><span class="work-tile__title">Afshin</span><span class="work-tile__meta">Portrait</span></span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-icons" aria-label="Social links">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+    </footer>
+
+    <script src="js/site-nav.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var filters = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+        var tiles = Array.prototype.slice.call(document.querySelectorAll("[data-category]"));
+        var count = document.querySelector("[data-visible-count]");
+
+        filters.forEach(function (filter) {
+          filter.addEventListener("click", function () {
+            var category = filter.getAttribute("data-filter");
+            var visible = 0;
+
+            filters.forEach(function (item) {
+              var active = item === filter;
+              item.classList.toggle("is-active", active);
+              item.setAttribute("aria-pressed", String(active));
+            });
+
+            tiles.forEach(function (tile) {
+              var categories = tile.getAttribute("data-category").split(" ");
+              var show = category === "all" || categories.indexOf(category) !== -1;
+              tile.hidden = !show;
+              if (show) {
+                visible += 1;
+              }
+            });
+
+            count.textContent = String(visible);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
