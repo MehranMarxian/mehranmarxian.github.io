@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="BRAMBLES by Mehran Ahmadi is a photogrammetry-based sculptural image project built from failure, erosion, and incomplete reconstruction."
+    />
+    <meta name="author" content="Mehran Ahmadi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mehran-ahmadi.com/brammbles.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BRAMBLES | Mehran Ahmadi" />
+    <meta
+      property="og:description"
+      content="A photogrammetry-based sculptural image project built from broken surfaces, missing data, and incomplete reconstruction."
+    />
+    <meta property="og:url" content="https://mehran-ahmadi.com/brammbles.html" />
+    <meta property="og:image" content="https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-three-quarter.webp" />
+    <title>BRAMBLES | Photogrammetry by Mehran Ahmadi</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+      .brambles-page {
+        display: block !important;
+        width: 100%;
+        padding-bottom: clamp(72px, 10vw, 150px);
+      }
+
+      .brambles-hero {
+        position: relative;
+        display: grid;
+        min-height: min(84svh, 980px);
+        align-items: end;
+        overflow: hidden;
+        background: #080909;
+      }
+
+      .brambles-hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 36%;
+      }
+
+      .brambles-hero::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.04) 28%, rgba(0, 0, 0, 0.88) 100%);
+        content: "";
+      }
+
+      .brambles-hero__content {
+        position: relative;
+        z-index: 1;
+        width: min(1380px, calc(100% - 64px));
+        margin: 0 auto;
+        padding-bottom: clamp(38px, 7vw, 96px);
+      }
+
+      .brambles-hero h1 {
+        margin: 0 0 12px;
+        color: #ffffff;
+        font-size: clamp(3rem, 9vw, 8rem);
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: 0.04em;
+      }
+
+      .brambles-hero p {
+        max-width: 720px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: clamp(1rem, 1.5vw, 1.18rem);
+      }
+
+      .brambles-statement {
+        display: grid;
+        grid-template-columns: minmax(0, 0.32fr) minmax(0, 1fr);
+        gap: clamp(32px, 8vw, 132px);
+        width: min(1280px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: clamp(70px, 10vw, 140px) 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+      }
+
+      .brambles-statement__index {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.48);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .brambles-statement__copy {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(22px, 4vw, 56px);
+      }
+
+      .brambles-statement__copy p {
+        margin: 0;
+        color: rgba(242, 242, 242, 0.68);
+        font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+        line-height: 1.75;
+      }
+
+      .brambles-statement__copy p:first-child {
+        grid-column: 1 / -1;
+        color: rgba(242, 242, 242, 0.92);
+        font-size: clamp(1.16rem, 2vw, 1.62rem);
+        line-height: 1.55;
+      }
+
+      .brambles-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(12px, 2vw, 28px);
+        width: min(1540px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .brambles-gallery figure {
+        margin: 0;
+        overflow: hidden;
+        background: #111313;
+      }
+
+      .brambles-gallery figure:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .brambles-gallery img {
+        display: block;
+        width: 100%;
+        height: auto;
+        cursor: zoom-in;
+        transition: filter 200ms ease, transform 280ms ease;
+      }
+
+      .brambles-gallery figure:hover img,
+      .brambles-gallery figure:focus-within img {
+        filter: brightness(1.05);
+        transform: scale(1.01);
+      }
+
+      @media (max-width: 767.98px) {
+        .brambles-hero {
+          min-height: 72svh;
+        }
+
+        .brambles-hero__content {
+          width: calc(100% - 32px);
+          padding-bottom: 34px;
+        }
+
+        .brambles-statement {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          width: calc(100% - 32px);
+        }
+
+        .brambles-statement__copy {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .brambles-statement__copy p:first-child {
+          grid-column: auto;
+        }
+
+        .brambles-gallery {
+          grid-template-columns: 1fr;
+          width: calc(100% - 20px);
+          gap: 10px;
+        }
+
+        .brambles-gallery figure:first-child {
+          grid-column: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="works.html">Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="brambles-page">
+      <header class="brambles-hero">
+        <img src="Images/Brambles/brambles-eroded-figure-three-quarter.webp" alt="BRAMBLES eroded figure by Mehran Ahmadi" />
+        <div class="brambles-hero__content">
+          <h1>BRAMBLES</h1>
+          <p>Photogrammetry / Sculptural Image / Incomplete Reconstruction</p>
+        </div>
+      </header>
+
+      <section class="brambles-statement" aria-labelledby="brambles-statement-title">
+        <p class="brambles-statement__index" id="brambles-statement-title">Project statement</p>
+        <div class="brambles-statement__copy">
+          <p><strong>BRAMBLES</strong> is a photogrammetry-based sculptural image project built from failure, erosion, and incomplete reconstruction.</p>
+          <p>
+            The work begins with the language of 3D capture, but instead of correcting its errors, it embraces them.
+            Broken surfaces, missing data, torn mesh structures, and fragile holes become the main material of the
+            image. The figure appears almost human, but never fully arrives as a portrait. A face is suggested, then
+            dissolved. Identity grows like thorns, roots, or burned organic matter around an empty center.
+          </p>
+          <p>
+            In <strong>BRAMBLES</strong>, photogrammetry is not used as a tool for accuracy, but as a way to reveal
+            distortion. The digital body becomes a wounded archive: a form caught between sculpture, memory, machine
+            vision, and decay. Its surface feels physical, almost touchable, yet it belongs to a space where the body
+            has already been translated, damaged, and rebuilt by technology.
+          </p>
+          <p>
+            The project explores how images survive after reconstruction, and what remains when the machine fails to
+            understand the human form.
+          </p>
+        </div>
+      </section>
+
+      <section class="brambles-gallery" aria-label="BRAMBLES image gallery">
+        <figure class="gallery-item"><img src="Images/Brambles/brambles-eroded-figure-sculpture.webp" alt="Full sculptural view from BRAMBLES by Mehran Ahmadi" /></figure>
+        <figure class="gallery-item"><img src="Images/Brambles/brambles-eroded-figure-three-quarter.webp" alt="Three-quarter view of the eroded BRAMBLES figure" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/Brambles/brambles-eroded-figure-profile.webp" alt="Profile view of the eroded BRAMBLES figure" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/Brambles/brambles-eroded-figure-front.webp" alt="Front view of the eroded BRAMBLES figure" loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="Images/Brambles/brambles-eroded-figure-back.webp" alt="Back view of the eroded BRAMBLES figure" loading="lazy" /></figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-icons" aria-label="Social links">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <script src="js/site-nav.js"></script>
+    <script src="js/gallery-lightbox.js"></script>
+  </body>
+</html>

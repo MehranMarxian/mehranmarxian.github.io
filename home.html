@@ -1019,31 +1019,47 @@
       }
 
       @media (max-width: 767.98px) {
+        .archive-index {
+          padding: 18px 12px 72px;
+        }
+
         .archive-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 10px;
+          gap: 12px;
         }
 
         .archive-card--photography {
           grid-column: 1 / -1;
-          width: 90vw;
-          aspect-ratio: 1 / 1;
+          grid-row: auto;
+          width: 100%;
+          aspect-ratio: 4 / 5;
         }
 
         .archive-secondary {
-          grid-template-columns: 1fr;
-          width: 90vw;
-          gap: 10px;
+          grid-column: 1 / -1;
+          grid-row: auto;
+          display: contents;
         }
 
         .archive-card--computer-vision,
         .archive-card--photogrammetry {
+          grid-column: span 1;
+          min-width: 0;
           width: 100%;
           aspect-ratio: 1 / 1;
         }
 
         .archive-card--field h3 {
-          font-size: clamp(1rem, 5vw, 1.42rem);
+          font-size: clamp(1rem, 4.8vw, 1.3rem);
+          white-space: nowrap;
+        }
+
+        .archive-card--computer-vision h3 {
+          font-size: clamp(0.7rem, 3.15vw, 0.88rem);
+        }
+
+        .archive-card--photogrammetry h3 {
+          font-size: clamp(0.58rem, 2.75vw, 0.76rem);
         }
 
         .archive-card--support {
@@ -1053,7 +1069,12 @@
         }
 
         .archive-card--support h3 {
-          font-size: clamp(0.72rem, 3.7vw, 0.92rem);
+          font-size: clamp(0.64rem, 2.9vw, 0.82rem);
+          white-space: nowrap;
+        }
+
+        .archive-card--support:last-child h3 {
+          font-size: clamp(0.54rem, 2.5vw, 0.7rem);
         }
       }
     </style>

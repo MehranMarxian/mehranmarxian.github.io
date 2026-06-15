@@ -12,22 +12,22 @@
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
     <style>
-      .photogrammetry-related {
-        margin-bottom: clamp(28px, 5vw, 72px);
+      .photogrammetry-projects {
+        --photogrammetry-gap: clamp(8px, 1.2vw, 18px);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--photogrammetry-gap);
+        margin-bottom: var(--photogrammetry-gap);
       }
 
-      .photogrammetry-related__label {
-        margin: 0 0 14px;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
+      .photogrammetry-related {
+        min-width: 0;
       }
 
       .photogrammetry-related__card {
         position: relative;
         display: block;
-        min-height: clamp(300px, 48vw, 680px);
+        aspect-ratio: 1 / 1;
         overflow: hidden;
         color: #ffffff;
         background: #111212;
@@ -51,15 +51,15 @@
       .photogrammetry-related__text {
         position: absolute;
         z-index: 1;
-        right: clamp(18px, 4vw, 54px);
-        bottom: clamp(18px, 4vw, 48px);
-        left: clamp(18px, 4vw, 54px);
+        right: clamp(14px, 2.4vw, 34px);
+        bottom: clamp(14px, 2.4vw, 30px);
+        left: clamp(14px, 2.4vw, 34px);
       }
 
       .photogrammetry-related__text h2 {
         margin: 0 0 6px;
         color: #ffffff;
-        font-size: clamp(1.8rem, 5vw, 4.8rem);
+        font-size: clamp(1.4rem, 3vw, 2.8rem);
         font-weight: 400;
       }
 
@@ -80,9 +80,48 @@
         transform: scale(1.025);
       }
 
+      .project-gallery img {
+        object-position: var(--object-position, center);
+      }
+
+      .project-page .project-gallery {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: clamp(8px, 1.2vw, 18px);
+      }
+
+      .project-page .project-gallery .gallery-item,
+      .project-page .project-gallery img {
+        aspect-ratio: 1 / 1;
+      }
+
+      @media (max-width: 767.98px) {
+        .project-page .project-gallery {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 8px;
+        }
+      }
+
       @media (max-width: 575.98px) {
-        .photogrammetry-related__card {
-          min-height: 72vw;
+        .photogrammetry-projects {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          margin-bottom: 8px;
+        }
+
+        .photogrammetry-related__text {
+          right: 8px;
+          bottom: 10px;
+          left: 8px;
+        }
+
+        .photogrammetry-related__text h2 {
+          margin-bottom: 3px;
+          font-size: clamp(0.92rem, 5vw, 1.2rem);
+        }
+
+        .photogrammetry-related__text p {
+          font-size: clamp(0.52rem, 2.7vw, 0.68rem);
+          line-height: 1.2;
         }
       }
     </style>
@@ -111,22 +150,32 @@
         <p>3D scans, displacement maps, fragmented bodies, and digital reconstructions.</p>
       </header>
 
-      <section class="photogrammetry-related" aria-labelledby="related-project-title">
-        <p class="photogrammetry-related__label">Related project</p>
-        <a class="photogrammetry-related__card" href="you.html">
-          <img src="images/mehran ahmadi color.jpg" alt="YOU digital artwork by Mehran Ahmadi" />
-          <span class="photogrammetry-related__text">
-            <h2 id="related-project-title">YOU</h2>
-            <p>Digital Art / Photogrammetry</p>
-          </span>
-        </a>
-      </section>
+      <div class="photogrammetry-projects">
+        <section class="photogrammetry-related" aria-labelledby="related-project-title">
+          <a class="photogrammetry-related__card" href="you.html">
+            <img src="images/mehran ahmadi color.jpg" alt="YOU digital artwork by Mehran Ahmadi" />
+            <span class="photogrammetry-related__text">
+              <h2 id="related-project-title">YOU</h2>
+              <p>Digital Art / Photogrammetry</p>
+            </span>
+          </a>
+        </section>
+
+        <section class="photogrammetry-related" aria-labelledby="brambles-project-title">
+          <a class="photogrammetry-related__card" href="brammbles.html">
+            <img src="Images/Brambles/brambles-eroded-figure-three-quarter.webp" alt="BRAMBLES eroded photogrammetry figure by Mehran Ahmadi" />
+            <span class="photogrammetry-related__text">
+              <h2 id="brambles-project-title">BRAMBLES</h2>
+              <p>Failure / Erosion / Incomplete Reconstruction</p>
+            </span>
+          </a>
+        </section>
+      </div>
 
       <section class="gallery project-gallery" aria-label="Photogrammetry gallery">
         <figure class="gallery-item"><img src="Images/Experiments/Black out - Photogrammetry.jpg" alt="Black out photogrammetry work by Mehran Ahmadi" /></figure>
         <figure class="gallery-item"><img src="Images/Experiments/Head Study - photogrammetry.jpg" alt="Head study photogrammetry work by Mehran Ahmadi" loading="lazy" /></figure>
         <figure class="gallery-item"><img src="Images/Experiments/Head Study 2 - Photogrammetry.png" alt="Second head study photogrammetry work by Mehran Ahmadi" loading="lazy" /></figure>
-        <figure class="gallery-item"><img src="Images/Experiments/SELFPORTRAIT - photogrammetry  Discplacement Maps.png" alt="Self portrait photogrammetry displacement map by Mehran Ahmadi" loading="lazy" /></figure>
         <figure class="gallery-item"><img src="Images/Experiments/SELFPORTRAIT 3DSCAN- Photogrammetry.png" alt="Self portrait 3D scan by Mehran Ahmadi" loading="lazy" /></figure>
       </section>
     </main>
