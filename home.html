@@ -943,6 +943,10 @@
         overflow-wrap: normal;
       }
 
+      .archive-card--openlayer h3 {
+        font-size: clamp(0.62rem, 0.86vw, 0.9rem);
+      }
+
       .archive-card--support .archive-card__description {
         display: none;
       }
@@ -982,6 +986,12 @@
 
         .archive-card--support .archive-card__top {
           display: none;
+        }
+      }
+
+      @media (min-width: 2000px) {
+        .archive-grid {
+          gap: 100px;
         }
       }
 
@@ -1076,6 +1086,12 @@
         .archive-card--support:last-child h3 {
           font-size: clamp(0.54rem, 2.5vw, 0.7rem);
         }
+
+        .archive-card--openlayer h3 {
+          font-size: clamp(0.52rem, 2.45vw, 0.68rem);
+          line-height: 1.2;
+          white-space: normal;
+        }
       }
     </style>
   </head>
@@ -1098,7 +1114,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="works.html">Works</a></li>
           <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -1175,7 +1190,7 @@
             <div class="archive-card__media">
               <img class="is-active" src="Images/Experiments/Black out - Photogrammetry.jpg" alt="Black out photogrammetry study by Mehran Ahmadi" />
               <img src="Images/Experiments/Head Study - photogrammetry.jpg" alt="Photogrammetry head study by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/UnusedImages/3D/mehran-ahmadi-portrait-3d-scan.jpg" alt="Fragmented 3D portrait scan by Mehran Ahmadi" loading="lazy" />
+              <img src="Images/Brambles/brambles-eroded-figure-three-quarter.webp" alt="Fragmented 3D portrait scan by Mehran Ahmadi" loading="lazy" />
             </div>
             <div class="archive-card__shade" aria-hidden="true"></div>
             <div class="archive-card__content">
@@ -1203,31 +1218,29 @@
           </article>
           </div>
 
-<article class="archive-card archive-card--support" data-slideshow data-delay="1800" tabindex="0" role="link">
+<article class="archive-card archive-card--support archive-card--openlayer" data-slideshow data-delay="1800" tabindex="0" role="link">
             <div class="archive-card__media">
-              <img class="is-active" src="Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg" alt="Cinematic MetaHuman portrait by Mehran Ahmadi" />
-              <img src="Images/blog/metahumans/mehran-ahmadi-metahuman-front-portrait.jpg" alt="Front portrait of a MetaHuman by Mehran Ahmadi" loading="lazy" />
-              <img src="Images/blog/metahumans/mehran-ahmadi-metahuman-realtime-night-lighting.jpg" alt="MetaHuman rendered with realtime night lighting by Mehran Ahmadi" loading="lazy" />
+              <img class="is-active" src="Images/OpenLayer/openlayer-photoshop-v53.png" alt="OpenLayer Photoshop Plugin interface by Mehran Ahmadi" loading="lazy" />
             </div>
             <div class="archive-card__shade" aria-hidden="true"></div>
             <div class="archive-card__content">
               <div class="archive-card__top">
-                <p class="archive-card__eyebrow">06 / Unreal Engine / 2024</p>
+                <p class="archive-card__eyebrow">06 / Photoshop plugin / Workflow</p>
                 <p class="archive-card__counter" aria-live="polite">01 / 03</p>
               </div>
               <div class="archive-card__bottom">
-                <h3>Metahumans</h3>
+                <h3>OpenLayer Photoshop Plugin</h3>
                 <p class="archive-card__description">
-                  Digital bodies, synthetic identity, and experiments with
-                  virtual human presence, cinematic light, and realtime rendering.
+                  A Photoshop extension workflow for layered image generation,
+                  compositing, and AI-assisted visual production.
                 </p>
                 <div class="archive-card__actions">
-                  <a class="archive-card__link" href="archive/the-metahumans.html">
-                    Read project <span aria-hidden="true">→</span>
+                  <a class="archive-card__link" href="https://mehran-ahmadi.com/OpenLayer/" target="_blank" rel="noopener">
+                    Open plugin <span aria-hidden="true">→</span>
                   </a>
                   <div class="archive-card__controls">
-                    <button class="archive-card__control" type="button" data-previous aria-label="Previous Metahumans image">←</button>
-                    <button class="archive-card__control" type="button" data-next aria-label="Next Metahumans image">→</button>
+                    <button class="archive-card__control" type="button" data-previous aria-label="Previous OpenLayer Photoshop Plugin image">←</button>
+                    <button class="archive-card__control" type="button" data-next aria-label="Next OpenLayer Photoshop Plugin image">→</button>
                   </div>
                 </div>
               </div>
