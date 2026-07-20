@@ -574,36 +574,27 @@ p {
   display: grid;
   width: 100%;
   clear: both;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(18px, 2.5vw, 36px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.2vw, 32px);
 }
 
 .blog-card {
-  grid-column: span 6;
+  grid-column: auto;
   overflow: hidden;
   background: #111212;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.blog-card:nth-child(1),
-.blog-card:nth-child(4) {
-  grid-column: span 7;
-}
-
-.blog-card:nth-child(2),
-.blog-card:nth-child(5) {
-  grid-column: span 5;
-}
-
 .blog-card__visual {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #090a0a;
 }
 
 .blog-card__visual > img,
 .blog-card__slide {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -628,6 +619,8 @@ p {
 .blog-card__comparison {
   position: absolute;
   inset: 0;
+  touch-action: none;
+  user-select: none;
 }
 
 .blog-card__comparison img {
@@ -639,6 +632,7 @@ p {
 }
 
 .blog-card__comparison-after {
+  z-index: 1;
   clip-path: inset(0 50% 0 0);
 }
 
@@ -647,6 +641,7 @@ p {
   top: 0;
   bottom: 0;
   left: 50%;
+  z-index: 2;
   width: 1px;
   background: rgba(255, 255, 255, 0.82);
   transform: translateX(-0.5px);
@@ -668,7 +663,7 @@ p {
 
 .blog-card__range {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   inset: 0;
   width: 100%;
   height: 100%;
@@ -679,7 +674,7 @@ p {
 
 .blog-card__label {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   bottom: 12px;
   padding: 5px 8px;
   color: rgba(255, 255, 255, 0.88);
@@ -699,10 +694,10 @@ p {
 
 .blog-card__body {
   display: flex;
-  min-height: 190px;
+  min-height: 172px;
   flex-direction: column;
   align-items: flex-start;
-  padding: clamp(22px, 3vw, 38px);
+  padding: clamp(20px, 2.5vw, 32px);
 }
 
 .blog-card__eyebrow {
@@ -715,13 +710,17 @@ p {
 
 .blog-card__body h2 {
   margin-bottom: 12px;
-  font-size: clamp(1.45rem, 2.4vw, 2.3rem);
+  font-size: clamp(1.28rem, 2vw, 1.85rem);
 }
 
 .blog-card__body p {
   max-width: 58ch;
   margin-bottom: 24px;
   color: var(--muted);
+}
+
+.blog-card__body p + p {
+  display: none;
 }
 
 .blog-card__link {
@@ -743,11 +742,7 @@ p {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .blog-card,
-  .blog-card:nth-child(1),
-  .blog-card:nth-child(2),
-  .blog-card:nth-child(4),
-  .blog-card:nth-child(5) {
+  .blog-card {
     grid-column: 1;
     width: 100%;
     min-width: 0;

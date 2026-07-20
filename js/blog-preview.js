@@ -21,13 +21,38 @@
     var after = comparison.querySelector(".blog-card__comparison-after");
     var line = comparison.querySelector(".blog-card__comparison-line");
 
-    function updateComparison() {
-      var value = Number(range.value);
+    if (!range || !after || !line) {
+      return;
+    }
+
+    function updateComparison(value) {
+      value = Math.max(0, Math.min(100, Number(value)));
+      range.value = value;
       after.style.clipPath = "inset(0 " + (100 - value) + "% 0 0)";
       line.style.left = value + "%";
     }
 
-    range.addEventListener("input", updateComparison);
-    updateComparison();
+    function updateFromPointer(event) {
+      var rect = comparison.getBoundingClientRect();
+      var x = event.clientX - rect.left;
+      updateComparison((x / rect.width) * 100);
+    }
+
+    range.addEventListener("input", function () {
+      updateComparison(range.value);
+    });
+
+    comparison.addEventListener("pointerdown", function (event) {
+      comparison.setPointerCapture(event.pointerId);
+      updateFromPointer(event);
+    });
+
+    comparison.addEventListener("pointermove", function (event) {
+      if (event.buttons) {
+        updateFromPointer(event);
+      }
+    });
+
+    updateComparison(range.value || 50);
   });
 })();
