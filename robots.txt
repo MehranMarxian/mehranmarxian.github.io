@@ -1,4 +1,14 @@
+# https://mehran-ahmadi.com/robots.txt
 User-agent: *
+Allow: /
+
+# Working drafts and superseded layouts - kept in the repo, not for search.
+Disallow: /pstocomfyui_files/
+Disallow: /*.psd$
+Disallow: /*.ai$
+
+# Image search is a primary channel for this site; keep image crawlers open.
+User-agent: Googlebot-Image
 Allow: /
 
 Sitemap: https://mehran-ahmadi.com/sitemap.xml

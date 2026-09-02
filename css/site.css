@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("../webfonts/PTSans_Regular/stylesheet.css");
 
 :root {
@@ -1478,7 +1479,8 @@ p {
   z-index: 1;
   display: grid;
   place-items: center;
-  padding: 24px;
+  align-content: center;
+  padding: 24px 24px 128px;
   text-align: center;
   color: #ffffff;
 }
@@ -1506,12 +1508,74 @@ p {
   border-color: #ffffff;
 }
 
-.hero-footer-text {
+.hero-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-tagline {
+  max-width: 44ch;
+  margin: 14px auto 26px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.88rem, 1.8vw, 1rem);
+  line-height: 1.55;
+}
+
+.hero-footer {
   position: absolute;
   z-index: 1;
   right: 16px;
   bottom: 12px;
   left: 16px;
+  text-align: center;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px 0;
+  margin: 0 auto 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-links li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hero-links li + li::before {
+  flex: 0 0 auto;
+  width: 3px;
+  height: 3px;
+  margin: 0 9px;
+  background: rgba(255, 255, 255, 0.34);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-links a {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.74rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.hero-links a:hover,
+.hero-links a:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.hero-footer-text {
+  margin: 0;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.78rem;
   text-align: center;
@@ -1763,4 +1827,124 @@ p {
     margin-top: 82px;
     padding: 0 12px;
   }
+}
+
+/* ---------------------------------------------------------------
+   Page masthead — gives gallery pages a real heading and lede so
+   they read (and index) as documents rather than bare image grids.
+   --------------------------------------------------------------- */
+.page-masthead {
+  width: 100%;
+  padding: clamp(28px, 4.2vw, 56px) clamp(16px, 3.4vw, 60px) clamp(20px, 3vw, 34px);
+  text-align: left;
+  border-bottom: 1px solid rgba(241, 240, 236, 0.16);
+}
+
+.page-masthead__kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.page-masthead__kicker::before {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 1px;
+  background: rgba(241, 240, 236, 0.34);
+  content: "";
+}
+
+.page-masthead h1 {
+  max-width: 20ch;
+  margin: 0 0 14px;
+  font-size: clamp(1.7rem, 4.4vw, 2.9rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.page-masthead__lede {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(0.94rem, 1.4vw, 1.06rem);
+  line-height: 1.6;
+}
+
+.page-masthead__lede a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(241, 240, 236, 0.3);
+  text-underline-offset: 3px;
+}
+
+.page-masthead__lede a:hover,
+.page-masthead__lede a:focus-visible {
+  color: var(--text);
+  text-decoration-color: currentColor;
+}
+
+/* ---------------------------------------------------------------
+   Footer site index — internal linking for crawlers and readers.
+   --------------------------------------------------------------- */
+.footer-nav {
+  order: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-nav li + li::before {
+  flex: 0 0 auto;
+  width: 3px;
+  height: 3px;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  content: "";
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+}
+
+/* Screen-reader-only helper, used for skip links and hidden labels. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
 }

@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mehran Ahmadi is a visual artist working with photography, AI-generated imagery, computer vision, and conceptual surreal visuals." />
+    <title>Mehran Ahmadi | Visual Artist</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <style>
+      /* ── Reset & Foundations ── */
+      *, *::before, *::after { box-sizing: border-box; }
+
+      :root {
+        --bg: #0e0f0f;
+        --panel: #141616;
+        --panel-alt: #151716;
+        --text: #f2f0eb;
+        --muted: #898b88;
+        --accent: #c76845;
+        --line: rgba(242,240,235,0.16);
+        --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        --sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --max-w: 1800px;
+        --gap: clamp(12px, 1.5vw, 24px);
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body.has-fixed-nav {
+        padding-top: 56px;
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+
+      img { display: block; max-width: 100%; height: auto; }
+      a { color: inherit; text-decoration: none; }
+
+      /* ── Scroll reveal ── */
+      .sr {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .sr.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* stagger children */
+      .sr-stagger > .sr:nth-child(1) { transition-delay: 0s; }
+      .sr-stagger > .sr:nth-child(2) { transition-delay: 0.08s; }
+      .sr-stagger > .sr:nth-child(3) { transition-delay: 0.16s; }
+      .sr-stagger > .sr:nth-child(4) { transition-delay: 0.24s; }
+      .sr-stagger > .sr:nth-child(5) { transition-delay: 0.32s; }
+      .sr-stagger > .sr:nth-child(6) { transition-delay: 0.4s; }
+      .sr-stagger > .sr:nth-child(7) { transition-delay: 0.48s; }
+
+      /* ── Section wrapper ── */
+      .section-inner {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: 0 clamp(20px, 4vw, 64px);
+      }
+
+      /* ── Hero ── */
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        overflow: hidden;
+      }
+
+      .hero__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .hero__bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+
+      .hero__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(14,15,15,0.92) 0%,
+          rgba(14,15,15,0.6) 30%,
+          rgba(14,15,15,0.25) 60%,
+          rgba(14,15,15,0.15) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero__content {
+        position: relative;
+        z-index: 2;
+        max-width: var(--max-w);
+        width: 100%;
+        margin: 0 auto;
+        padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 64px);
+        padding-bottom: clamp(60px, 8vw, 120px);
+      }
+
+      .hero__name {
+        font-family: var(--serif);
+        font-size: clamp(3rem, 8vw, 7.5rem);
+        font-weight: 400;
+        line-height: 1.0;
+        margin: 0 0 clamp(8px, 1vw, 16px);
+        letter-spacing: -0.02em;
+      }
+
+      .hero__subtitle {
+        font-family: var(--sans);
+        font-size: clamp(0.9rem, 1.4vw, 1.25rem);
+        font-weight: 400;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 clamp(16px, 2vw, 32px);
+      }
+
+      .hero__desc {
+        max-width: 540px;
+        font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+        line-height: 1.7;
+        color: rgba(242,240,235,0.72);
+        margin: 0;
+      }
+
+      .hero__scroll {
+        position: absolute;
+        bottom: clamp(24px, 3vw, 48px);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .hero__scroll-line {
+        width: 1px;
+        height: 40px;
+        background: var(--muted);
+        animation: scrollPulse 2s ease-in-out infinite;
+      }
+
+      @keyframes scrollPulse {
+        0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+        50% { opacity: 1; transform: scaleY(1); }
+      }
+
+      /* ── Bento Grid ── */
+      .bento {
+        padding: clamp(60px, 8vw, 120px) 0;
+      }
+
+      .bento__heading {
+        font-family: var(--serif);
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        font-weight: 400;
+        margin: 0 0 clamp(32px, 4vw, 64px);
+      }
+
+      .bento__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: clamp(220px, 22vw, 400px);
+        gap: var(--gap);
+      }
+
+      /* Named grid placement */
+      .bento__card:nth-child(1) { grid-column: span 1; grid-row: span 2; } /* Photography - tall */
+      .bento__card:nth-child(2) { grid-column: span 1; grid-row: span 1; } /* Computer Vision */
+      .bento__card:nth-child(3) { grid-column: span 1; grid-row: span 1; } /* Photogrammetry */
+      .bento__card:nth-child(4) { grid-column: span 2; grid-row: span 1; } /* OpenLayer - wide */
+      .bento__card:nth-child(5) { grid-column: span 1; grid-row: span 1; } /* Image Processing */
+      .bento__card:nth-child(6) { grid-column: span 1; grid-row: span 1; } /* YOU */
+      .bento__card:nth-child(7) { grid-column: span 1; grid-row: span 1; } /* Digital Sculptures */
+
+      .bento__card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 6px;
+        cursor: pointer;
+        display: block;
+      }
+
+      .bento__card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .bento__card:hover img {
+        transform: scale(1.05);
+      }
+
+      .bento__card-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(14,15,15,0.85) 0%,
+          rgba(14,15,15,0.2) 50%,
+          transparent 100%
+        );
+        transition: background 0.4s ease;
+      }
+
+      .bento__card:hover .bento__card-overlay {
+        background: linear-gradient(
+          to top,
+          rgba(14,15,15,0.92) 0%,
+          rgba(14,15,15,0.45) 50%,
+          rgba(14,15,15,0.2) 100%
+        );
+      }
+
+      .bento__card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: clamp(16px, 2vw, 28px);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .bento__card-num {
+        font-family: var(--sans);
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+      .bento__card-title {
+        font-family: var(--serif);
+        font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .bento__card-meta {
+        font-size: 0.78rem;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+      }
+
+      .bento__card-arrow {
+        position: absolute;
+        top: clamp(12px, 1.5vw, 20px);
+        right: clamp(12px, 1.5vw, 20px);
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        transform: translate(-6px, 6px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+      }
+
+      .bento__card:hover .bento__card-arrow {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      .bento__card-arrow svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: var(--text);
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* ── Practice Section ── */
+      .practice {
+        background: var(--panel-alt);
+        padding: clamp(80px, 10vw, 160px) 0;
+      }
+
+      .practice__statement {
+        font-family: var(--serif);
+        font-size: clamp(2rem, 4vw, 4rem);
+        font-weight: 400;
+        line-height: 1.15;
+        margin: 0 0 clamp(24px, 3vw, 48px);
+        max-width: 900px;
+      }
+
+      .practice__bio {
+        max-width: 640px;
+        font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+        line-height: 1.8;
+        color: rgba(242,240,235,0.72);
+        margin: 0 0 clamp(40px, 5vw, 80px);
+      }
+
+      .practice__tags {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(12px, 1.5vw, 20px);
+        max-width: 720px;
+        margin-bottom: clamp(40px, 5vw, 64px);
+      }
+
+      .practice__tag {
+        padding: clamp(14px, 1.5vw, 22px) clamp(16px, 2vw, 28px);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        font-size: clamp(0.8rem, 1vw, 0.95rem);
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-align: center;
+        transition: border-color 0.3s ease, color 0.3s ease;
+      }
+
+      .practice__tag:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .practice__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent);
+        transition: gap 0.3s ease;
+      }
+
+      .practice__link:hover {
+        gap: 14px;
+        color: var(--accent);
+      }
+
+      /* ── Journal Section ── */
+      .journal {
+        padding: clamp(80px, 10vw, 160px) 0;
+      }
+
+      .journal__heading {
+        font-family: var(--serif);
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        font-weight: 400;
+        margin: 0 0 clamp(32px, 4vw, 64px);
+      }
+
+      .journal__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .journal__item {
+        border-top: 1px solid var(--line);
+      }
+
+      .journal__item:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .journal__link {
+        display: grid;
+        grid-template-columns: clamp(100px, 14vw, 200px) 1fr auto;
+        align-items: center;
+        gap: clamp(16px, 3vw, 40px);
+        padding: clamp(20px, 2.5vw, 36px) 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .journal__link:hover {
+        opacity: 0.75;
+      }
+
+      .journal__thumb {
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+
+      .journal__thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .journal__link:hover .journal__thumb img {
+        transform: scale(1.06);
+      }
+
+      .journal__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .journal__title {
+        font-family: var(--serif);
+        font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+        font-weight: 400;
+        line-height: 1.25;
+      }
+
+      .journal__meta {
+        font-size: 0.78rem;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+      }
+
+      .journal__arrow {
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+
+      .journal__arrow svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: var(--text);
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* ── Contact CTA ── */
+      .cta {
+        background: #f2f0eb;
+        color: #0e0f0f;
+        padding: clamp(80px, 10vw, 160px) 0;
+        text-align: center;
+      }
+
+      .cta__heading {
+        font-family: var(--serif);
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        margin: 0 0 clamp(20px, 2vw, 36px);
+      }
+
+      .cta__email {
+        display: inline-block;
+        font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        color: #0e0f0f;
+        border-bottom: 1px solid rgba(14,15,15,0.3);
+        padding-bottom: 4px;
+        transition: border-color 0.3s ease;
+      }
+
+      .cta__email:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      /* ── Footer ── */
+      .site-footer {
+        padding: clamp(40px, 5vw, 64px) 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .site-footer .section-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .footer__socials {
+        display: flex;
+        gap: clamp(12px, 1.5vw, 20px);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer__socials a {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        transition: border-color 0.3s ease, opacity 0.3s ease;
+        opacity: 0.6;
+      }
+
+      .footer__socials a:hover {
+        border-color: var(--accent);
+        opacity: 1;
+      }
+
+      .footer__socials img {
+        width: 16px;
+        height: 16px;
+        filter: invert(1) brightness(0.9);
+      }
+
+      .footer__copy {
+        font-size: 0.78rem;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+        margin: 0;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 1100px) {
+        .bento__grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: clamp(200px, 28vw, 340px);
+        }
+        .bento__card:nth-child(1) { grid-column: span 1; grid-row: span 2; }
+        .bento__card:nth-child(4) { grid-column: span 2; }
+      }
+
+      @media (max-width: 768px) {
+        .bento__grid {
+          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: clamp(180px, 40vw, 280px);
+        }
+        .bento__card:nth-child(1) { grid-column: span 1; grid-row: span 2; }
+        .bento__card:nth-child(4) { grid-column: span 2; }
+
+        .practice__tags {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .journal__link {
+          grid-template-columns: 80px 1fr auto;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .bento__grid {
+          grid-template-columns: 1fr;
+          grid-auto-rows: clamp(200px, 55vw, 320px);
+        }
+        .bento__card:nth-child(1),
+        .bento__card:nth-child(4) {
+          grid-column: span 1;
+          grid-row: span 1;
+        }
+
+        .practice__tags {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .journal__link {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .journal__arrow {
+          display: none;
+        }
+
+        .hero__name {
+          font-size: clamp(2.4rem, 12vw, 4rem);
+        }
+      }
+    </style>
+  </head>
+  <body class="has-fixed-nav">
+    <!-- ── Nav ── -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav" aria-label="Main navigation">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ── Hero ── -->
+      <section class="hero" aria-label="Introduction">
+        <div class="hero__bg">
+          <img src="Images/home/mehran-ahmadi-visual-artist-home-01.jpg" alt="Cinematic visual by Mehran Ahmadi" />
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <h1 class="hero__name sr">Mehran Ahmadi</h1>
+          <p class="hero__subtitle sr">Artist, Photographer &amp; Designer</p>
+          <p class="hero__desc sr">Exploring how images shift between lived experience, digital bodies, and machine perception.</p>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ── Bento Projects ── -->
+      <section class="bento" aria-label="Selected projects">
+        <div class="section-inner">
+          <h2 class="bento__heading sr">Selected Works</h2>
+          <div class="bento__grid sr-stagger">
+
+            <!-- 01 Photography -->
+            <a class="bento__card sr" href="photography.html" aria-label="Photography series">
+              <img src="Images/15-mehran-ahmadi-portrait.jpg" alt="Portrait study by Mehran Ahmadi" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">01</span>
+                <h3 class="bento__card-title">Photography</h3>
+                <span class="bento__card-meta">Portraits &amp; documentary</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+            <!-- 02 Computer Vision -->
+            <a class="bento__card sr" href="computer-vision.html" aria-label="Computer Vision project">
+              <img src="Images/False-Restorations/false-restorations-08-figure-among-portraits.webp" alt="False Restorations - figure among portraits" loading="lazy" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">02</span>
+                <h3 class="bento__card-title">Computer Vision</h3>
+                <span class="bento__card-meta">False Restorations series</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+            <!-- 03 Photogrammetry -->
+            <a class="bento__card sr" href="photogrammetry.html" aria-label="Photogrammetry project">
+              <img src="Images/Brambles/brambles-eroded-figure-three-quarter.webp" alt="Brambles - eroded figure in three-quarter view" loading="lazy" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">03</span>
+                <h3 class="bento__card-title">Photogrammetry</h3>
+                <span class="bento__card-meta">Brambles &amp; spatial capture</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+            <!-- 04 OpenLayer (wide) -->
+            <a class="bento__card sr" href="https://mehran-ahmadi.com/OpenLayer/" target="_blank" rel="noopener noreferrer" aria-label="OpenLayer project (opens in new tab)">
+              <img src="Images/OpenLayer/openlayer-photoshop-v53.webp" alt="OpenLayer digital composition" loading="lazy" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">04</span>
+                <h3 class="bento__card-title">OpenLayer</h3>
+                <span class="bento__card-meta">Digital compositing &amp; layered imagery</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+            <!-- 05 Image Processing -->
+            <a class="bento__card sr" href="archive/blog-1.html" aria-label="Image Processing project">
+              <img src="Images/mehran-ahmadi-photo-006.jpg" alt="Image processing study by Mehran Ahmadi" loading="lazy" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">05</span>
+                <h3 class="bento__card-title">Image Processing</h3>
+                <span class="bento__card-meta">Experiments in pixel manipulation</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+            <!-- 06 YOU -->
+            <a class="bento__card sr" href="you.html" aria-label="YOU project">
+              <img src="Images/mehran ahmadi color.jpg" alt="YOU series - color portrait" loading="lazy" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">06</span>
+                <h3 class="bento__card-title">YOU</h3>
+                <span class="bento__card-meta">Interactive identity exploration</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+            <!-- 07 Digital Sculptures -->
+            <a class="bento__card sr" href="https://youtu.be/7L12Cd_4bPk?si=PiFct_Mt40LMm9Pb" target="_blank" rel="noopener noreferrer" aria-label="Digital Sculptures (opens YouTube in new tab)">
+              <img src="Images/thumbnail uemehran.webp" alt="Digital sculpture by Mehran Ahmadi" loading="lazy" />
+              <div class="bento__card-overlay" aria-hidden="true"></div>
+              <div class="bento__card-content">
+                <span class="bento__card-num">07</span>
+                <h3 class="bento__card-title">Digital Sculptures</h3>
+                <span class="bento__card-meta">3D form &amp; motion</span>
+              </div>
+              <div class="bento__card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Practice ── -->
+      <section class="practice" aria-label="About the practice">
+        <div class="section-inner">
+          <h2 class="practice__statement sr">Visual stories made where art meets computation.</h2>
+          <p class="practice__bio sr">Mehran Ahmadi is a visual artist and photographer whose practice spans traditional image-making and computational media. Working across photography, photogrammetry, computer vision, and generative systems, he builds visual narratives that interrogate how we perceive, reconstruct, and reimagine the human figure in an era of machine sight.</p>
+          <div class="practice__tags sr-stagger">
+            <div class="practice__tag sr">Photography</div>
+            <div class="practice__tag sr">Visual storytelling</div>
+            <div class="practice__tag sr">Computer graphics</div>
+            <div class="practice__tag sr">Computer vision</div>
+            <div class="practice__tag sr">AI-assisted images</div>
+            <div class="practice__tag sr">Spatial capture</div>
+          </div>
+          <a href="about.html" class="practice__link sr">
+            More about Mehran
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── Journal ── -->
+      <section class="journal" aria-label="Journal entries">
+        <div class="section-inner">
+          <h2 class="journal__heading sr">Journal</h2>
+          <ul class="journal__list">
+
+            <li class="journal__item sr">
+              <a class="journal__link" href="archive/the-metahumans.html">
+                <div class="journal__thumb">
+                  <img src="Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg" alt="MetaHuman cinematic profile render" loading="lazy" />
+                </div>
+                <div class="journal__info">
+                  <span class="journal__title">The MetaHumans</span>
+                  <span class="journal__meta">Unreal Engine &amp; digital humans</span>
+                </div>
+                <div class="journal__arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="journal__item sr">
+              <a class="journal__link" href="Melancholictoons.html">
+                <div class="journal__thumb">
+                  <img src="Images/Melancholic toons/Melancholic toons (1).jpg" alt="Melancholic Toons illustration" loading="lazy" />
+                </div>
+                <div class="journal__info">
+                  <span class="journal__title">Melancholic Toons</span>
+                  <span class="journal__meta">Illustration &amp; character study</span>
+                </div>
+                <div class="journal__arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </div>
+              </a>
+            </li>
+
+            <li class="journal__item sr">
+              <a class="journal__link" href="archive/pstocomfyui3.html">
+                <div class="journal__thumb">
+                  <img src="img/PSTOCOMFY/33.webp" alt="Photoshop to ComfyUI workflow" loading="lazy" />
+                </div>
+                <div class="journal__info">
+                  <span class="journal__title">Photoshop to ComfyUI</span>
+                  <span class="journal__meta">Workflow &amp; pipeline integration</span>
+                </div>
+                <div class="journal__arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── Contact CTA ── -->
+      <section class="cta" aria-label="Get in touch">
+        <div class="section-inner">
+          <h2 class="cta__heading sr">Let's make something real.</h2>
+          <a href="mailto:mehran.ahmadi@gmail.com" class="cta__email sr">mehran.ahmadi@gmail.com</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="section-inner">
+        <ul class="footer__socials" aria-label="Social links">
+          <li><a href="https://www.facebook.com/mehranahmadipage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="icons/social-facebook.svg" alt="Facebook" /></a></li>
+          <li><a href="https://www.instagram.com/mehranmarxian" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="icons/social-instagram.svg" alt="Instagram" /></a></li>
+          <li><a href="https://www.linkedin.com/in/mehranahmadi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a></li>
+          <li><a href="https://www.behance.net/mehranahmadi" target="_blank" rel="noopener noreferrer" aria-label="Behance"><img src="icons/social-behance.svg" alt="Behance" /></a></li>
+          <li><a href="https://soundcloud.com/mehranmarxian" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a></li>
+          <li><a href="https://github.com/mehranmarxian" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="icons/social-github.svg" alt="GitHub" /></a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 Mehran Ahmadi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ── Scroll Reveal ── -->
+    <script>
+      (function () {
+        var els = document.querySelectorAll('.sr');
+        if (!('IntersectionObserver' in window)) {
+          els.forEach(function (el) { el.classList.add('is-visible'); });
+          return;
+        }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+        els.forEach(function (el) { observer.observe(el); });
+      })();
+    </script>
+  </body>
+</html>

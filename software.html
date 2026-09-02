@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Software — OpenLayer &amp; Open-Source Tools | Mehran Ahmadi</title>
+    <meta name="description" content="Open-source software by Mehran Ahmadi, including OpenLayer, a free Photoshop plugin for ComfyUI with local AI generation, inpainting, upscaling and layer separation." />
+    <link rel="canonical" href="https://mehran-ahmadi.com/software.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Mehran Ahmadi" />
+    <meta name="keywords" content="OpenLayer, Photoshop plugin, ComfyUI, local AI, open source, UXP plugin, Stable Diffusion Photoshop" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mehran Ahmadi" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://mehran-ahmadi.com/software.html" />
+    <meta property="og:title" content="Software — OpenLayer &amp; Open-Source Tools | Mehran Ahmadi" />
+    <meta property="og:description" content="Open-source software by Mehran Ahmadi, including OpenLayer, a free Photoshop plugin for ComfyUI with local AI generation, inpainting, upscaling and layer separation." />
+    <meta property="og:image" content="https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Software — OpenLayer &amp; Open-Source Tools | Mehran Ahmadi" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Software — OpenLayer &amp; Open-Source Tools | Mehran Ahmadi" />
+    <meta name="twitter:description" content="Open-source software by Mehran Ahmadi, including OpenLayer, a free Photoshop plugin for ComfyUI with local AI generation, inpainting, upscaling and layer separation." />
+    <meta name="twitter:image" content="https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0e0f0f" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://mehran-ahmadi.com/#person",
+            "name": "Mehran Ahmadi",
+            "alternateName": "MEHRAN AHMADI",
+            "url": "https://mehran-ahmadi.com/",
+            "image": "https://mehran-ahmadi.com/Images/og/mehran-ahmadi-og.jpg",
+            "email": "mailto:mehran.ahmadi@gmail.com",
+            "jobTitle": "Visual Artist and Photographer",
+            "description": "Iranian visual artist and photographer based in Tehran, working across photography, computer vision, photogrammetry and AI-assisted image making.",
+            "nationality": {
+              "@type": "Country",
+              "name": "Iran"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tehran",
+              "addressCountry": "IR"
+            },
+            "knowsAbout": [
+              "Photography",
+              "Portrait photography",
+              "Documentary photography",
+              "Computer vision",
+              "Photogrammetry",
+              "3D scanning",
+              "Generative AI art",
+              "Stable Diffusion",
+              "ComfyUI",
+              "Adobe Photoshop plugins"
+            ],
+            "sameAs": [
+              "https://www.instagram.com/mehranahmadiphotography/",
+              "https://www.facebook.com/Mehran.Photography/",
+              "https://www.linkedin.com/in/mehran-ahmadi-243aa256/",
+              "https://www.behance.net/mehran_ahmadi",
+              "https://soundcloud.com/mehranahmadi",
+              "https://github.com/MehranMarxian"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mehran-ahmadi.com/#website",
+            "url": "https://mehran-ahmadi.com/",
+            "name": "Mehran Ahmadi",
+            "alternateName": "Mehran Ahmadi - Visual Artist",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "copyrightHolder": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://mehran-ahmadi.com/software.html#webpage",
+            "url": "https://mehran-ahmadi.com/software.html",
+            "name": "Software — OpenLayer & Open-Source Tools | Mehran Ahmadi",
+            "description": "Open-source software by Mehran Ahmadi, including OpenLayer, a free Photoshop plugin for ComfyUI with local AI generation, inpainting, upscaling and layer separation.",
+            "isPartOf": {
+              "@id": "https://mehran-ahmadi.com/#website"
+            },
+            "about": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg"
+            },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mehran-ahmadi.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Software",
+                "item": "https://mehran-ahmadi.com/software.html"
+              }
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://mehran-ahmadi.com/software.html#openlayer",
+            "name": "OpenLayer",
+            "alternateName": "OpenLayer for Photoshop",
+            "applicationCategory": "MultimediaApplication",
+            "applicationSubCategory": "Adobe Photoshop plugin",
+            "operatingSystem": "Windows, macOS",
+            "url": "https://mehran-ahmadi.com/OpenLayer/",
+            "downloadUrl": "https://github.com/MehranMarxian/OpenLayer/releases",
+            "codeRepository": "https://github.com/MehranMarxian/OpenLayer",
+            "softwareVersion": "0.20.0-alpha",
+            "license": "https://opensource.org/licenses/MIT",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "Free, open-source Photoshop plugin that connects Adobe Photoshop to a local ComfyUI server for text to image, image to image, sketch to image, inpainting, outpainting, upscaling and splitting a flat image back into editable layers. Runs entirely on your own GPU with no cloud, credits or subscription.",
+            "featureList": [
+              "Text to image",
+              "Image to image",
+              "Sketch to image",
+              "Inpaint",
+              "Outpaint",
+              "Upscale",
+              "Prompt from layer",
+              "Live painting",
+              "Multi-reference composition",
+              "Unflatten a flat image into layers"
+            ],
+            "keywords": "Photoshop plugin, ComfyUI, Stable Diffusion, Flux, local AI, UXP, inpainting, upscaling",
+            "author": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "creator": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "publisher": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "image": "https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://mehran-ahmadi.com/software.html#window-drift",
+            "name": "Window Drift",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows",
+            "url": "https://mehranmarxian.github.io/Window-Drift/",
+            "codeRepository": "https://github.com/MehranMarxian/Window-Drift",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "A calm kinetic desktop utility and screensaver for Windows, written in .NET.",
+            "author": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            }
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://mehran-ahmadi.com/software.html#goldengateglass",
+            "name": "GoldenGateGlass",
+            "codeRepository": "https://github.com/MehranMarxian/GoldenGateGlass",
+            "programmingLanguage": "C#",
+            "description": "Glass surfaces and acrylic-style material effects for modern Windows applications.",
+            "author": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            }
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://mehran-ahmadi.com/software.html#octalayer",
+            "name": "OctaLayer",
+            "codeRepository": "https://github.com/MehranMarxian/OctaLayer",
+            "description": "A Photoshop UXP plugin backed by OctaEngine, its own local inference engine.",
+            "author": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://mehran-ahmadi.com/software.html#tools",
+            "name": "Open-source software by Mehran Ahmadi",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://mehran-ahmadi.com/OpenLayer/",
+                "name": "OpenLayer"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://mehranmarxian.github.io/Window-Drift/",
+                "name": "Window Drift"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "https://github.com/MehranMarxian/GoldenGateGlass",
+                "name": "GoldenGateGlass"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "url": "https://github.com/MehranMarxian/OctaLayer",
+                "name": "OctaLayer"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "url": "https://github.com/MehranMarxian/awesome-comfyui",
+                "name": "Awesome ComfyUI"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+      .software-page {
+        --sw-line: rgba(241, 240, 236, 0.16);
+        --sw-line-strong: rgba(241, 240, 236, 0.34);
+        --sw-muted: #999b98;
+      }
+
+      /* .page-shell is laid out as a flex row further up the cascade; this page
+         wants ordinary block flow. */
+      .software-page .page-shell {
+        display: block;
+        text-align: left;
+      }
+
+      .software-page .page-masthead {
+        padding-inline: 0;
+      }
+
+      .software-page .software-closing {
+        max-width: 68ch;
+        margin: clamp(40px, 6vw, 72px) 0 0;
+        padding-top: clamp(24px, 3vw, 36px);
+        border-top: 1px solid var(--sw-line);
+      }
+
+      .software-page .software-closing h2 {
+        margin: 0 0 12px;
+        font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+        font-weight: 400;
+      }
+
+      .software-page .software-closing p {
+        margin: 0;
+        color: rgba(241, 240, 236, 0.78);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .software-page .software-closing a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-color: rgba(241, 240, 236, 0.3);
+        text-underline-offset: 3px;
+      }
+
+      .software-list {
+        display: grid;
+        gap: clamp(28px, 4vw, 48px);
+        width: min(980px, 100%);
+        margin: clamp(28px, 5vw, 56px) 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .software-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        padding-top: clamp(24px, 3vw, 36px);
+        border-top: 1px solid var(--sw-line);
+      }
+
+      .software-item:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .software-item--lead {
+        gap: 26px;
+      }
+
+      .software-item__eyebrow {
+        margin: 0 0 10px;
+        color: var(--sw-muted);
+        font-size: 0.72rem;
+        line-height: 1.35;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .software-item h2 {
+        margin: 0 0 12px;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        line-height: 1.15;
+      }
+
+      .software-item h3 {
+        margin: 26px 0 10px;
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+      }
+
+      .software-item p {
+        max-width: 68ch;
+        margin: 0 0 14px;
+        color: rgba(241, 240, 236, 0.78);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .software-shot {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--sw-line);
+      }
+
+      .software-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 6px 24px;
+        max-width: 68ch;
+        margin: 0 0 18px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .software-features li {
+        position: relative;
+        padding-left: 16px;
+        color: rgba(241, 240, 236, 0.74);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .software-features li::before {
+        position: absolute;
+        top: 0.62em;
+        left: 0;
+        width: 6px;
+        height: 1px;
+        background: var(--sw-line-strong);
+        content: "";
+      }
+
+      .software-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        margin-top: 4px;
+      }
+
+      .software-actions a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 18px;
+        color: rgba(241, 240, 236, 0.92);
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        border: 1px solid var(--sw-line-strong);
+        transition: color 180ms ease, border-color 180ms ease;
+      }
+
+      .software-actions a:hover,
+      .software-actions a:focus-visible {
+        color: #ffffff;
+        text-decoration: none;
+        border-color: rgba(241, 240, 236, 0.7);
+      }
+
+      .software-meta {
+        margin: 0;
+        color: var(--sw-muted);
+        font-size: 0.76rem;
+        line-height: 1.5;
+      }
+
+      @media (min-width: 768px) {
+        .software-item--lead {
+          grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+          align-items: start;
+        }
+
+        .software-item--lead .software-shot {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+        }
+      }
+    </style>
+  </head>
+  <body class="has-fixed-nav software-page">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <header class="page-masthead">
+        <p class="page-masthead__kicker">Open source</p>
+        <h1>Software</h1>
+        <p class="page-masthead__lede">
+          Alongside the image work I build and release open-source tools, mostly around
+          local AI image generation, Adobe Photoshop and Windows. Everything below is
+          free, MIT-style licensed and developed in the open on GitHub.
+        </p>
+      </header>
+
+      <ol class="software-list">
+        <li class="software-item software-item--lead" id="openlayer">
+          <div>
+            <p class="software-item__eyebrow">01 / Photoshop plugin / ComfyUI</p>
+            <h2>OpenLayer — a free Photoshop plugin for ComfyUI</h2>
+            <p>
+              OpenLayer connects Adobe Photoshop to a local ComfyUI server so you can
+              generate, inpaint, outpaint and upscale images without leaving your document,
+              and bring results back in as editable layers. It runs entirely on your own
+              machine and GPU with Stable Diffusion, SDXL and Flux models — no cloud, no
+              credits, no subscription.
+            </p>
+            <h3>What it does</h3>
+            <ul class="software-features">
+              <li>Text to image</li>
+              <li>Image to image</li>
+              <li>Sketch to image</li>
+              <li>Inpaint and outpaint</li>
+              <li>Upscale</li>
+              <li>Prompt from layer</li>
+              <li>Live painting</li>
+              <li>Multi-reference composition</li>
+              <li>Unflatten a flat image into layers</li>
+              <li>Layer tools for sending content back to ComfyUI</li>
+            </ul>
+            <div class="software-actions">
+              <a href="https://mehran-ahmadi.com/OpenLayer/">
+                Open the OpenLayer site <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://github.com/MehranMarxian/OpenLayer" target="_blank" rel="noopener">
+                Source on GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/MehranMarxian/OpenLayer/releases" target="_blank" rel="noopener">
+                Download the plugin <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <p class="software-meta">
+              Adobe UXP plugin · Photoshop 2024 or later · Windows and macOS · MIT licence · free and open source
+            </p>
+          </div>
+          <img
+            class="software-shot"
+            src="Images/OpenLayer/openlayer-photoshop-v53.webp"
+            width="1280"
+            height="800"
+            alt="The OpenLayer panel running inside Adobe Photoshop, showing local ComfyUI image generation controls"
+            loading="lazy"
+            decoding="async"
+          />
+        </li>
+
+        <li class="software-item" id="octalayer">
+          <div>
+            <p class="software-item__eyebrow">02 / Photoshop plugin / Local inference</p>
+            <h2>OctaLayer</h2>
+            <p>
+              A Photoshop UXP plugin backed by OctaEngine, its own local inference engine,
+              so image generation runs without a separate ComfyUI installation.
+            </p>
+            <div class="software-actions">
+              <a href="https://github.com/MehranMarxian/OctaLayer" target="_blank" rel="noopener">
+                Source on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="software-item" id="window-drift">
+          <div>
+            <p class="software-item__eyebrow">03 / Windows utility / .NET</p>
+            <h2>Window Drift</h2>
+            <p>
+              A calm kinetic desktop utility and screensaver for Windows — slow, quiet
+              motion instead of the usual noise.
+            </p>
+            <div class="software-actions">
+              <a href="https://mehranmarxian.github.io/Window-Drift/" target="_blank" rel="noopener">
+                Project page <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/MehranMarxian/Window-Drift" target="_blank" rel="noopener">
+                Source on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="software-item" id="goldengateglass">
+          <div>
+            <p class="software-item__eyebrow">04 / Windows UI / C#</p>
+            <h2>GoldenGateGlass</h2>
+            <p>
+              Glass and acrylic-style surface effects for modern Windows applications,
+              packaged so they can be dropped into a .NET project.
+            </p>
+            <div class="software-actions">
+              <a href="https://github.com/MehranMarxian/GoldenGateGlass" target="_blank" rel="noopener">
+                Source on GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="software-item" id="lists">
+          <div>
+            <p class="software-item__eyebrow">05 / Curated lists / ComfyUI</p>
+            <h2>Awesome ComfyUI</h2>
+            <p>
+              Two curated lists gathered while building the plugins: tools and custom nodes
+              for ComfyUI, and the alternative front-ends people have built on top of it.
+            </p>
+            <div class="software-actions">
+              <a href="https://github.com/MehranMarxian/awesome-comfyui" target="_blank" rel="noopener">
+                Awesome ComfyUI <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/MehranMarxian/awesome-alternative-uis-for-comfyui" target="_blank" rel="noopener">
+                Alternative UIs for ComfyUI <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ol>
+
+      <section class="software-closing">
+        <h2>Why these tools exist</h2>
+        <p>
+          The tools come directly out of the studio work. Projects like
+          <a href="head-reconstruction.html">Head Reconstruction</a> and
+          <a href="False-Restorations.html">False Restorations</a> are made by moving an
+          image back and forth between Photoshop and a local diffusion model dozens of
+          times. OpenLayer is that round trip turned into a plugin, and the rest follow
+          from the same need: keep the work local, keep it editable, keep it free.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <ul class="footer-nav" aria-label="Site index">
+        <li><a href="home.html">Archive</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="portraits.html">Portraits</a></li>
+        <li><a href="wall.html">WALLS</a></li>
+        <li><a href="Documentryphotography.html">Documentary</a></li>
+        <li><a href="computer-vision.html">Computer Vision</a></li>
+        <li><a href="photogrammetry.html">Photogrammetry</a></li>
+        <li><a href="you.html">YOU</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-icons" aria-label="Social links">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://www.behance.net/mehran_ahmadi" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+    </footer>
+
+    <script src="js/site-nav.js"></script>
+  </body>
+</html>

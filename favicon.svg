@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mehran Ahmadi">
+  <rect width="64" height="64" fill="#0e0f0f"/>
+  <rect x="4.5" y="4.5" width="55" height="55" fill="none" stroke="#f1f0ec" stroke-opacity="0.45" stroke-width="1.5"/>
+  <path d="M16 46V18h5.6l10.4 17.4L42.4 18H48v28h-5.2V27.4L32.9 43h-1.8L21.2 27.4V46z" fill="#f1f0ec"/>
+</svg>

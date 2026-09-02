@@ -1,78 +1,814 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mehran-ahmadi.com/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-01.jpg</image:loc>
+      <image:title>Atmospheric photographic artwork by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-02.jpg</image:loc>
+      <image:title>Surreal photographic artwork by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-03.jpg</image:loc>
+      <image:title>Conceptual visual artwork by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-04.jpg</image:loc>
+      <image:title>Low-light photographic artwork by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-05.jpg</image:loc>
+      <image:title>Portrait-based visual artwork by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-06.jpg</image:loc>
+      <image:title>Minimal photographic composition by MEHRAN AHMADI</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/home.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/15-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.jpg</image:loc>
+      <image:title>Documentary photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-1.jpg</image:loc>
+      <image:title>WALLS photography series by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-08-figure-among-portraits.webp</image:loc>
+      <image:title>False Restorations figure among portraits by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp</image:loc>
+      <image:title>The Animal Machine by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp</image:loc>
+      <image:title>False Restorations by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Black%20out%20-%20Photogrammetry.jpg</image:loc>
+      <image:title>Black out photogrammetry study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Head%20Study%20-%20photogrammetry.jpg</image:loc>
+      <image:title>Photogrammetry head study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-three-quarter.webp</image:loc>
+      <image:title>Fragmented 3D portrait scan by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/OpenLayer/openlayer-photoshop-v53.webp</image:loc>
+      <image:title>OpenLayer Photoshop Plugin interface by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
+      <image:title>Source photograph for Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/imagebymehranahmadiswimer.jpg</image:loc>
+      <image:title>Processed photographic image by Mehran Ahmadi</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://mehran-ahmadi.com/portraits.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <loc>https://mehran-ahmadi.com/software.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/OpenLayer/openlayer-photoshop-v53.webp</image:loc>
+      <image:title>The OpenLayer panel running inside Adobe Photoshop, showing local ComfyUI image generation controls</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/works.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/15-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Head%20Study%20-%20photogrammetry.jpg</image:loc>
+      <image:title>Photogrammetry head study</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/8.jpg</image:loc>
+      <image:title>Portrait photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp</image:loc>
+      <image:title>The Animal Machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi03-crop-u5071.jpg</image:loc>
+      <image:title>Documentary photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-1.jpg</image:loc>
+      <image:title>Walls photography series</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp</image:loc>
+      <image:title>False Restorations artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/3.jpg</image:loc>
+      <image:title>Portrait from Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-2.jpg</image:loc>
+      <image:title>Wall surface photograph</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Black%20out%20-%20Photogrammetry.jpg</image:loc>
+      <image:title>Black Out photogrammetry study</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi06-crop-u9696.jpg</image:loc>
+      <image:title>Documentary image by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/10-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait by Mehran Ahmadi</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photography.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/15-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/8.jpg</image:loc>
+      <image:title>Portrait photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/3.jpg</image:loc>
+      <image:title>Portrait from Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/mehran_ahmadi27.jpg</image:loc>
+      <image:title>Documentary photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.jpg</image:loc>
+      <image:title>Black and white portrait from A Place to Stay by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi03-crop-u5071.jpg</image:loc>
+      <image:title>Documentary photograph from the Kahrizak series by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-1.jpg</image:loc>
+      <image:title>WALLS photographic series by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-2.jpg</image:loc>
+      <image:title>Weathered wall surface photographed by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-3.jpg</image:loc>
+      <image:title>Architectural surface from the WALLS series by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Empty-Space/empty-space-01.webp</image:loc>
+      <image:title>Stacked chairs and covered furniture from the EMPTY SPACE photographic series</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://mehran-ahmadi.com/AI%20WORKS.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <loc>https://mehran-ahmadi.com/computer-vision.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mehran-ahmadi.com/wall.html</loc>
-    <lastmod>2026-05-28</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mehran-ahmadi.com/you.html</loc>
-    <lastmod>2026-05-28</lastmod>
-    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%281%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI artwork by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2811%29.jpg</image:loc>
+      <image:title>Melancholic cartoon character reconstructed with AI by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2812%29.jpg</image:loc>
+      <image:title>AI image-to-image line art experiment by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp</image:loc>
+      <image:title>The Animal Machine anatomical animal study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-01.webp</image:loc>
+      <image:title>Anatomical pig reconstructed as a biological system by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-02.webp</image:loc>
+      <image:title>Pig anatomy transformed into flesh, cables, and machine structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp</image:loc>
+      <image:title>False Restorations painterly reconstruction by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-01-archival-room.webp</image:loc>
+      <image:title>Archival room reconstructed through AI-assisted image processes by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp</image:loc>
+      <image:title>Figures and a black cat from False Restorations by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-wire-grid.jpg</image:loc>
+      <image:title>Head Reconstruction wire-grid portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-line-map.jpg</image:loc>
+      <image:title>Portrait reconstructed through an irregular line map by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-folded-shell.jpg</image:loc>
+      <image:title>Head reconstructed as a folded geometric shell by Mehran Ahmadi</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photogrammetry.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mehran-ahmadi.com/brammbles.html</loc>
-    <lastmod>2026-06-14</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mehran-ahmadi.com/Melancholictoons.html</loc>
-    <lastmod>2026-05-28</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mehran-ahmadi.com/False-Restorations.html</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran%20ahmadi%20color.jpg</image:loc>
+      <image:title>YOU digital artwork by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-three-quarter.webp</image:loc>
+      <image:title>BRAMBLES eroded photogrammetry figure by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Black%20out%20-%20Photogrammetry.jpg</image:loc>
+      <image:title>Black out photogrammetry work by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Head%20Study%20-%20photogrammetry.jpg</image:loc>
+      <image:title>Head study photogrammetry work by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/Head%20Study%202%20-%20Photogrammetry.webp</image:loc>
+      <image:title>Second head study photogrammetry work by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Experiments/SELFPORTRAIT%203DSCAN-%20Photogrammetry.webp</image:loc>
+      <image:title>Self portrait 3D scan by Mehran Ahmadi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/portraits.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/1.jpg</image:loc>
+      <image:title>Portrait photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/2.jpg</image:loc>
+      <image:title>Portrait study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/3.jpg</image:loc>
+      <image:title>Black and white portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/4.jpg</image:loc>
+      <image:title>Studio portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/5.jpg</image:loc>
+      <image:title>Conceptual portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/6.jpg</image:loc>
+      <image:title>Expressive portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/8.jpg</image:loc>
+      <image:title>Minimal portrait photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/16-mehran-ahmadi-portrait.JPG</image:loc>
+      <image:title>Portrait photograph number sixteen by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/10-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait photograph number ten by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/11-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait photograph number eleven by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/12-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait photograph number twelve by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/14-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:title>Portrait photograph number fourteen by Mehran Ahmadi</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/blog.html</loc>
-    <lastmod>2026-06-06</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mehran-ahmadi.com/archive/the-metahumans.html</loc>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg</image:loc>
+      <image:title>Cinematic MetaHuman portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-front-portrait.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-realtime-night-lighting.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%281%29.jpg</image:loc>
+      <image:title>Melancholic Toons artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%286%29.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2810%29.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
+      <image:title>Original photograph</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/imagebymehranahmadiswimer.jpg</image:loc>
+      <image:title>Processed photograph</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/31.png</image:loc>
+      <image:title>Photoshop input image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/33.webp</image:loc>
+      <image:title>ComfyUI output image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/mehran-ahmadi-photo-013.webp</image:loc>
+      <image:title>Image Notes photograph by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/PS_TO_Z_Image%2027.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/about.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/contact.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/Documentryphotography.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.jpg</image:loc>
+      <image:title>A Place to Stay documentary photograph by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi03-crop-u5071.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi04-crop-u5091.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi05-crop-u9676.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi06-crop-u9696.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi07-crop-u9716.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi08-crop-u9736.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi09-crop-u9756.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi10-crop-u9776.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi11.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi12-crop-u5251.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/UnusedImages/Documentry/mehran_ahmadi13-crop-u5271.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/False-Restorations.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp</image:loc>
+      <image:title>Two dreamlike reconstructed figures and a black cat arranged on a bed by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-02-woman-by-window.webp</image:loc>
+      <image:title>Painterly reconstructed figure reclining beneath a window in the False Restorations series by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp</image:loc>
+      <image:title>Two reconstructed figures and a black cat seated in an unstable painted interior by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-04-fragmented-standing-figure.webp</image:loc>
+      <image:title>Fragmented standing figure rendered as an imperfect AI-assisted painting by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-05-quiet-room-and-reflection.webp</image:loc>
+      <image:title>Quiet reconstructed room with a seated figure, mirror, and fading figures by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-06-theatrical-room-reconstruction.webp</image:loc>
+      <image:title>Theatrical interior of layered figures, paintings, and machine artifacts by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-07-portrait-by-window.webp</image:loc>
+      <image:title>Intimate painterly portrait reconstructed beside a window by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-08-figure-among-portraits.webp</image:loc>
+      <image:title>Standing figure surrounded by painted portraits and a black cat in an AI-assisted interior by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-01-archival-room.webp</image:loc>
+      <image:title>Painterly AI-assisted archival interior with a seated figure, framed painting, and distorted sculpture by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-10-seated-figure-and-mirror.webp</image:loc>
+      <image:title>Seated figure beside a mirror and plant in a muted fictional painting by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-11-room-of-portraits.webp</image:loc>
+      <image:title>Figures assembled inside a room filled with unstable painted portraits by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-12-figure-with-black-cat.webp</image:loc>
+      <image:title>Reconstructed seated figure merging with a black cat and machine artifacts by Mehran Ahmadi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/Melancholictoons.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%281%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 1 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%282%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 2 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%283%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 3 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%284%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 4 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%285%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 5 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%286%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 6 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%287%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 7 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%288%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 8 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%289%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 9 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2810%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 10 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2811%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 11 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2812%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI lineart artwork 12 by Mehran Ahmadi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/archive/blog-1.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
+      <image:title>Original Mehran Ahmadi photograph used for image processing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/imagebymehranahmadiswimer.jpg</image:loc>
+      <image:title>Processed version of the Mehran Ahmadi photograph</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/double-compound-pendulum.gif</image:loc>
+      <image:title>Double compound pendulum animation related to chaos theory</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/archive/pstocomfyui3.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/31.png</image:loc>
+      <image:title>Input line artwork for ComfyUI processing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/33.webp</image:loc>
+      <image:title>Output image generated from the line artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/361.png</image:loc>
+      <image:title>Second input artwork prepared for ComfyUI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/362.webp</image:loc>
+      <image:title>Second ComfyUI generated output artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/43.png</image:loc>
+      <image:title>Third Photoshop input prepared for ComfyUI processing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/45.webp</image:loc>
+      <image:title>Third ComfyUI processed output image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/Screenshot%20pscomfyui.webp</image:loc>
+      <image:title>Photoshop interface connected to ComfyUI workflow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/Screenshot_comfyui.webp</image:loc>
+      <image:title>ComfyUI node workflow for LineArtProcessor image generation</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/archive/the-metahumans.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg</image:loc>
+      <image:title>Cinematic MetaHuman portrait created by Mehran Ahmadi in Unreal Engine 5</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-unreal-engine-neutral-profile.jpg</image:loc>
+      <image:title>Neutral MetaHuman profile study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-unreal-engine-workflow.jpg</image:loc>
+      <image:title>The MetaHumans realtime production workflow inside Unreal Engine 5</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-front-portrait.jpg</image:loc>
+      <image:title>Front-facing cinematic MetaHuman portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-realtime-night-lighting.jpg</image:loc>
+      <image:title>Low-angle MetaHuman portrait with realtime night lighting</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-side-profile.jpg</image:loc>
+      <image:title>MetaHuman side profile surrounded by defocused city lights</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-eye-detail.jpg</image:loc>
+      <image:title>Detailed MetaHuman eye and eyelashes rendered in Unreal Engine 5</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-mouth-skin-detail.jpg</image:loc>
+      <image:title>Detailed MetaHuman mouth and skin rendered in Unreal Engine 5</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/brammbles.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-three-quarter.webp</image:loc>
+      <image:title>BRAMBLES eroded figure by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-sculpture.webp</image:loc>
+      <image:title>Full sculptural view from BRAMBLES by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-profile.webp</image:loc>
+      <image:title>Profile view of the eroded BRAMBLES figure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-front.webp</image:loc>
+      <image:title>Front view of the eroded BRAMBLES figure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Brambles/brambles-eroded-figure-back.webp</image:loc>
+      <image:title>Back view of the eroded BRAMBLES figure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/empty-space.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Empty-Space/empty-space-01.webp</image:loc>
+      <image:title>Stacked chairs and covered furniture slowly revealed inside a dark, unused room</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/head-reconstruction.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-wire-grid.jpg</image:loc>
+      <image:title>Profile portrait reconstructed through a black wire grid by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-contour-profile.jpg</image:loc>
+      <image:title>Profile portrait divided by fine red contour lines</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-folded-shell.jpg</image:loc>
+      <image:title>Head reconstructed as a folded white geometric shell</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-line-map.jpg</image:loc>
+      <image:title>Dark portrait reconstructed through a fine irregular line map</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-script-mask.jpg</image:loc>
+      <image:title>Layered profile portrait covered by white and black calligraphic mask fragments</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/the_animal_machine.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp</image:loc>
+      <image:title>The Animal Machine anatomical pig study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-01.webp</image:loc>
+      <image:title>Anatomical pig body reconstructed as a dense organic system by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-02.webp</image:loc>
+      <image:title>Pig anatomy transformed into flesh, cables, and machine-like structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-03.webp</image:loc>
+      <image:title>Anatomical animal diagram crossed by red vascular lines</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-04.webp</image:loc>
+      <image:title>Pig body reduced to ribs, routes, and exposed technical structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-05.webp</image:loc>
+      <image:title>Layered anatomical pig study suggesting an industrial biological machine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-06.webp</image:loc>
+      <image:title>Anatomical pig form with an exposed network of ribs and organs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-07.webp</image:loc>
+      <image:title>Pig anatomy rendered as a pale technical study with red internal lines</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-08.webp</image:loc>
+      <image:title>Animal body mapped as an anatomical and computational diagram</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-09.webp</image:loc>
+      <image:title>Anatomical pig study with flesh transformed into layered internal systems</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-10.webp</image:loc>
+      <image:title>Pale pig body interrupted by red lines and exposed anatomical structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-11.webp</image:loc>
+      <image:title>Animal anatomy reorganized into a violent network of bodies and cables</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/wall.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-1.jpg</image:loc>
+      <image:title>WALLS project photograph 1 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-2.jpg</image:loc>
+      <image:title>WALLS project photograph 2 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-3.jpg</image:loc>
+      <image:title>WALLS project photograph 3 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-4.jpg</image:loc>
+      <image:title>WALLS project photograph 4 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-5.jpg</image:loc>
+      <image:title>WALLS project photograph 5 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-6.jpg</image:loc>
+      <image:title>WALLS project photograph 6 by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-7.jpg</image:loc>
+      <image:title>WALLS project photograph 7 by Mehran Ahmadi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/you.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran%20ahmadi%20color.jpg</image:loc>
+      <image:title>YOU digital artwork by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/othersider%20mehran%20ahmadi.jpg</image:loc>
+      <image:title>Fragmented figure detail from YOU</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran%20ahmadi%20detil%20love.jpg</image:loc>
+      <image:title>Close detail from YOU digital artwork</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/images/mehran-ahmadi-photo-001.jpg</image:loc>
+      <image:title>Photographic source image related to YOU</image:title>
+    </image:image>
   </url>
 </urlset>

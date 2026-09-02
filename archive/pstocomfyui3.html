@@ -4,13 +4,147 @@
     <base href="../" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Photoshop to ComfyUI, a Mehran Ahmadi blog post about AI image workflow, LineArtProcessor, and image-to-image transformation."
-    />
-    <title>Photoshop to ComfyUI | Mehran Ahmadi</title>
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
+    <title>Photoshop to ComfyUI — An Image-to-Image Workflow | Mehran Ahmadi</title>
+    <meta name="description" content="How Mehran Ahmadi moves artwork between Photoshop and ComfyUI: a LineArtProcessor image-to-image workflow that keeps the structure of the original drawing intact." />
+    <link rel="canonical" href="https://mehran-ahmadi.com/archive/pstocomfyui3.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Mehran Ahmadi" />
+    <meta name="keywords" content="ComfyUI, Photoshop, image to image, ControlNet, lineart, AI workflow" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mehran Ahmadi" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://mehran-ahmadi.com/archive/pstocomfyui3.html" />
+    <meta property="og:title" content="Photoshop to ComfyUI — An Image-to-Image Workflow | Mehran Ahmadi" />
+    <meta property="og:description" content="How Mehran Ahmadi moves artwork between Photoshop and ComfyUI: a LineArtProcessor image-to-image workflow that keeps the structure of the original drawing intact." />
+    <meta property="og:image" content="https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg" />
+    <meta property="article:published_time" content="2026-06-06" />
+    <meta property="article:author" content="Mehran Ahmadi" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Photoshop to ComfyUI — An Image-to-Image Workflow | Mehran Ahmadi" />
+    <meta name="twitter:description" content="How Mehran Ahmadi moves artwork between Photoshop and ComfyUI: a LineArtProcessor image-to-image workflow that keeps the structure of the original drawing intact." />
+    <meta name="twitter:image" content="https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0e0f0f" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://mehran-ahmadi.com/#person",
+            "name": "Mehran Ahmadi",
+            "alternateName": "MEHRAN AHMADI",
+            "url": "https://mehran-ahmadi.com/",
+            "image": "https://mehran-ahmadi.com/Images/og/mehran-ahmadi-og.jpg",
+            "email": "mailto:mehran.ahmadi@gmail.com",
+            "jobTitle": "Visual Artist and Photographer",
+            "description": "Iranian visual artist and photographer based in Tehran, working across photography, computer vision, photogrammetry and AI-assisted image making.",
+            "nationality": {
+              "@type": "Country",
+              "name": "Iran"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tehran",
+              "addressCountry": "IR"
+            },
+            "knowsAbout": [
+              "Photography",
+              "Portrait photography",
+              "Documentary photography",
+              "Computer vision",
+              "Photogrammetry",
+              "3D scanning",
+              "Generative AI art",
+              "Stable Diffusion",
+              "ComfyUI",
+              "Adobe Photoshop plugins"
+            ],
+            "sameAs": [
+              "https://www.instagram.com/mehranahmadiphotography/",
+              "https://www.facebook.com/Mehran.Photography/",
+              "https://www.linkedin.com/in/mehran-ahmadi-243aa256/",
+              "https://www.behance.net/mehran_ahmadi",
+              "https://soundcloud.com/mehranahmadi",
+              "https://github.com/MehranMarxian"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mehran-ahmadi.com/#website",
+            "url": "https://mehran-ahmadi.com/",
+            "name": "Mehran Ahmadi",
+            "alternateName": "Mehran Ahmadi - Visual Artist",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "copyrightHolder": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            }
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://mehran-ahmadi.com/archive/pstocomfyui3.html#article",
+            "headline": "Photoshop to ComfyUI",
+            "name": "Photoshop to ComfyUI",
+            "description": "How Mehran Ahmadi moves artwork between Photoshop and ComfyUI: a LineArtProcessor image-to-image workflow that keeps the structure of the original drawing intact.",
+            "url": "https://mehran-ahmadi.com/archive/pstocomfyui3.html",
+            "image": "https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg",
+            "datePublished": "2026-06-06",
+            "dateModified": "2026-06-06",
+            "articleSection": "Workflow",
+            "keywords": "ComfyUI, Photoshop, image to image, ControlNet, lineart, AI workflow",
+            "inLanguage": "en",
+            "author": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "publisher": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "isPartOf": {
+              "@id": "https://mehran-ahmadi.com/#website"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://mehran-ahmadi.com/archive/pstocomfyui3.html"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mehran-ahmadi.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Journal",
+                "item": "https://mehran-ahmadi.com/blog.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Photoshop to ComfyUI",
+                "item": "https://mehran-ahmadi.com/archive/pstocomfyui3.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link href="../css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="../css/site.css" rel="stylesheet" />
   </head>
   <body class="has-fixed-nav">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
@@ -21,10 +155,10 @@
       <div class="collapse navbar-collapse" id="siteNavigation">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
         </ul>
       </div>
     </nav>
@@ -51,10 +185,10 @@
         </div>
 
         <figure class="cd-image-container blog-comparison">
-          <img src="img/PSTOCOMFY/31.png" alt="Input line artwork for ComfyUI processing" />
+          <img src="../img/PSTOCOMFY/31.png" alt="Input line artwork for ComfyUI processing" />
           <span class="cd-image-label" data-type="original">Input</span>
           <div class="cd-resize-img">
-            <img src="img/PSTOCOMFY/33.png" alt="Output image generated from the line artwork" />
+            <img src="../img/PSTOCOMFY/33.webp" alt="Output image generated from the line artwork" />
             <span class="cd-image-label" data-type="modified">Output</span>
           </div>
           <span class="cd-handle" aria-hidden="true"></span>
@@ -70,10 +204,10 @@
         </div>
 
         <figure class="cd-image-container blog-comparison">
-          <img src="img/PSTOCOMFY/361.png" alt="Second input artwork prepared for ComfyUI" loading="lazy" />
+          <img src="../img/PSTOCOMFY/361.png" alt="Second input artwork prepared for ComfyUI" loading="lazy" />
           <span class="cd-image-label" data-type="original">Input</span>
           <div class="cd-resize-img">
-            <img src="img/PSTOCOMFY/362.png" alt="Second ComfyUI generated output artwork" loading="lazy" />
+            <img src="../img/PSTOCOMFY/362.webp" alt="Second ComfyUI generated output artwork" loading="lazy" />
             <span class="cd-image-label" data-type="modified">Output</span>
           </div>
           <span class="cd-handle" aria-hidden="true"></span>
@@ -89,10 +223,10 @@
         </div>
 
         <figure class="cd-image-container blog-comparison">
-          <img src="img/PSTOCOMFY/43.png" alt="Third Photoshop input prepared for ComfyUI processing" loading="lazy" />
+          <img src="../img/PSTOCOMFY/43.png" alt="Third Photoshop input prepared for ComfyUI processing" loading="lazy" />
           <span class="cd-image-label" data-type="original">Input</span>
           <div class="cd-resize-img">
-            <img src="img/PSTOCOMFY/45.png" alt="Third ComfyUI processed output image" loading="lazy" />
+            <img src="../img/PSTOCOMFY/45.webp" alt="Third ComfyUI processed output image" loading="lazy" />
             <span class="cd-image-label" data-type="modified">Output</span>
           </div>
           <span class="cd-handle" aria-hidden="true"></span>
@@ -109,7 +243,7 @@
         </div>
 
         <figure class="blog-gif blog-image">
-          <img src="img/PSTOCOMFY/Screenshot pscomfyui.png" alt="Photoshop interface connected to ComfyUI workflow" loading="lazy" />
+          <img src="../img/PSTOCOMFY/Screenshot pscomfyui.webp" alt="Photoshop interface connected to ComfyUI workflow" loading="lazy" />
         </figure>
 
         <div class="blog-copy">
@@ -121,7 +255,7 @@
         </div>
 
         <figure class="blog-gif blog-image">
-          <img src="img/PSTOCOMFY/Screenshot_comfyui.png" alt="ComfyUI node workflow for LineArtProcessor image generation" loading="lazy" />
+          <img src="../img/PSTOCOMFY/Screenshot_comfyui.webp" alt="ComfyUI node workflow for LineArtProcessor image generation" loading="lazy" />
         </figure>
 
         <div class="blog-copy">
@@ -142,21 +276,34 @@
 
 
     <footer class="site-footer">
+      <ul class="footer-nav" aria-label="Site index">
+        <li><a href="../home.html">Archive</a></li>
+        <li><a href="../photography.html">Photography</a></li>
+        <li><a href="../portraits.html">Portraits</a></li>
+        <li><a href="../wall.html">WALLS</a></li>
+        <li><a href="../Documentryphotography.html">Documentary</a></li>
+        <li><a href="../computer-vision.html">Computer Vision</a></li>
+        <li><a href="../photogrammetry.html">Photogrammetry</a></li>
+        <li><a href="../you.html">YOU</a></li>
+        <li><a href="../works.html">Works</a></li>
+        <li><a href="../software.html">Software</a></li>
+        <li><a href="../blog.html">Journal</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
       <div class="footer-icons" aria-label="Social links">
-        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
-        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
-        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
-        <a href="https://behance.net" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
-        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
-        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="../icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="../icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="../icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://behance.net" target="_blank" rel="noopener"><img src="../icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="../icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="../icons/social-github.svg" alt="GitHub" /></a>
       </div>
       <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
     </footer>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.4.1.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/site-nav.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/site-nav.js"></script>
   </body>
 </html>

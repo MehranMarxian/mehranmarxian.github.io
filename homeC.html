@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mehran Ahmadi is a visual artist working with photography, AI-generated imagery, computer vision, and conceptual surreal visuals."
+    />
+    <title>Mehran Ahmadi | Visual Artist</title>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ── Tokens ── */
+      :root {
+        --hc-bg: #0e0f0f;
+        --hc-panel: #141616;
+        --hc-panel-alt: #151716;
+        --hc-text: #f2f0eb;
+        --hc-soft: #c6c4be;
+        --hc-muted: #898b88;
+        --hc-accent: #c76845;
+        --hc-line: rgba(242, 240, 235, 0.16);
+        --hc-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+        --hc-sans: "Instrument Sans", "PT Sans", Arial, sans-serif;
+        --hc-max: 1600px;
+        --hc-page-pad: clamp(20px, 5vw, 72px);
+      }
+
+      /* ── Base overrides ── */
+      body.has-fixed-nav {
+        background: var(--hc-bg);
+        color: var(--hc-text);
+        font-family: var(--hc-sans);
+        line-height: 1.6;
+      }
+
+      /* ── Reveal animation ── */
+      .hc-reveal {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .hc-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ══════════════════════════════════
+         HERO — split-screen
+         ══════════════════════════════════ */
+      .hc-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: calc(100vh - 56px);
+        position: relative;
+      }
+
+      /* left text pane */
+      .hc-hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(40px, 6vw, 100px) var(--hc-page-pad);
+        position: relative;
+      }
+      .hc-hero__text::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: 0;
+        width: 1px;
+        background: var(--hc-line);
+      }
+
+      .hc-hero__name {
+        font-family: var(--hc-serif);
+        font-size: clamp(2.4rem, 4.5vw, 5.2rem);
+        font-weight: 400;
+        line-height: 1.08;
+        margin: 0 0 24px;
+        color: var(--hc-text);
+      }
+
+      .hc-hero__bio {
+        font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+        color: var(--hc-soft);
+        max-width: 480px;
+        margin: 0 0 32px;
+        line-height: 1.7;
+      }
+
+      .hc-hero__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .hc-hero__tag {
+        font-size: 0.78rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border: 1px solid var(--hc-line);
+        border-radius: 100px;
+        color: var(--hc-soft);
+      }
+
+      /* right image pane */
+      .hc-hero__image {
+        position: relative;
+        overflow: hidden;
+      }
+      .hc-hero__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* scroll indicator */
+      .hc-hero__scroll {
+        position: absolute;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        color: var(--hc-muted);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        z-index: 2;
+      }
+      .hc-hero__scroll-line {
+        width: 1px;
+        height: 40px;
+        background: var(--hc-muted);
+        animation: hc-scroll-pulse 2s ease-in-out infinite;
+      }
+      @keyframes hc-scroll-pulse {
+        0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+        50% { opacity: 1; transform: scaleY(1); }
+      }
+
+      /* ══════════════════════════════════
+         PROJECT CARDS
+         ══════════════════════════════════ */
+      .hc-projects {
+        padding: clamp(60px, 8vw, 120px) var(--hc-page-pad);
+      }
+      .hc-projects__inner {
+        max-width: var(--hc-max);
+        margin: 0 auto;
+      }
+
+      .hc-card {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        gap: clamp(24px, 4vw, 64px);
+        align-items: center;
+        padding: clamp(32px, 4vw, 56px) 0;
+        border-bottom: 1px solid var(--hc-line);
+      }
+      .hc-card:first-child {
+        padding-top: 0;
+      }
+
+      .hc-card__media {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        aspect-ratio: 4 / 3;
+      }
+      .hc-card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+      .hc-card:hover .hc-card__media img {
+        transform: scale(1.04);
+      }
+
+      .hc-card__body {
+        padding: clamp(8px, 2vw, 24px) 0;
+      }
+
+      .hc-card__number {
+        font-family: var(--hc-sans);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--hc-accent);
+        margin: 0 0 12px;
+      }
+
+      .hc-card__title {
+        font-family: var(--hc-serif);
+        font-size: clamp(1.8rem, 2.8vw, 3rem);
+        font-weight: 400;
+        line-height: 1.15;
+        margin: 0 0 12px;
+        color: var(--hc-text);
+      }
+
+      .hc-card__meta {
+        font-size: 0.8rem;
+        color: var(--hc-muted);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin: 0 0 16px;
+      }
+
+      .hc-card__desc {
+        font-size: clamp(0.92rem, 1vw, 1.05rem);
+        color: var(--hc-soft);
+        line-height: 1.65;
+        margin: 0 0 24px;
+        max-width: 520px;
+      }
+
+      .hc-card__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--hc-text);
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        transition: color 0.3s ease;
+      }
+      .hc-card__link:hover {
+        color: var(--hc-accent);
+        text-decoration: none;
+      }
+      .hc-card__link svg {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease;
+      }
+      .hc-card__link:hover svg {
+        transform: translateX(4px);
+      }
+
+      /* ══════════════════════════════════
+         PRACTICE / MANIFESTO
+         ══════════════════════════════════ */
+      .hc-practice {
+        background: var(--hc-panel-alt);
+        padding: clamp(60px, 8vw, 120px) var(--hc-page-pad);
+      }
+      .hc-practice__inner {
+        max-width: var(--hc-max);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: clamp(32px, 5vw, 80px);
+        align-items: start;
+      }
+
+      .hc-practice__label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--hc-muted);
+        padding-top: 8px;
+      }
+
+      .hc-practice__statement {
+        font-family: var(--hc-serif);
+        font-size: clamp(1.6rem, 2.8vw, 2.8rem);
+        font-weight: 400;
+        line-height: 1.3;
+        color: var(--hc-text);
+        margin: 0 0 32px;
+      }
+
+      .hc-practice__body {
+        font-size: clamp(0.92rem, 1vw, 1.05rem);
+        color: var(--hc-soft);
+        line-height: 1.7;
+        max-width: 640px;
+        margin: 0 0 28px;
+      }
+
+      .hc-practice__disciplines {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .hc-practice__disciplines li {
+        font-size: 0.76rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border: 1px solid var(--hc-line);
+        border-radius: 100px;
+        color: var(--hc-muted);
+      }
+
+      /* ══════════════════════════════════
+         JOURNAL TEASERS
+         ══════════════════════════════════ */
+      .hc-journal {
+        padding: clamp(60px, 8vw, 120px) var(--hc-page-pad);
+      }
+      .hc-journal__inner {
+        max-width: var(--hc-max);
+        margin: 0 auto;
+      }
+
+      .hc-journal__heading {
+        font-family: var(--hc-serif);
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        font-weight: 400;
+        color: var(--hc-text);
+        margin: 0 0 clamp(32px, 4vw, 56px);
+      }
+
+      .hc-journal__list {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hc-journal__entry {
+        display: grid;
+        grid-template-columns: clamp(80px, 12vw, 180px) 1fr auto;
+        gap: clamp(16px, 3vw, 40px);
+        align-items: center;
+        padding: clamp(16px, 2vw, 24px) 0;
+        border-bottom: 1px solid var(--hc-line);
+        text-decoration: none;
+        color: inherit;
+        transition: background 0.3s ease;
+      }
+      .hc-journal__entry:first-child {
+        border-top: 1px solid var(--hc-line);
+      }
+      .hc-journal__entry:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .hc-journal__thumb {
+        aspect-ratio: 3 / 2;
+        overflow: hidden;
+        border-radius: 3px;
+      }
+      .hc-journal__thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+      .hc-journal__entry:hover .hc-journal__thumb img {
+        transform: scale(1.05);
+      }
+
+      .hc-journal__title {
+        font-family: var(--hc-serif);
+        font-size: clamp(1rem, 1.4vw, 1.3rem);
+        color: var(--hc-text);
+      }
+
+      .hc-journal__arrow {
+        width: 20px;
+        height: 20px;
+        color: var(--hc-muted);
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .hc-journal__entry:hover .hc-journal__arrow {
+        transform: translateX(4px);
+        color: var(--hc-accent);
+      }
+
+      /* ══════════════════════════════════
+         CONTACT CTA
+         ══════════════════════════════════ */
+      .hc-cta {
+        background: #f2f0eb;
+        color: #0e0f0f;
+        padding: clamp(60px, 8vw, 120px) var(--hc-page-pad);
+      }
+      .hc-cta__inner {
+        max-width: var(--hc-max);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hc-cta__headline {
+        font-family: var(--hc-serif);
+        font-size: clamp(2rem, 4vw, 4rem);
+        font-weight: 400;
+        line-height: 1.15;
+        margin: 0 0 24px;
+        color: #0e0f0f;
+      }
+      .hc-cta__headline em {
+        font-style: italic;
+      }
+
+      .hc-cta__body {
+        font-size: clamp(0.92rem, 1vw, 1.05rem);
+        color: #3a3b39;
+        max-width: 540px;
+        margin: 0 auto 36px;
+        line-height: 1.7;
+      }
+
+      .hc-cta__email {
+        display: inline-block;
+        font-size: clamp(1rem, 1.2vw, 1.15rem);
+        font-weight: 500;
+        color: #0e0f0f;
+        text-decoration: none;
+        padding-bottom: 4px;
+        border-bottom: 2px solid var(--hc-accent);
+        transition: color 0.3s ease, border-color 0.3s ease;
+      }
+      .hc-cta__email:hover {
+        color: var(--hc-accent);
+        text-decoration: none;
+      }
+
+      /* ══════════════════════════════════
+         FOOTER
+         ══════════════════════════════════ */
+      .hc-footer {
+        background: var(--hc-bg);
+        padding: clamp(32px, 4vw, 56px) var(--hc-page-pad);
+        border-top: 1px solid var(--hc-line);
+      }
+      .hc-footer__inner {
+        max-width: var(--hc-max);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .hc-footer__social {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .hc-footer__social a {
+        display: block;
+        width: 22px;
+        height: 22px;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+      }
+      .hc-footer__social a:hover {
+        opacity: 1;
+      }
+      .hc-footer__social img {
+        width: 100%;
+        height: 100%;
+        filter: invert(1);
+      }
+
+      .hc-footer__copy {
+        font-size: 0.78rem;
+        color: var(--hc-muted);
+        margin: 0;
+      }
+
+      /* ══════════════════════════════════
+         RESPONSIVE
+         ══════════════════════════════════ */
+      @media (max-width: 991px) {
+        .hc-hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+        .hc-hero__text {
+          padding: clamp(40px, 8vw, 80px) var(--hc-page-pad);
+          order: 2;
+        }
+        .hc-hero__text::after {
+          display: none;
+        }
+        .hc-hero__image {
+          order: 1;
+          aspect-ratio: 16 / 10;
+        }
+        .hc-hero__scroll {
+          display: none;
+        }
+        .hc-practice__inner {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hc-card {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .hc-card__media {
+          aspect-ratio: 16 / 10;
+        }
+        .hc-journal__entry {
+          grid-template-columns: 70px 1fr auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hc-hero__name {
+          font-size: 2rem;
+        }
+        .hc-journal__entry {
+          grid-template-columns: 1fr auto;
+        }
+        .hc-journal__thumb {
+          display: none;
+        }
+      }
+
+      /* ── 2K+ comfort ── */
+      @media (min-width: 2000px) {
+        .hc-card {
+          gap: 80px;
+          padding: 72px 0;
+        }
+        .hc-card__media {
+          aspect-ratio: 3 / 2;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="has-fixed-nav">
+    <!-- ════ NAV ════ -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#siteNavigation"
+        aria-controls="siteNavigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ════ HERO ════ -->
+      <section class="hc-hero" aria-label="Introduction">
+        <div class="hc-hero__text">
+          <h1 class="hc-hero__name">Mehran<br />Ahmadi</h1>
+          <p class="hc-hero__bio">
+            Artist, designer, and photographer exploring how images shift
+            between lived experience, digital bodies, and machine perception.
+          </p>
+          <ul class="hc-hero__tags" aria-label="Disciplines">
+            <li class="hc-hero__tag">Photography</li>
+            <li class="hc-hero__tag">Computer Vision</li>
+            <li class="hc-hero__tag">AI</li>
+            <li class="hc-hero__tag">Spatial Capture</li>
+            <li class="hc-hero__tag">Design</li>
+          </ul>
+        </div>
+        <div class="hc-hero__image">
+          <img
+            src="Images/home/mehran-ahmadi-visual-artist-home-01.jpg"
+            alt="Featured work by Mehran Ahmadi"
+          />
+        </div>
+        <div class="hc-hero__scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="hc-hero__scroll-line"></div>
+        </div>
+      </section>
+
+      <!-- ════ PROJECTS ════ -->
+      <section class="hc-projects" aria-label="Selected projects">
+        <div class="hc-projects__inner">
+
+          <!-- 01 Photography -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/15-mehran-ahmadi-portrait.jpg"
+                alt="Portrait study by Mehran Ahmadi"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">01</p>
+              <h2 class="hc-card__title">Photography</h2>
+              <p class="hc-card__meta">Portraits &middot; Documentary &middot; Surface Studies</p>
+              <p class="hc-card__desc">
+                Portraits, documentary work, and studies of architectural surfaces.
+              </p>
+              <a class="hc-card__link" href="photography.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 02 Computer Vision -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/False-Restorations/false-restorations-08-figure-among-portraits.webp"
+                alt="Computer vision reconstruction by Mehran Ahmadi"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">02</p>
+              <h2 class="hc-card__title">Computer Vision</h2>
+              <p class="hc-card__meta">Reconstruction &middot; Archives &middot; Anatomical Systems</p>
+              <p class="hc-card__desc">
+                Reconstructed characters, anatomical systems, and unstable archives.
+              </p>
+              <a class="hc-card__link" href="computer-vision.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 03 Photogrammetry -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/Brambles/brambles-eroded-figure-three-quarter.webp"
+                alt="Photogrammetry sculpture by Mehran Ahmadi"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">03</p>
+              <h2 class="hc-card__title">Photogrammetry</h2>
+              <p class="hc-card__meta">3D Capture &middot; Fragmented Bodies &middot; Digital Residue</p>
+              <p class="hc-card__desc">
+                Failed reconstructions, fragmented bodies, digital residue.
+              </p>
+              <a class="hc-card__link" href="photogrammetry.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 04 OpenLayer -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/OpenLayer/openlayer-photoshop-v53.webp"
+                alt="OpenLayer Photoshop extension interface"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">04</p>
+              <h2 class="hc-card__title">OpenLayer</h2>
+              <p class="hc-card__meta">Photoshop Extension &middot; AI Tools &middot; Visual Production</p>
+              <p class="hc-card__desc">
+                Photoshop extension for AI-assisted visual production.
+              </p>
+              <a class="hc-card__link" href="https://mehran-ahmadi.com/OpenLayer/" target="_blank" rel="noopener">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 05 Image Processing -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/mehran-ahmadi-photo-006.jpg"
+                alt="Image processing study by Mehran Ahmadi"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">05</p>
+              <h2 class="hc-card__title">Image Processing</h2>
+              <p class="hc-card__meta">Systems &middot; Chaos Theory &middot; The Archive</p>
+              <p class="hc-card__desc">
+                Notes on image systems, chaos theory, and the archive.
+              </p>
+              <a class="hc-card__link" href="archive/blog-1.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 06 YOU -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/mehran ahmadi color.jpg"
+                alt="YOU project by Mehran Ahmadi"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">06</p>
+              <h2 class="hc-card__title">YOU</h2>
+              <p class="hc-card__meta">Digital Body &middot; Identity &middot; Photographic Source</p>
+              <p class="hc-card__desc">
+                A fragmented digital body between photographic source and unstable identity.
+              </p>
+              <a class="hc-card__link" href="you.html">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 07 Digital Sculptures -->
+          <article class="hc-card hc-reveal">
+            <div class="hc-card__media">
+              <img
+                src="Images/thumbnail uemehran.webp"
+                alt="Digital sculpture by Mehran Ahmadi"
+                loading="lazy"
+              />
+            </div>
+            <div class="hc-card__body">
+              <p class="hc-card__number">07</p>
+              <h2 class="hc-card__title">Digital Sculptures</h2>
+              <p class="hc-card__meta">Realtime &middot; Sculptural Forms &middot; Digital Bodies</p>
+              <p class="hc-card__desc">
+                Realtime sculptural forms and digital bodies.
+              </p>
+              <a class="hc-card__link" href="https://youtu.be/7L12Cd_4bPk?si=PiFct_Mt40LMm9Pb" target="_blank" rel="noopener">
+                View project
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ════ PRACTICE MANIFESTO ════ -->
+      <section class="hc-practice" aria-label="Practice statement">
+        <div class="hc-practice__inner hc-reveal">
+          <p class="hc-practice__label">Practice</p>
+          <div>
+            <p class="hc-practice__statement">
+              Visual stories made where art meets computation.
+            </p>
+            <p class="hc-practice__body">
+              My work sits at the intersection of photography, machine learning,
+              and spatial capture. I build images that question the stability of
+              the photographic record, reconstruct lost or imagined figures, and
+              test what happens when human perception and algorithmic vision
+              occupy the same frame.
+            </p>
+            <ul class="hc-practice__disciplines" aria-label="Disciplines">
+              <li>Photography</li>
+              <li>Computer Vision</li>
+              <li>Photogrammetry</li>
+              <li>AI</li>
+              <li>Spatial Capture</li>
+              <li>Design</li>
+              <li>Image Processing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ JOURNAL TEASERS ════ -->
+      <section class="hc-journal" aria-label="Working notes">
+        <div class="hc-journal__inner">
+          <h2 class="hc-journal__heading hc-reveal">Working notes.</h2>
+          <div class="hc-journal__list">
+
+            <a class="hc-journal__entry hc-reveal" href="archive/the-metahumans.html">
+              <div class="hc-journal__thumb">
+                <img
+                  src="Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg"
+                  alt="MetaHumans project thumbnail"
+                  loading="lazy"
+                />
+              </div>
+              <span class="hc-journal__title">The MetaHumans</span>
+              <svg class="hc-journal__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+
+            <a class="hc-journal__entry hc-reveal" href="Melancholictoons.html">
+              <div class="hc-journal__thumb">
+                <img
+                  src="Images/Melancholic toons/Melancholic toons (1).jpg"
+                  alt="Melancholic Toons project thumbnail"
+                  loading="lazy"
+                />
+              </div>
+              <span class="hc-journal__title">Melancholic Toons</span>
+              <svg class="hc-journal__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+
+            <a class="hc-journal__entry hc-reveal" href="archive/pstocomfyui3.html">
+              <div class="hc-journal__thumb">
+                <img
+                  src="img/PSTOCOMFY/33.webp"
+                  alt="Photoshop to ComfyUI workflow thumbnail"
+                  loading="lazy"
+                />
+              </div>
+              <span class="hc-journal__title">Photoshop to ComfyUI</span>
+              <svg class="hc-journal__arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ════ CONTACT CTA ════ -->
+      <section class="hc-cta" aria-label="Contact">
+        <div class="hc-cta__inner hc-reveal">
+          <h2 class="hc-cta__headline">Let's make something <em>real.</em></h2>
+          <p class="hc-cta__body">
+            Open to collaborations, commissions, and conversations about art,
+            technology, and the spaces between them.
+          </p>
+          <a class="hc-cta__email" href="mailto:mehran.ahmadi@gmail.com">mehran.ahmadi@gmail.com</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ════ FOOTER ════ -->
+    <footer class="hc-footer">
+      <div class="hc-footer__inner">
+        <ul class="hc-footer__social" aria-label="Social links">
+          <li><a href="https://www.facebook.com/mehranmarxian" target="_blank" rel="noopener" aria-label="Facebook"><img src="icons/social-facebook.svg" alt="" /></a></li>
+          <li><a href="https://www.instagram.com/mehranmarxian" target="_blank" rel="noopener" aria-label="Instagram"><img src="icons/social-instagram.svg" alt="" /></a></li>
+          <li><a href="https://www.linkedin.com/in/mehranahmadi/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="icons/social-linkedin.svg" alt="" /></a></li>
+          <li><a href="https://www.behance.net/mehranmarxian" target="_blank" rel="noopener" aria-label="Behance"><img src="icons/social-behance.svg" alt="" /></a></li>
+          <li><a href="https://soundcloud.com/mehranmarxian" target="_blank" rel="noopener" aria-label="SoundCloud"><img src="icons/social-soundcloud.svg" alt="" /></a></li>
+          <li><a href="https://github.com/mehranmarxian" target="_blank" rel="noopener" aria-label="GitHub"><img src="icons/social-github.svg" alt="" /></a></li>
+        </ul>
+        <p class="hc-footer__copy">&copy; 2026 Mehran Ahmadi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (for mobile nav toggle) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+      /* ── Scroll-reveal via IntersectionObserver ── */
+      (function () {
+        var els = document.querySelectorAll(".hc-reveal");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach(function (el) { el.classList.add("is-visible"); });
+          return;
+        }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        els.forEach(function (el) { observer.observe(el); });
+      })();
+    </script>
+  </body>
+</html>
