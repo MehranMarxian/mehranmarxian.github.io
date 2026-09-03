@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Making OpenLayer — A Photoshop Plugin for ComfyUI | Mehran Ahmadi</title>
+    <meta name="description" content="How OpenLayer was built: turning a manual Photoshop to ComfyUI round trip into a free, open-source UXP plugin that generates, inpaints and upscales on your own GPU." />
+    <link rel="canonical" href="https://mehran-ahmadi.com/PStoComfy2026.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Mehran Ahmadi" />
+    <meta name="keywords" content="OpenLayer, Photoshop plugin, ComfyUI, UXP, local AI, Stable Diffusion, Flux, open source" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Mehran Ahmadi" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://mehran-ahmadi.com/PStoComfy2026.html" />
+    <meta property="og:title" content="Making OpenLayer — A Photoshop Plugin for ComfyUI | Mehran Ahmadi" />
+    <meta property="og:description" content="How OpenLayer was built: turning a manual Photoshop to ComfyUI round trip into a free, open-source UXP plugin that generates, inpaints and upscales on your own GPU." />
+    <meta property="og:image" content="https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="article:published_time" content="2026-09-03" />
+    <meta property="article:author" content="Mehran Ahmadi" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Making OpenLayer — A Photoshop Plugin for ComfyUI | Mehran Ahmadi" />
+    <meta name="twitter:description" content="How OpenLayer was built: turning a manual Photoshop to ComfyUI round trip into a free, open-source UXP plugin that generates, inpaints and upscales on your own GPU." />
+    <meta name="twitter:image" content="https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg" />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0e0f0f" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://mehran-ahmadi.com/#person",
+            "name": "Mehran Ahmadi",
+            "alternateName": "MEHRAN AHMADI",
+            "url": "https://mehran-ahmadi.com/",
+            "image": "https://mehran-ahmadi.com/Images/og/mehran-ahmadi-og.jpg",
+            "email": "mailto:mehran.ahmadi@gmail.com",
+            "jobTitle": "Visual Artist and Photographer",
+            "description": "Iranian visual artist and photographer based in Tehran, working across photography, computer vision, photogrammetry and AI-assisted image making.",
+            "nationality": {
+              "@type": "Country",
+              "name": "Iran"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Tehran",
+              "addressCountry": "IR"
+            },
+            "knowsAbout": [
+              "Photography",
+              "Portrait photography",
+              "Documentary photography",
+              "Computer vision",
+              "Photogrammetry",
+              "3D scanning",
+              "Generative AI art",
+              "Stable Diffusion",
+              "ComfyUI",
+              "Adobe Photoshop plugins"
+            ],
+            "sameAs": [
+              "https://www.instagram.com/mehranahmadiphotography/",
+              "https://www.facebook.com/Mehran.Photography/",
+              "https://www.linkedin.com/in/mehran-ahmadi-243aa256/",
+              "https://www.behance.net/mehran_ahmadi",
+              "https://soundcloud.com/mehranahmadi",
+              "https://github.com/MehranMarxian"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mehran-ahmadi.com/#website",
+            "url": "https://mehran-ahmadi.com/",
+            "name": "Mehran Ahmadi",
+            "alternateName": "Mehran Ahmadi - Visual Artist",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "copyrightHolder": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            }
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://mehran-ahmadi.com/PStoComfy2026.html#article",
+            "headline": "Making OpenLayer",
+            "name": "Making OpenLayer",
+            "description": "How OpenLayer was built: turning a manual Photoshop to ComfyUI round trip into a free, open-source UXP plugin that generates, inpaints and upscales on your own GPU.",
+            "url": "https://mehran-ahmadi.com/PStoComfy2026.html",
+            "image": "https://mehran-ahmadi.com/Images/og/software-mehran-ahmadi.jpg",
+            "datePublished": "2026-09-03",
+            "dateModified": "2026-09-03",
+            "articleSection": "Workflow",
+            "keywords": "OpenLayer, Photoshop plugin, ComfyUI, UXP, local AI, Stable Diffusion, Flux, open source",
+            "inLanguage": "en",
+            "author": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "publisher": {
+              "@id": "https://mehran-ahmadi.com/#person"
+            },
+            "isPartOf": {
+              "@id": "https://mehran-ahmadi.com/#website"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://mehran-ahmadi.com/PStoComfy2026.html"
+            },
+            "about": {
+              "@id": "https://mehran-ahmadi.com/software.html#openlayer"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mehran-ahmadi.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Journal",
+                "item": "https://mehran-ahmadi.com/blog.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Making OpenLayer",
+                "item": "https://mehran-ahmadi.com/PStoComfy2026.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <style>
+      .openlayer-meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 0;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        color: rgba(255, 255, 255, 0.54);
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .openlayer-meta li + li::before {
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        margin: 0 10px;
+        vertical-align: middle;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .openlayer-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 4px 28px;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+      }
+
+      .openlayer-features li {
+        position: relative;
+        padding-left: 16px;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      .openlayer-features li::before {
+        position: absolute;
+        top: 0.78em;
+        left: 0;
+        width: 7px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.34);
+        content: "";
+      }
+
+      .openlayer-pipeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 14px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+        counter-reset: step;
+      }
+
+      .openlayer-pipeline li {
+        padding: 18px 20px;
+        border: 1px solid rgba(241, 240, 236, 0.16);
+      }
+
+      .openlayer-pipeline li::before {
+        display: block;
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.44);
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        counter-increment: step;
+        content: "0" counter(step);
+      }
+
+      .openlayer-pipeline strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--text);
+        font-weight: 400;
+        font-size: 0.98rem;
+      }
+
+      .openlayer-pipeline span {
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .openlayer-cta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .openlayer-cta a {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 18px;
+        color: rgba(241, 240, 236, 0.92);
+        font-size: 0.84rem;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        border: 1px solid rgba(241, 240, 236, 0.34);
+        transition: color 180ms ease, border-color 180ms ease;
+      }
+
+      .openlayer-cta a:hover,
+      .openlayer-cta a:focus-visible {
+        color: #ffffff;
+        text-decoration: none;
+        border-color: rgba(241, 240, 236, 0.7);
+      }
+    </style>
+  </head>
+  <body class="has-fixed-nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light site-nav">
+      <a class="navbar-brand" href="home.html">Mehran Ahmadi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavigation" aria-controls="siteNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="siteNavigation">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portraits.html">Portraits</a></li>
+          <li class="nav-item active"><a class="nav-link" href="blog.html">Blog <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-shell">
+      <article class="blog-article">
+        <header class="page-intro">
+          <h1>Making OpenLayer</h1>
+          <p>A free Photoshop plugin for ComfyUI, built out of my own workflow</p>
+        </header>
+
+        <ul class="openlayer-meta">
+          <li>Adobe UXP plugin</li>
+          <li>TypeScript</li>
+          <li>MIT licence</li>
+          <li>v0.20.0 alpha</li>
+          <li>2026</li>
+        </ul>
+
+        <figure class="blog-image blog-gif">
+          <img
+            src="Images/OpenLayer/openlayer-photoshop-v53.webp"
+            alt="The OpenLayer panel open inside Adobe Photoshop, showing local ComfyUI generation controls beside a painting in progress"
+            width="1280"
+            height="800"
+          />
+          <figcaption>The OpenLayer panel running beside a document in Photoshop.</figcaption>
+        </figure>
+
+        <div class="blog-copy">
+          <h2>The problem was the round trip</h2>
+          <p>
+            For a long time my AI work ran on a loop that never quite closed.
+            I would build an image in Photoshop — mask it, correct it, get the
+            structure right — then export a flat PNG, walk it over to ComfyUI,
+            queue a graph, wait, find the output folder, drag the result back
+            into Photoshop, realign it, and start again. Projects like
+            <a href="head-reconstruction.html">Head Reconstruction</a> and
+            <a href="False-Restorations.html">False Restorations</a> are made of
+            dozens of those laps.
+          </p>
+          <p>
+            The generation was never the slow part. The commuting was. And every
+            lap cost something real: the moment an image leaves Photoshop as a
+            flat PNG, the layers, the masks and the edit history are gone. You
+            get a picture back, but not a document you can keep working in.
+          </p>
+          <p>
+            I wrote up that manual workflow at the time — it is still here as
+            <a href="archive/pstocomfyui3.html">Photoshop to ComfyUI</a>, built on
+            a LineArtProcessor and ControlNet setup, and standing on
+            <a href="https://github.com/NimaNzrii/comfyui-photoshop" target="_blank" rel="noopener">Nima's comfyui-photoshop</a>,
+            which first showed me the two programs could talk at all. OpenLayer
+            is what happened when I stopped documenting that loop and started
+            trying to remove it.
+          </p>
+        </div>
+
+        <figure class="blog-comparison cd-image-container">
+          <img src="img/PSTOCOMFY/31.png" alt="Line artwork prepared in Photoshop before processing" />
+          <span class="cd-image-label" data-type="original">Photoshop</span>
+          <div class="cd-resize-img">
+            <img src="img/PSTOCOMFY/33.webp" alt="The same artwork after an image-to-image pass in ComfyUI" />
+            <span class="cd-image-label" data-type="modified">ComfyUI</span>
+          </div>
+          <span class="cd-handle" aria-hidden="true"></span>
+        </figure>
+
+        <div class="blog-copy">
+          <h2>What it had to be</h2>
+          <p>
+            Before writing anything I set three rules, and they decided most of
+            the architecture on their own.
+          </p>
+        </div>
+
+        <ul class="openlayer-pipeline">
+          <li>
+            <strong>Local, always</strong>
+            <span>
+              Your art, your GPU, your machine. No cloud round trip, no credits,
+              no subscription, and nothing about the work leaving the room.
+            </span>
+          </li>
+          <li>
+            <strong>Layers, not pictures</strong>
+            <span>
+              Results arrive as editable Photoshop layers, placed where they
+              belong, so a generation is a step in the document rather than a
+              replacement for it.
+            </span>
+          </li>
+          <li>
+            <strong>Open, so it survives me</strong>
+            <span>
+              MIT licensed and developed in public, because a tool this close to
+              someone's working files should never be a black box.
+            </span>
+          </li>
+        </ul>
+
+        <div class="blog-copy">
+          <h2>How it is put together</h2>
+          <p>
+            OpenLayer is an Adobe UXP plugin written in TypeScript, so the panel
+            lives inside Photoshop and can read and write the document directly.
+            The part that took the longest to get right is the piece in the
+            middle: a small local hub that sits between the panel and a ComfyUI
+            server, keeps a socket open, tracks which jobs are in flight, and
+            hands results back to the layer they came from.
+          </p>
+          <p>
+            That middle layer is doing the work the old manual loop used to make
+            me do by hand — capturing the right region, sending it with the right
+            conditioning, and knowing where the answer goes when it returns.
+            Everything else in the plugin is built on top of it.
+          </p>
+        </div>
+
+        <figure class="blog-image blog-gif">
+          <img
+            src="img/PSTOCOMFY/Screenshot_comfyui.webp"
+            alt="A ComfyUI node graph of the kind OpenLayer drives from inside Photoshop"
+            loading="lazy"
+          />
+          <figcaption>The node graph moved out of sight — still there, no longer in the way.</figcaption>
+        </figure>
+
+        <div class="blog-copy">
+          <h2>What it does now</h2>
+          <p>
+            The current alpha covers the operations I actually reach for in a
+            working session, with Stable Diffusion, SDXL and Flux models:
+          </p>
+        </div>
+
+        <ul class="openlayer-features">
+          <li>Text to image</li>
+          <li>Image to image</li>
+          <li>Sketch to image</li>
+          <li>Inpaint and outpaint</li>
+          <li>Upscale</li>
+          <li>Prompt from layer</li>
+          <li>Live painting</li>
+          <li>Multi-reference composition</li>
+          <li>Unflatten a flat image into layers</li>
+          <li>Layer tools for sending work back out</li>
+        </ul>
+
+        <div class="blog-copy">
+          <p>
+            <em>Unflatten</em> is the one I did not expect to care about as much
+            as I do. It takes a finished flat image and separates it back into
+            layers — which is exactly the loss I started out complaining about,
+            run in reverse.
+          </p>
+          <h2>Still an alpha</h2>
+          <p>
+            Version 0.20.0 is honest about being early. It needs Photoshop 2024
+            or later and a ComfyUI install you are already comfortable running,
+            and it will occasionally lose an argument with a custom node graph.
+            It is free, the source is public, and the issue tracker is the
+            fastest way to change what it does next.
+          </p>
+        </div>
+
+        <div class="openlayer-cta">
+          <a href="https://mehran-ahmadi.com/OpenLayer/">
+            OpenLayer site <span aria-hidden="true">&rarr;</span>
+          </a>
+          <a href="https://github.com/MehranMarxian/OpenLayer" target="_blank" rel="noopener">
+            Source on GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a href="https://github.com/MehranMarxian/OpenLayer/releases" target="_blank" rel="noopener">
+            Download the plugin <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a href="software.html">
+            All software <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <ul class="footer-nav" aria-label="Site index">
+        <li><a href="home.html">Archive</a></li>
+        <li><a href="photography.html">Photography</a></li>
+        <li><a href="portraits.html">Portraits</a></li>
+        <li><a href="wall.html">WALLS</a></li>
+        <li><a href="Documentryphotography.html">Documentary</a></li>
+        <li><a href="generative-art.html">Generative Art</a></li>
+        <li><a href="photogrammetry.html">Photogrammetry</a></li>
+        <li><a href="you.html">YOU</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="footer-icons" aria-label="Social links">
+        <a href="https://www.facebook.com/Mehran.Photography/" target="_blank" rel="noopener"><img src="icons/social-facebook.svg" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/mehranahmadiphotography/" target="_blank" rel="noopener"><img src="icons/social-instagram.svg" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/in/mehran-ahmadi-243aa256/" target="_blank" rel="noopener"><img src="icons/social-linkedin.svg" alt="LinkedIn" /></a>
+        <a href="https://www.behance.net/mehran_ahmadi" target="_blank" rel="noopener"><img src="icons/social-behance.svg" alt="Behance" /></a>
+        <a href="https://soundcloud.com/mehranahmadi" target="_blank" rel="noopener"><img src="icons/social-soundcloud.svg" alt="SoundCloud" /></a>
+        <a href="https://github.com/MehranMarxian" target="_blank" rel="noopener"><img src="icons/social-github.svg" alt="GitHub" /></a>
+      </div>
+      <p class="footer-text">&copy; 2026 Mehran Ahmadi</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/site-nav.js"></script>
+  </body>
+</html>

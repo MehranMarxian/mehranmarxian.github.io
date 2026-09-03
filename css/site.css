@@ -6,10 +6,10 @@
   --text: #f2f2f2;
   --muted: #a8a8a8;
   --line: #1d1d1d;
-  --nav-bg: rgba(14, 15, 15, 0.94);
+  --nav-bg: rgba(14, 15, 15, 0.58);
   --footer-bg: #0e0f0f;
   --footer-text: #ffffff;
-  --site-version: "26.52";
+  --site-version: "26.63";
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
 }
@@ -101,10 +101,45 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border-bottom: 0;
-  background: var(--page-bg) !important;
-  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--nav-bg) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  backdrop-filter: blur(18px) saturate(180%);
   padding: 0.5rem 1rem !important;
+  will-change: transform;
+  transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 300ms ease, border-color 300ms ease;
+}
+
+/* Scrolling down — tuck the bar away. Scrolling up brings it straight back. */
+.site-nav.is-hidden {
+  transform: translateY(-100%);
+}
+
+/* Never hide the bar while the mobile menu is open, or focus is inside it. */
+.site-nav.is-menu-open,
+.site-nav:focus-within {
+  transform: translateY(0);
+}
+
+/* The open mobile menu expands inside the bar, so it needs more backing. */
+.site-nav.is-menu-open {
+  background-color: rgba(14, 15, 15, 0.92) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+/* No backdrop-filter (older Firefox, some embedded views): fall back to a
+   near-solid bar rather than unreadable text over the artwork. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-nav {
+    background-color: rgba(14, 15, 15, 0.97) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav {
+    transition: none;
+  }
 }
 
 .site-nav.navbar-light .navbar-brand,
@@ -656,7 +691,11 @@ p {
   left: 50%;
   width: 34px;
   height: 34px;
-  background: rgba(14, 15, 15, 0.82);
+  background-color: rgba(14, 15, 15, 0.82);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 7.5 5.5 12 10 16.5'/%3E%3Cpath d='M14 7.5 18.5 12 14 16.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 19px 19px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -1479,33 +1518,52 @@ p {
   z-index: 1;
   display: grid;
   place-items: center;
-  align-content: center;
-  padding: 24px 24px 128px;
+  align-content: end;
+  padding: 24px 24px 104px;
   text-align: center;
   color: #ffffff;
+}
+
+/* The hero footer index wraps onto several lines on narrow screens, so the
+   centred block needs more clearance there. */
+@media (max-width: 767.98px) {
+  .centered-content {
+    padding-bottom: 168px;
+  }
 }
 
 .enter-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-width: 132px;
-  min-height: 52px;
-  padding: 12px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.82);
+  gap: 12px;
+  min-height: 44px;
+  padding: 4px 2px;
+  border: 0;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.34);
+  background: transparent;
   font: inherit;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
   cursor: pointer;
-  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+  transition: gap 180ms ease, color 160ms ease;
+}
+
+.enter-btn::after {
+  content: "→";
+  transition: transform 180ms ease;
 }
 
 .enter-btn:hover,
-.enter-btn:focus {
-  color: #111111;
-  background: #ffffff;
-  border-color: #ffffff;
+.enter-btn:focus-visible {
+  color: #ffffff;
+  text-decoration: none;
+  gap: 18px;
+}
+
+.enter-btn:hover::after,
+.enter-btn:focus-visible::after {
+  transform: translateX(3px);
 }
 
 .hero-title {

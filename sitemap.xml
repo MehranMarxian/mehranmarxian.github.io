@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mehran-ahmadi.com/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -33,19 +33,19 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/home.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/15-mehran-ahmadi-portrait.jpg</image:loc>
+      <image:loc>https://mehran-ahmadi.com/Images/15-mehran-ahmadi-portrait.webp</image:loc>
       <image:title>Portrait photography by Mehran Ahmadi</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.jpg</image:loc>
+      <image:loc>https://mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.webp</image:loc>
       <image:title>Documentary photography by Mehran Ahmadi</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-1.jpg</image:loc>
+      <image:loc>https://mehran-ahmadi.com/Images/wall/mehran_ahmad-wall-1.webp</image:loc>
       <image:title>WALLS photography series by Mehran Ahmadi</image:title>
     </image:image>
     <image:image>
@@ -87,7 +87,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/software.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -97,7 +97,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/works.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -151,7 +151,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photography.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -196,62 +196,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://mehran-ahmadi.com/computer-vision.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%281%29.jpg</image:loc>
-      <image:title>Melancholic Toons AI artwork by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2811%29.jpg</image:loc>
-      <image:title>Melancholic cartoon character reconstructed with AI by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2812%29.jpg</image:loc>
-      <image:title>AI image-to-image line art experiment by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp</image:loc>
-      <image:title>The Animal Machine anatomical animal study by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-01.webp</image:loc>
-      <image:title>Anatomical pig reconstructed as a biological system by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-02.webp</image:loc>
-      <image:title>Pig anatomy transformed into flesh, cables, and machine structures</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp</image:loc>
-      <image:title>False Restorations painterly reconstruction by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-01-archival-room.webp</image:loc>
-      <image:title>Archival room reconstructed through AI-assisted image processes by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp</image:loc>
-      <image:title>Figures and a black cat from False Restorations by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-wire-grid.jpg</image:loc>
-      <image:title>Head Reconstruction wire-grid portrait by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-line-map.jpg</image:loc>
-      <image:title>Portrait reconstructed through an irregular line map by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-folded-shell.jpg</image:loc>
-      <image:title>Head reconstructed as a folded geometric shell by Mehran Ahmadi</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://mehran-ahmadi.com/photogrammetry.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -281,7 +227,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/portraits.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -335,9 +281,19 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/blog.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/OpenLayer/openlayer-photoshop-v53.webp</image:loc>
+      <image:title>The OpenLayer panel running inside Adobe Photoshop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/Screenshot_comfyui.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/33.webp</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/blog/metahumans/mehran-ahmadi-metahuman-cinematic-profile.jpg</image:loc>
       <image:title>Cinematic MetaHuman portrait by Mehran Ahmadi</image:title>
@@ -370,33 +326,22 @@
       <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/31.png</image:loc>
       <image:title>Photoshop input image</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/33.webp</image:loc>
-      <image:title>ComfyUI output image</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/mehran-ahmadi-photo-013.webp</image:loc>
-      <image:title>Image Notes photograph by Mehran Ahmadi</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://mehran-ahmadi.com/Images/PS_TO_Z_Image%2027.webp</image:loc>
-    </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/Documentryphotography.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -439,7 +384,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/False-Restorations.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -493,7 +438,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/Melancholictoons.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -546,8 +491,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mehran-ahmadi.com/PStoComfy2026.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/OpenLayer/openlayer-photoshop-v53.webp</image:loc>
+      <image:title>The OpenLayer panel open inside Adobe Photoshop, showing local ComfyUI generation controls beside a painting in progress</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/31.png</image:loc>
+      <image:title>Line artwork prepared in Photoshop before processing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/33.webp</image:loc>
+      <image:title>The same artwork after an image-to-image pass in ComfyUI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/img/PSTOCOMFY/Screenshot_comfyui.webp</image:loc>
+      <image:title>A ComfyUI node graph of the kind OpenLayer drives from inside Photoshop</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mehran-ahmadi.com/archive/blog-1.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -565,7 +532,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/pstocomfyui3.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -603,7 +570,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/the-metahumans.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -641,7 +608,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/brammbles.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -667,7 +634,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/empty-space.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -676,8 +643,62 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mehran-ahmadi.com/generative-art.html</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%281%29.jpg</image:loc>
+      <image:title>Melancholic Toons AI artwork by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2811%29.jpg</image:loc>
+      <image:title>Melancholic cartoon character reconstructed with AI by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Melancholic%20toons/Melancholic%20toons%20%2812%29.jpg</image:loc>
+      <image:title>AI image-to-image line art experiment by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-header.webp</image:loc>
+      <image:title>The Animal Machine anatomical animal study by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-01.webp</image:loc>
+      <image:title>Anatomical pig reconstructed as a biological system by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/The-Animal-Machine/the-animal-machine-02.webp</image:loc>
+      <image:title>Pig anatomy transformed into flesh, cables, and machine structures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-09-figures-on-bed.webp</image:loc>
+      <image:title>False Restorations painterly reconstruction by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-01-archival-room.webp</image:loc>
+      <image:title>Archival room reconstructed through AI-assisted image processes by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-03-figures-and-black-cat.webp</image:loc>
+      <image:title>Figures and a black cat from False Restorations by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-wire-grid.jpg</image:loc>
+      <image:title>Head Reconstruction wire-grid portrait by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-line-map.jpg</image:loc>
+      <image:title>Portrait reconstructed through an irregular line map by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Head-Reconstruction/head-reconstruction-folded-shell.jpg</image:loc>
+      <image:title>Head reconstructed as a folded geometric shell by Mehran Ahmadi</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mehran-ahmadi.com/head-reconstruction.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -703,7 +724,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/the_animal_machine.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -757,7 +778,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/wall.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -791,7 +812,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/you.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
