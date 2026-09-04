@@ -2,14 +2,14 @@
 @import url("../webfonts/PTSans_Regular/stylesheet.css");
 
 :root {
-  --page-bg: #0e0f0f;
+  --page-bg: #000000;
   --text: #f2f2f2;
   --muted: #a8a8a8;
   --line: #1d1d1d;
-  --nav-bg: rgba(14, 15, 15, 0.58);
-  --footer-bg: #0e0f0f;
+  --nav-bg: rgba(0, 0, 0, 0.58);
+  --footer-bg: #000000;
   --footer-text: #ffffff;
-  --site-version: "26.63";
+  --site-version: "26.66";
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
 }
@@ -101,7 +101,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 0;
   background: var(--nav-bg) !important;
   -webkit-backdrop-filter: blur(18px) saturate(180%);
   backdrop-filter: blur(18px) saturate(180%);
@@ -124,7 +124,7 @@ p {
 
 /* The open mobile menu expands inside the bar, so it needs more backing. */
 .site-nav.is-menu-open {
-  background-color: rgba(14, 15, 15, 0.92) !important;
+  background-color: rgba(0, 0, 0, 0.92) !important;
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
@@ -132,7 +132,7 @@ p {
    near-solid bar rather than unreadable text over the artwork. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .site-nav {
-    background-color: rgba(14, 15, 15, 0.97) !important;
+    background-color: rgba(0, 0, 0, 0.97) !important;
   }
 }
 

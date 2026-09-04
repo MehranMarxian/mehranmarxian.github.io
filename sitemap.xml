@@ -3,37 +3,55 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mehran-ahmadi.com/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-01.jpg</image:loc>
-      <image:title>Atmospheric photographic artwork by MEHRAN AHMADI</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-02.jpg</image:loc>
-      <image:title>Surreal photographic artwork by MEHRAN AHMADI</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-03.jpg</image:loc>
-      <image:title>Conceptual visual artwork by MEHRAN AHMADI</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-04.jpg</image:loc>
-      <image:title>Low-light photographic artwork by MEHRAN AHMADI</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-05.jpg</image:loc>
-      <image:title>Portrait-based visual artwork by MEHRAN AHMADI</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/home/mehran-ahmadi-visual-artist-home-06.jpg</image:loc>
-      <image:title>Minimal photographic composition by MEHRAN AHMADI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/15-mehran-ahmadi-portrait.webp</image:loc>
+      <image:title>Portrait photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/og/portraits-mehran-ahmadi.jpg</image:loc>
+      <image:title>Portrait photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/og/documentary-mehran-ahmadi.jpg</image:loc>
+      <image:title>A Place to Stay, documentary photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/og/wall-mehran-ahmadi.jpg</image:loc>
+      <image:title>WALLS, abstract architecture photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/og/empty-space-mehran-ahmadi.jpg</image:loc>
+      <image:title>EMPTY SPACE, long-exposure photography by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/False-Restorations/false-restorations-08-figure-among-portraits.webp</image:loc>
+      <image:title>False Restorations, a generative artwork by Mehran Ahmadi</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/home.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -41,7 +59,7 @@
       <image:title>Portrait photography by Mehran Ahmadi</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://mehran-ahmadi.com/images/mehran_ahmadi01-crop-u9596.webp</image:loc>
+      <image:loc>https://mehran-ahmadi.com/Images/mehran_ahmadi01-crop-u9596.webp</image:loc>
       <image:title>Documentary photography by Mehran Ahmadi</image:title>
     </image:image>
     <image:image>
@@ -87,7 +105,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/software.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -97,7 +115,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/works.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -151,7 +169,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photography.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -197,7 +215,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photogrammetry.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -227,7 +245,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/portraits.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -281,7 +299,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/blog.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -329,19 +347,19 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/about.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/contact.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/Documentryphotography.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -384,7 +402,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/False-Restorations.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -438,7 +456,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/Melancholictoons.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -492,7 +510,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/PStoComfy2026.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -514,16 +532,16 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/blog-1.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/images/mehran-ahmadi-photo-006.jpg</image:loc>
-      <image:title>Original Mehran Ahmadi photograph used for image processing</image:title>
+      <image:title>The photograph after chaos-theory processing, its water turned to gold filigree</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/imagebymehranahmadiswimer.jpg</image:loc>
-      <image:title>Processed version of the Mehran Ahmadi photograph</image:title>
+      <image:title>The original photograph of a swimmer in turquoise water</image:title>
     </image:image>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/images/double-compound-pendulum.gif</image:loc>
@@ -532,7 +550,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/pstocomfyui3.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -570,7 +588,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/the-metahumans.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -608,7 +626,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/brammbles.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -634,7 +652,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/empty-space.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -644,7 +662,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/generative-art.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -698,7 +716,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/head-reconstruction.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -724,7 +742,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/the_animal_machine.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -778,7 +796,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/wall.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -812,7 +830,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/you.html</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
