@@ -42,6 +42,14 @@ body.has-fixed-nav {
   background: var(--page-bg);
 }
 
+/* Pages stack a masthead above their content, so main must lay its children
+   out in normal flow. Something in the cascade resolves main to flex, which
+   put the masthead and the content side by side and wrecked narrow screens;
+   several pages had already worked around it individually. */
+main {
+  display: block;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -508,6 +516,16 @@ p {
   margin: 0;
   place-items: center;
   background: #111314;
+}
+
+@media (max-width: 767.98px) {
+  .documentary-showcase {
+    min-height: min(52svh, 420px);
+  }
+
+  .documentary-showcase img {
+    max-height: min(52svh, 420px);
+  }
 }
 
 .documentary-showcase img {
