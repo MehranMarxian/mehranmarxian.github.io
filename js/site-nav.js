@@ -51,15 +51,24 @@
 
   const THRESHOLD = 6; // ignore sub-pixel and trackpad jitter
   const REVEAL_AT = 90; // don't start hiding until we're past the bar itself
+  const TOP_AT = 8; // below this we're still "at the top" of the page
 
   let lastY = window.pageYOffset || document.documentElement.scrollTop || 0;
   let ticking = false;
+
+  // On pages that let the bar ride over a hero (body.nav-over-hero) the
+  // background only appears once the page has left the top.
+  function setScrolled(y) {
+    nav.classList.toggle("is-scrolled", y > TOP_AT);
+  }
 
   function apply() {
     ticking = false;
 
     const y = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
     const delta = y - lastY;
+
+    setScrolled(y);
 
     // Never hide while the mobile menu is open.
     if (nav.classList.contains("is-menu-open")) {
@@ -98,7 +107,11 @@
     lastY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
     ticking = false;
     nav.classList.remove("is-hidden");
+    setScrolled(lastY);
   }
+
+  // A reload part-way down the page must start with the background already on.
+  setScrolled(lastY);
 
   window.addEventListener("pageshow", resync);
   document.addEventListener("visibilitychange", () => {

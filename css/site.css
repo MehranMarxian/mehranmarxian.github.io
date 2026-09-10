@@ -136,6 +136,32 @@ p {
   border-bottom-color: rgba(255, 255, 255, 0.06);
 }
 
+/* Opt-in (body.nav-over-hero): the bar rides on the artwork until the page
+   moves. At the very top there is no bar at all — just the links — so a hero
+   image is never cut in half by a dark strip. site-nav.js adds .is-scrolled
+   once the page leaves the top; the transparent state is the CSS default so a
+   slow script can't flash a solid bar over the hero on load. */
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) {
+  background: transparent !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+}
+
+/* The hero's own top scrim carries most of the contrast; this keeps the links
+   readable if a bright slide ever lands under them. */
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-brand,
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .nav-link,
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggler {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.75);
+}
+
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggler-icon,
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggler-icon::before,
+body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggler-icon::after {
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.75);
+}
+
 /* No backdrop-filter (older Firefox, some embedded views): fall back to a
    near-solid bar rather than unreadable text over the artwork. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
