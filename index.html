@@ -362,6 +362,53 @@
         background: #f1f0ec;
       }
 
+      /* ---------------- VOID: live header for the generative-art work ---- */
+      /* Sits inside .rs-rows, so it pulls back out to full bleed with
+         negative margins; the overlay mirrors the top hero's bottom-left
+         block. The demo iframe is a background layer (pointer-events stay
+         off), buttons and links carry the interaction. */
+      .rs-void-hero {
+        position: relative;
+        display: grid;
+        align-content: end;
+        min-height: 100svh;
+        margin: 0 calc(-1 * var(--rs-inset));
+        overflow: hidden;
+        padding: 0 var(--rs-inset) clamp(56px, 9vh, 108px);
+      }
+
+      .rs-void-hero .void-card {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        border: 0;
+      }
+
+      .rs-void-hero::after {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 58%);
+        pointer-events: none;
+        content: "";
+      }
+
+      .rs-void-hero__inner {
+        position: relative;
+        z-index: 2;
+        max-width: 1180px;
+      }
+
+      .rs-void-hero__title {
+        margin: 0 0 18px;
+        color: #ffffff;
+        font-size: clamp(1.35rem, 3.2vw, 2.6rem);
+        font-weight: 400;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
       /* ---------------- cards: solid block, text below the image --------- */
       .rs-card {
         display: flex;
@@ -722,6 +769,34 @@
           </div>
         </div>
 
+        <!-- VOID / PARTICLE MEMORY: live header for the generative-art work
+             below. The demo is a background layer — pointer-events stay off
+             the iframe so the page scrolls past it — and it only mounts
+             while the card is on screen (js/void-demo.js). -->
+        <section class="rs-void-hero" aria-label="VOID / PARTICLE MEMORY — live generative artwork">
+          <div class="void-card" data-void-demo="https://mehran-ahmadi.com/Particle-Memory-VOID/app/?demo=1">
+            <img
+              loading="lazy"
+              width="1024"
+              height="830"
+              alt="A portrait reconstructing itself from thousands of living particles"
+              src="https://mehran-ahmadi.com/Particle-Memory-VOID/app/samples/demo-portrait.jpg"
+            />
+          </div>
+          <div class="rs-void-hero__inner">
+            <h2 class="rs-void-hero__title">VOID / PARTICLE MEMORY</h2>
+            <p class="rs-hero__lede">
+              A generative particle-life system that turns your photos, 3D models, and
+              point clouds into living memories, reconstructing, evolving, dissolving,
+              and remembering themselves.
+            </p>
+            <div class="rs-hero__actions">
+              <a class="rs-btn" href="https://mehran-ahmadi.com/Particle-Memory-VOID/">Enter the piece</a>
+              <a class="rs-btn rs-btn--ghost" href="https://github.com/MehranMarxian/Particle-Memory-VOID" target="_blank" rel="noopener">View source</a>
+            </div>
+          </div>
+        </section>
+
         <div class="rs-row rs-row--2">
           <a class="rs-card" href="generative-art.html" data-reveal>
             <div class="rs-card__media">
@@ -887,6 +962,7 @@
     </footer>
 
     <script src="js/site-nav.js"></script>
+    <script src="js/void-demo.js"></script>
     <script>
       (function () {
         "use strict";
