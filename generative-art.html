@@ -306,6 +306,27 @@
         display: none;
       }
 
+      /* VOID live card: the poster stays visible (the img rules above are
+         the slideshow's) and the self-playing demo takes over from it via
+         js/void-demo.js while the card is on screen. The card itself is not
+         a link — only its archive-card__link is. */
+      .archive-card--live {
+        cursor: default;
+      }
+
+      .archive-card__media .void-card {
+        position: absolute;
+        inset: 0;
+        border: 0;
+      }
+
+      .archive-card__media .void-card img {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+      }
+
       .archive-card__shade {
         z-index: -2;
         background:
@@ -1040,6 +1061,38 @@
 
       <section class="archive-index" id="selected-fields" aria-label="Generative art projects">
         <div class="archive-grid">
+<article class="archive-card archive-card--live">
+            <div class="archive-card__media">
+              <div class="void-card" data-void-demo="https://mehran-ahmadi.com/Particle-Memory-VOID/app/?demo=1">
+                <img
+                  loading="lazy"
+                  width="1024"
+                  height="830"
+                  alt="A portrait reconstructing itself from thousands of living particles"
+                  src="https://mehran-ahmadi.com/Particle-Memory-VOID/app/samples/demo-portrait.jpg"
+                />
+              </div>
+            </div>
+            <div class="archive-card__shade" aria-hidden="true"></div>
+            <div class="archive-card__content">
+              <div class="archive-card__top">
+                <p class="archive-card__eyebrow">Generative art / Particle memory</p>
+              </div>
+              <div class="archive-card__bottom">
+                <h3>VOID / PARTICLE MEMORY</h3>
+                <p class="archive-card__description">
+                  A self-playing memory cycle — photographs, 3D models and point
+                  clouds rebuild themselves from living particles.
+                </p>
+                <div class="archive-card__actions">
+                  <a class="archive-card__link" href="https://mehran-ahmadi.com/Particle-Memory-VOID/">
+                    View project <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
 <article class="archive-card" data-slideshow data-delay="0" tabindex="0" role="link">
             <div class="archive-card__media">
               <img class="is-active" src="Images/Melancholic toons/Melancholic toons (1).jpg" alt="Melancholic Toons AI artwork by Mehran Ahmadi" />
@@ -1196,6 +1249,7 @@
     </footer>
 
     <script src="js/site-nav.js"></script>
+    <script src="js/void-demo.js"></script>
     <script>
       (function () {
         "use strict";
