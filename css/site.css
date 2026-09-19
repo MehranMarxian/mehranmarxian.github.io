@@ -2037,6 +2037,35 @@ body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggle
   text-decoration: none;
 }
 
+/* ---------------------------------------------------------------
+   VOID / PARTICLE MEMORY live card. The poster still is swapped for
+   the self-playing demo iframe while the card is on screen and the
+   iframe is removed again off-screen (js/void-demo.js). The iframe is
+   a background layer: it never takes pointer events, so visitors can
+   always scroll past the card, also on touch.
+   --------------------------------------------------------------- */
+.void-card {
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+  border: 1px solid #1e1e1e;
+}
+
+.void-card img,
+.void-card iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+  display: block;
+}
+
+.void-card iframe {
+  pointer-events: none;
+}
+
 /* Screen-reader-only helper, used for skip links and hidden labels. */
 .visually-hidden {
   position: absolute !important;
