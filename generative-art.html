@@ -314,6 +314,20 @@
         cursor: default;
       }
 
+      /* Moondust "coming soon" card: no destination yet, so the card and
+         its action label are inert rather than a link. */
+      .archive-card--soon {
+        cursor: default;
+      }
+
+      .archive-card__link--soon {
+        cursor: default;
+      }
+
+      .archive-card__link--soon:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
       .archive-card__media .void-card {
         position: absolute;
         inset: 0;
@@ -1211,6 +1225,30 @@
                     <button class="archive-card__control" type="button" data-previous aria-label="Previous Head Reconstruction image">←</button>
                     <button class="archive-card__control" type="button" data-next aria-label="Next Head Reconstruction image">→</button>
                   </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+<article class="archive-card archive-card--soon">
+            <div class="archive-card__media">
+              <img class="is-active" src="Images/Moondust/moondust-loop.gif" alt="Moondust generative visual instrument looping teaser animation by Mehran Ahmadi" loading="lazy" />
+            </div>
+            <div class="archive-card__shade" aria-hidden="true"></div>
+            <div class="archive-card__content">
+              <div class="archive-card__top">
+                <p class="archive-card__eyebrow">Generative art / Live visual instrument</p>
+              </div>
+              <div class="archive-card__bottom">
+                <h3>Moondust</h3>
+                <p class="archive-card__description">
+                  A visual instrument for your desktop. Load images, video or
+                  your camera, then turn the knobs: memory, flow and chaos
+                  keep the picture alive, and a real-time AI quietly dreams
+                  on top of it.
+                </p>
+                <div class="archive-card__actions">
+                  <span class="archive-card__link archive-card__link--soon">Coming soon&hellip;</span>
                 </div>
               </div>
             </div>
