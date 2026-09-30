@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://mehran-ahmadi.com/</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/home.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -105,12 +105,42 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/software.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://mehran-ahmadi.com/Images/OpenLayer/openlayer-photoshop-v53.webp</image:loc>
       <image:title>The OpenLayer panel running inside Adobe Photoshop, showing local ComfyUI image generation controls</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/Moondust.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/og/moondust-mehran-ahmadi.jpg</image:loc>
+      <image:title>Moondust, a visual instrument by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Moondust/app/dream-hero.webp</image:loc>
+      <image:title>Moondust with the Dream layer live: a glass lattice sculpture, dreamed in amber and teal light, above the console</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Moondust/app/dream-panel.webp</image:loc>
+      <image:title>The Moondust Dream panel: what the model is sent on the left, what it sends back on the right</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Moondust/app/modulation.webp</image:loc>
+      <image:title>The Moondust modulation panel: three LFOs and a microphone input patched to Memory, Scale and Flow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Moondust/app/contour.webp</image:loc>
+      <image:title>Moondust&#x27;s Contour effect turning a flowing pattern into bands of false colour</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/Moondust/app/two-decks.webp</image:loc>
+      <image:title>Two decks blended in Moondust: a sculpture and a swimmer, layered into one underwater picture</image:title>
     </image:image>
   </url>
   <url>
@@ -121,7 +151,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/works.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -175,7 +205,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photography.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -221,7 +251,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/photogrammetry.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -251,7 +281,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/portraits.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -305,7 +335,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/blog.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -353,19 +383,19 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/about.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/contact.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/Documentryphotography.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -408,7 +438,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/False-Restorations.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -462,7 +492,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/Melancholictoons.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -516,7 +546,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/PStoComfy2026.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -538,7 +568,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/blog-1.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -556,7 +586,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/pstocomfyui3.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -594,7 +624,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/archive/the-metahumans.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -632,7 +662,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/brammbles.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -658,7 +688,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/empty-space.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -668,7 +698,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/generative-art.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -722,7 +752,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/head-reconstruction.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -748,7 +778,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/the_animal_machine.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -802,7 +832,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/wall.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -836,7 +866,7 @@
   </url>
   <url>
     <loc>https://mehran-ahmadi.com/you.html</loc>
-    <lastmod>2026-09-04</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
