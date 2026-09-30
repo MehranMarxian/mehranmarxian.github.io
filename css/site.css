@@ -9,7 +9,7 @@
   --nav-bg: rgba(0, 0, 0, 0.58);
   --footer-bg: #000000;
   --footer-text: #ffffff;
-  --site-version: "26.76";
+  --site-version: "26.77";
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
 }
@@ -2078,4 +2078,19 @@ body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggle
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
+}
+
+/* ---------------------------------------------------------------
+   Looping videos used as moving pictures (see js/inline-video.js).
+   When iOS refuses to autoplay them (Low Power Mode) it draws a big
+   native play button over the poster. They have no controls, so hide
+   it: the poster stands as a still until the first tap starts them.
+   --------------------------------------------------------------- */
+video:not([controls])::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video:not([controls])::-webkit-media-controls {
+  display: none !important;
 }
