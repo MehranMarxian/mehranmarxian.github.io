@@ -396,3 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Media folders removed from the site (2026-09-30). Local copies stay out of commits.
+/Images/3D/
+/Images/AI/stroies about humans/
+/Images/UnusedImages/3D/
+/Images/UnusedImages/AI/
+/Images/blog/golden-gate-glass/
