@@ -737,7 +737,7 @@
       <header class="md-hero">
         <div class="md-hero__media" aria-hidden="true">
           <video autoplay muted loop playsinline preload="auto" poster="Images/Moondust/moondust-hero-poster.jpg">
-            <source src="Images/Moondust/moondust-hero.webm" type="video/webm" />
+            <source src="Images/Moondust/moondust-hero.webm" type='video/webm; codecs="vp9"' />
             <source src="Images/Moondust/moondust-hero.mp4" type="video/mp4" />
           </video>
         </div>
@@ -784,10 +784,11 @@
             playsinline
             preload="none"
             data-scroll-play
+            width="960"
+            height="486"
             poster="Images/Moondust/app/knobs-turning-poster.jpg"
             aria-label="The Moondust console: the Memory, Flow, Chaos and Dream knobs turning while the picture answers"
           >
-            <source src="Images/Moondust/app/knobs-turning.webm" type="video/webm" />
             <source src="Images/Moondust/app/knobs-turning.mp4" type="video/mp4" />
           </video>
         </div>
@@ -844,10 +845,11 @@
             playsinline
             preload="none"
             data-scroll-play
+            width="480"
+            height="270"
             poster="Images/Moondust/app/dream-morph-poster.jpg"
             aria-label="The same sculpture dreamed from amber glass to teal ice and back, its shape unchanged"
           >
-            <source src="Images/Moondust/app/dream-morph.webm" type="video/webm" />
             <source src="Images/Moondust/app/dream-morph.mp4" type="video/mp4" />
           </video>
         </div>
@@ -1017,7 +1019,7 @@
             data-scroll-play
             poster="Images/Moondust/moondust-dream-poster.jpg"
           >
-            <source src="Images/Moondust/moondust-dream.webm" type="video/webm" />
+            <source src="Images/Moondust/moondust-dream.webm" type='video/webm; codecs="vp9"' />
             <source src="Images/Moondust/moondust-dream.mp4" type="video/mp4" />
           </video>
         </div>
@@ -1068,6 +1070,7 @@
 
     <script src="js/site-nav.js"></script>
     <script src="js/gallery-lightbox.js"></script>
+    <script src="js/inline-video.js"></script>
     <script>
       (function () {
         var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1081,6 +1084,8 @@
           return;
         }
 
+        document.querySelectorAll("video[autoplay]").forEach(siteVideo.play);
+
         // The clips below the fold only load and play while they are on screen.
         var clips = document.querySelectorAll("video[data-scroll-play]");
         if (!clips.length || !("IntersectionObserver" in window)) {
@@ -1090,12 +1095,9 @@
           function (entries) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
-                var playing = entry.target.play();
-                if (playing && playing.catch) {
-                  playing.catch(function () {});
-                }
+                siteVideo.play(entry.target);
               } else {
-                entry.target.pause();
+                siteVideo.pause(entry.target);
               }
             });
           },

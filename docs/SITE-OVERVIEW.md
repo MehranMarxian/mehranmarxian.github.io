@@ -44,6 +44,7 @@ projects.html              Old URL; redirects to archive/projects.html (broken, 
 css/site.css               THE stylesheet: tokens, nav, footer, shared components, site version
 js/site-nav.js             Mobile menu + hide-on-scroll nav (every live page)
 js/void-demo.js            Mounts the VOID iframe only while on screen
+js/inline-video.js         siteVideo.play/pause for looping muted videos; poster + first-tap start when autoplay is refused (iOS Low Power Mode)
 js/gallery-lightbox.js, js/documentary-filmstrip.js, js/blog-preview.js   Per-page helpers
 webfonts/PTSans_Regular/   Self-hosted PT Sans (the only site font)
 Images/                    All current artwork, by series folder; Images/og/ = 1200x630 social cards
@@ -74,7 +75,7 @@ Drafts and leftovers, all public but noindex or unlinked:
 - **Colour:** black page (`#000`), off-white ink `#f1f0ec` / `#f2f2f2`, muted grey `#9a9c99` / `#a8a8a8`, card surface `#15181a` (hover `#1c2023`), hairlines `rgba(241,240,236,.14)`. Colour comes from the artwork, never from UI chrome. Tokens: `:root` in `css/site.css`, `.rs` on the homepage.
 - **Type:** PT Sans (self-hosted) for everything. Eyebrows and buttons are small uppercase with wide tracking (`letter-spacing: .14em–.22em`); titles are regular weight (400), uppercase on cards; body 1.55 line-height. Sizes are fluid `clamp()` values.
 - **Components:** fixed translucent "glass" nav (blur 18px) that hides on scroll down and rides transparent over heroes (`body.nav-over-hero`); full-height heroes (`min-height: 100svh`) with bottom-left captions; square-cornered cards with 16:9 media and text below; solid off-white primary button and 1px ghost button (`.rs-btn`, `.rs-btn--ghost`); footer site index + social icons + "Version 26.xx".
-- **Motion:** slow and eased. Hero slides travel left-to-right over 1.9 s `cubic-bezier(.16,1,.3,1)`; cards fade up 30 px over 750 ms with 90 ms staggers (`data-reveal`, `data-delay`); nav slides 380 ms. Reduced motion and Save-Data disable video autoplay and reveals. Keep new motion in this register and always gate it behind `prefers-reduced-motion`.
+- **Motion:** slow and eased. Hero slides travel left-to-right over 1.9 s `cubic-bezier(.16,1,.3,1)`; cards fade up 30 px over 750 ms with 90 ms staggers (`data-reveal`, `data-delay`); nav slides 380 ms. Reduced motion and Save-Data disable video autoplay and reveals. Looping videos start through `siteVideo.play()` (`js/inline-video.js`), always have a `poster`, and ship an H.264 MP4 (plus an optional VP9 4:2:0 WebM tagged `codecs="vp9"`); when a browser refuses autoplay the poster stands as a still and the first tap starts them. Keep new motion in this register and always gate it behind `prefers-reduced-motion`.
 - **Tone of copy:** first-person, plain, a little poetic ("Forever unfinished, on purpose."). Short ledes, no marketing superlatives.
 
 ## 3. Conventions (inferred)

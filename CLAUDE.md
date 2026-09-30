@@ -69,6 +69,7 @@ index.html            homepage (styles in its own <style>, prefixed .rs-)
 css/site.css          shared tokens, nav, footer, components, --site-version
 js/site-nav.js        mobile menu + hide-on-scroll nav
 js/void-demo.js       lazy VOID iframe
+js/inline-video.js    looping videos: siteVideo.play/pause, iOS autoplay fallback
 Images/<Series>/      artwork; Images/og/ = 1200x630 social cards
 webfonts/             self-hosted PT Sans (the only font)
 archive/              superseded pages; three journal posts here are still live

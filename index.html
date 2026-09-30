@@ -729,7 +729,7 @@
                .rs-hero__inner--moondust block below and the is-moondust class on
                the header; the script then activates the next slide by itself. -->
           <video class="is-active" data-caption="moondust" autoplay muted loop playsinline preload="auto" poster="Images/Moondust/moondust-hero-poster.jpg">
-            <source src="Images/Moondust/moondust-hero.webm" type="video/webm" />
+            <source src="Images/Moondust/moondust-hero.webm" type='video/webm; codecs="vp9"' />
             <source src="Images/Moondust/moondust-hero.mp4" type="video/mp4" />
           </video>
           <!-- MOONDUST SLIDE END -->
@@ -1040,6 +1040,7 @@
 
     <script src="js/site-nav.js"></script>
     <script src="js/void-demo.js"></script>
+    <script src="js/inline-video.js"></script>
     <script>
       (function () {
         "use strict";
@@ -1060,7 +1061,7 @@
             if (el.tagName === "VIDEO") {
               el.removeAttribute("autoplay");
               el.preload = "none";
-              el.pause();
+              siteVideo.pause(el);
             }
           });
         }
@@ -1069,6 +1070,16 @@
         // without touching anything else) and match the caption to it.
         if (slides.length && !slides.some(function (el) { return el.classList.contains("is-active"); })) {
           slides[0].classList.add("is-active");
+        }
+
+        // Start the first slide through siteVideo, so a refused autoplay is
+        // noticed (poster as a still, first tap starts it).
+        if (!saveData) {
+          slides.forEach(function (el) {
+            if (el.tagName === "VIDEO" && el.classList.contains("is-active")) {
+              siteVideo.play(el);
+            }
+          });
         }
 
         function syncSlide(el) {
@@ -1082,16 +1093,13 @@
             if (other === el) {
               if (!saveData) {
                 other.currentTime = 0;
-                var playing = other.play();
-                if (playing && playing.catch) {
-                  playing.catch(function () {});
-                }
+                siteVideo.play(other);
               }
             } else {
               // let the outgoing video keep playing until it has slid away
               window.setTimeout(function () {
                 if (!other.classList.contains("is-active")) {
-                  other.pause();
+                  siteVideo.pause(other);
                 }
               }, 2200);
             }
@@ -1156,11 +1164,22 @@
             var el = slides[i];
             var clip = el.tagName === "VIDEO" && !saveData;
 
-            if (clip && (el.paused || el.readyState < 3 || !isFinite(el.duration))) {
-              // not playing yet (still loading): time the loop from when it starts
-              el.addEventListener("playing", schedule, { once: true });
+            if (clip && el.hasAttribute("data-refused")) {
+              // autoplay refused (iOS Low Power Mode): the poster dwells like a photo
+              clip = false;
+            } else if (clip && (el.paused || el.readyState < 3 || !isFinite(el.duration))) {
+              // not playing yet (still loading): time the loop from when it starts,
+              // or dwell like a photo if the browser refuses to play it
+              var waitFor = function () {
+                el.removeEventListener("playing", waitFor);
+                el.removeEventListener("inlinevideorefused", waitFor);
+                schedule();
+              };
+              el.addEventListener("playing", waitFor);
+              el.addEventListener("inlinevideorefused", waitFor);
               timer = window.setTimeout(function () {
-                el.removeEventListener("playing", schedule);
+                el.removeEventListener("playing", waitFor);
+                el.removeEventListener("inlinevideorefused", waitFor);
                 tick();
               }, 20000);
               return;
@@ -1189,10 +1208,7 @@
             } else {
               var el = slides[i];
               if (el.tagName === "VIDEO" && !saveData) {
-                var playing = el.play();
-                if (playing && playing.catch) {
-                  playing.catch(function () {});
-                }
+                siteVideo.play(el);
               }
               start();
             }

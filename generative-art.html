@@ -1307,6 +1307,7 @@
 
     <script src="js/site-nav.js"></script>
     <script src="js/void-demo.js"></script>
+    <script src="js/inline-video.js"></script>
     <script>
       (function () {
         "use strict";
@@ -1319,6 +1320,8 @@
             video.removeAttribute("autoplay");
             video.pause();
           });
+        } else {
+          Array.prototype.forEach.call(document.querySelectorAll(".archive-card__media video[autoplay]"), siteVideo.play);
         }
 
         cards.forEach(function (card) {
