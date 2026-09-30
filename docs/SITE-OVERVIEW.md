@@ -49,6 +49,7 @@ webfonts/PTSans_Regular/   Self-hosted PT Sans (the only site font)
 Images/                    All current artwork, by series folder; Images/og/ = 1200x630 social cards
 icons/                     Social icons (use the social-*.svg set)
 favicon.*, icon-*.png, apple-touch-icon.png, site.webmanifest, robots.txt, sitemap.xml, CNAME
+scripts/, .github/workflows/site-checks.yml, .htmlvalidate.json   PR checks (see CLAUDE.md)
 
 Drafts and leftovers, all public but noindex or unlinked:
   2026home1, Home-design, blog-redesign, hoeme26test, home-before-*, home-redesign,
@@ -110,7 +111,7 @@ Effort: S < 1 h, M = a few hours, L = a day or more.
 | 9 | **Dead vendor files:** Bootstrap 4.4.1, jQuery 2.1.1/3.4.1, popper, modernizr, `js/main.js`, `css/style.css`, `css/reset.css` are used only by drafts/archive. The nav still uses Bootstrap class names (`navbar`, `collapse`) but is styled by `site.css` and driven by `site-nav.js`. | Dead weight, and a trap for anyone who thinks Bootstrap is in use. | S |
 | 10 | **Accessibility polish:** no skip-to-content link; link hover colour `#555` on black is about 2.8:1 contrast; hero video has no pause control (it stops for reduced-motion users, but WCAG 2.2.2 wants a control for anything that moves > 5 s). | Keyboard and low-vision users. | S |
 | 11 | **Duplicated markup:** nav, footer, favicon block and JSON-LD Person are copy-pasted into ~25 pages; the version appears only via CSS. | Every nav/footer change touches every page; easy to miss one. A tiny build step or GitHub Action could template them, but that is a structural decision. | M–L |
-| 12 | **No automation:** no CI, no link check, no HTML validation, no Lighthouse run on PRs. `.gitignore` is the Visual Studio template (no OS or editor files). No `.nojekyll`. README still describes the old Muse/Dreamweaver site. | Regressions reach production unseen. | S–M |
+| 12 | **Automation:** ~~no CI~~ PR checks added in `chore/pr-checks` (links, HTML validation, phone/desktop render); still no Lighthouse run. `.gitignore` is the Visual Studio template (no OS or editor files). No `.nojekyll`. README still describes the old Muse/Dreamweaver site. | Regressions reach production unseen. | S–M |
 
 Not a problem, recorded so nobody "fixes" it: `experiments.html`, `AI WORKS.html` and `computer-vision.html` are duplicate old URLs whose canonicals point at the current pages. Keep them.
 
