@@ -1,0 +1,42 @@
+name: Site checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install check tools (not part of the site)
+        run: npm install --no-save --no-package-lock playwright@1.56.1 html-validate@9.7.1
+
+      - name: Links and images (case-sensitive, like GitHub Pages)
+        run: python3 scripts/check_links.py
+
+      - name: HTML validation (live pages)
+        run: python3 scripts/site_pages.py | tr '\n' '\0' | xargs -0 npx html-validate
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Phone and desktop render (sideways scroll, JS errors, 404s)
+        run: |
+          python3 -m http.server 8899 >/dev/null 2>&1 &
+          sleep 1
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            export CHANGED_FILES="$(git diff --name-only origin/${{ github.base_ref }}...HEAD)"
+          fi
+          node scripts/check_pages.mjs
