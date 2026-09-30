@@ -586,33 +586,73 @@
       }
 
       /* ---------------- wishlist ---------------- */
+      /* A full-screen closing hero: the Dream loop plays behind the wishlist
+         call, which sits bottom-left like the opening hero. */
       .md-cta {
+        position: relative;
+        display: grid;
+        align-content: end;
+        min-height: 100svh;
+        overflow: hidden;
+        padding: 0 var(--md-inset) clamp(56px, 9vh, 108px);
+      }
+
+      .md-cta__media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: #000000;
+      }
+
+      .md-cta__media video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .md-cta::after {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 30%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0) 60%);
+        pointer-events: none;
+        content: "";
+      }
+
+      .md-cta__inner {
+        position: relative;
+        z-index: 2;
         display: grid;
         justify-items: start;
         max-width: 900px;
-        padding: clamp(72px, 11vw, 150px) var(--md-inset);
       }
 
       .md-cta h2 {
         margin: 0 0 18px;
-        color: var(--md-ink);
-        font-size: clamp(1.6rem, 3.2vw, 3rem);
+        color: #ffffff;
+        font-size: clamp(1.9rem, 4.6vw, 3.6rem);
         font-weight: 400;
-        line-height: 1.12;
-        letter-spacing: 0;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        text-shadow: 0 2px 28px rgba(0, 0, 0, 0.6);
       }
 
-      .md-cta p {
+      .md-cta__inner > p:not(.md-kicker) {
         max-width: 50ch;
         margin: 0 0 28px;
-        color: var(--md-soft);
-        font-size: clamp(1rem, 1.4vw, 1.15rem);
-        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: clamp(1rem, 1.6vw, 1.2rem);
+        line-height: 1.6;
+        text-shadow: 0 1px 18px rgba(0, 0, 0, 0.6);
       }
 
-      .md-cta .md-cta__note {
+      .md-cta__inner > p.md-cta__note {
         margin: 16px 0 0;
-        color: var(--md-muted);
+        color: rgba(255, 255, 255, 0.62);
         font-size: 0.8rem;
       }
 
@@ -834,14 +874,6 @@
               loading="lazy"
             />
           </figure>
-          <figure class="meta-figure md-figure">
-            <img
-              src="Images/Moondust/moondust-loop.gif"
-              alt="A looping test of the Dream layer repainting a still image into shifting new forms in real time"
-              loading="lazy"
-            />
-            <figcaption>An early Dream test, mid-thought.</figcaption>
-          </figure>
         </div>
         <div class="md-feature__copy">
           <p class="md-kicker">Watch it think</p>
@@ -976,19 +1008,34 @@
 
       <!-- ============ wishlist ============ -->
       <section class="md-cta" id="wishlist">
-        <p class="md-kicker">Wishlist</p>
-        <h2>Be the first to press play.</h2>
-        <p>
-          Moondust hasn't shipped yet. Leave your email and I'll let you know
-          the moment the first build is ready to install.
-        </p>
-        <a
-          class="md-btn"
-          href="mailto:mehran.ahmadi@gmail.com?subject=Moondust%20wishlist&body=Hi%20Mehran%2C%0A%0APlease%20add%20me%20to%20the%20Moondust%20wishlist.%0A%0AMy%20email%3A%20"
-        >
-          Join the wishlist
-        </a>
-        <p class="md-cta__note">No spam — just one email, when it's ready.</p>
+        <div class="md-cta__media" aria-hidden="true">
+          <video
+            muted
+            loop
+            playsinline
+            preload="none"
+            data-scroll-play
+            poster="Images/Moondust/moondust-dream-poster.jpg"
+          >
+            <source src="Images/Moondust/moondust-dream.webm" type="video/webm" />
+            <source src="Images/Moondust/moondust-dream.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="md-cta__inner">
+          <p class="md-kicker">Wishlist</p>
+          <h2>Be the first to press play.</h2>
+          <p>
+            Moondust hasn't shipped yet. Leave your email and I'll let you know
+            the moment the first build is ready to install.
+          </p>
+          <a
+            class="md-btn"
+            href="mailto:mehran.ahmadi@gmail.com?subject=Moondust%20wishlist&body=Hi%20Mehran%2C%0A%0APlease%20add%20me%20to%20the%20Moondust%20wishlist.%0A%0AMy%20email%3A%20"
+          >
+            Join the wishlist
+          </a>
+          <p class="md-cta__note">No spam — just one email, when it's ready.</p>
+        </div>
       </section>
     </main>
 

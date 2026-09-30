@@ -9,7 +9,7 @@
   --nav-bg: rgba(0, 0, 0, 0.58);
   --footer-bg: #000000;
   --footer-text: #ffffff;
-  --site-version: "26.69";
+  --site-version: "26.76";
   --space-page: clamp(24px, 5vw, 72px);
   --space-section: clamp(32px, 7vw, 96px);
 }

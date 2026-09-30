@@ -206,7 +206,7 @@
         ]
       }
     </script>
-    <link rel="preload" as="image" href="Images/home/mehran-ahmadi-visual-artist-home-01.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="Images/Moondust/moondust-hero-poster.jpg" fetchpriority="high" />
     <link href="css/site.css" rel="stylesheet" />
     <style>
       .rs {
@@ -271,7 +271,8 @@
         overflow: hidden;
       }
 
-      .rs-hero__media img {
+      .rs-hero__media img,
+      .rs-hero__media video {
         position: absolute;
         inset: 0;
         width: 100%;
@@ -283,16 +284,16 @@
         will-change: transform;
       }
 
-      .rs-hero__media img.is-active {
+      .rs-hero__media .is-active {
         transform: translateX(0);
       }
 
-      .rs-hero__media img.is-leaving {
+      .rs-hero__media .is-leaving {
         transform: translateX(100%);
       }
 
       /* used to snap a spent slide back to the left without animating */
-      .rs-hero__media img.is-instant {
+      .rs-hero__media .is-instant {
         transition: none !important;
       }
 
@@ -327,6 +328,53 @@
         flex-wrap: wrap;
         gap: 12px;
       }
+
+      /* ---- MOONDUST SLIDE (remove with the marked HTML + JS hooks) ---------
+         Two caption blocks share one grid cell; the header's .is-moondust
+         class (set by the slideshow script) decides which one shows. */
+      .rs-hero > .rs-hero__inner {
+        grid-area: 1 / 1;
+        align-self: end; /* both captions sit on the bottom-left, whatever their height */
+        transition: opacity 600ms ease, visibility 600ms;
+      }
+
+      .rs-hero.is-moondust > .rs-hero__inner:not(.rs-hero__inner--moondust),
+      .rs-hero:not(.is-moondust) > .rs-hero__inner--moondust {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .rs-md-title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 14px;
+        margin: 0 0 18px;
+        color: #ffffff;
+        font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        text-shadow: 0 1px 14px rgba(0, 0, 0, 0.7);
+      }
+
+      .rs-md-title span {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.62em;
+        letter-spacing: 0.16em;
+      }
+
+      .rs-md-tagline {
+        max-width: 18ch;
+        margin: 0 0 20px;
+        color: #ffffff;
+        font-size: clamp(1.9rem, 4.6vw, 3.6rem);
+        font-weight: 400;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        text-shadow: 0 2px 28px rgba(0, 0, 0, 0.6);
+      }
+      /* ---- /MOONDUST SLIDE ------------------------------------------------ */
 
       .rs a.rs-btn {
         display: inline-flex;
@@ -641,6 +689,8 @@
 
       @media (prefers-reduced-motion: reduce) {
         .rs-hero__media img,
+        .rs-hero__media video,
+        .rs-hero__inner,
         .rs-card,
         .rs-card__cue span {
           transition: none;
@@ -673,15 +723,39 @@
 
     <main>
       <!-- ============ hero ============ -->
-      <header class="rs-hero">
+      <header class="rs-hero is-moondust">
         <div class="rs-hero__media" aria-hidden="true">
-          <img class="is-active" src="Images/home/mehran-ahmadi-visual-artist-home-01.jpg" alt="" fetchpriority="high" />
+          <!-- MOONDUST SLIDE START: first slide. To remove: delete this video, the
+               .rs-hero__inner--moondust block below and the is-moondust class on
+               the header; the script then activates the next slide by itself. -->
+          <video class="is-active" data-caption="moondust" autoplay muted loop playsinline preload="auto" poster="Images/Moondust/moondust-hero-poster.jpg">
+            <source src="Images/Moondust/moondust-hero.webm" type="video/webm" />
+            <source src="Images/Moondust/moondust-hero.mp4" type="video/mp4" />
+          </video>
+          <!-- MOONDUST SLIDE END -->
+          <img src="Images/home/mehran-ahmadi-visual-artist-home-01.jpg" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-02.jpg" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-03.jpg" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-04.jpg" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-05.jpg" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-06.jpg" alt="" loading="lazy" />
         </div>
+
+        <!-- MOONDUST SLIDE START: caption shown while the Moondust slide is up -->
+        <div class="rs-hero__inner rs-hero__inner--moondust">
+          <p class="rs-md-title">Moondust <span>visual instrument</span></p>
+          <p class="rs-md-tagline">Stop generating images. Start playing them.</p>
+          <p class="rs-hero__lede">
+            Load a photo, a video or your own camera onto the canvas. Turn a
+            few knobs, and the picture stays alive — drifting, breathing, and
+            quietly dreamed by a real-time AI. Forever unfinished, on purpose.
+          </p>
+          <div class="rs-hero__actions">
+            <a class="rs-btn" href="Moondust.html#wishlist">Join the wishlist</a>
+            <a class="rs-btn rs-btn--ghost" href="Moondust.html#look">See what it does</a>
+          </div>
+        </div>
+        <!-- MOONDUST SLIDE END -->
 
         <div class="rs-hero__inner">
           <!-- Kept for search engines and screen readers, which need a page
@@ -974,8 +1048,61 @@
 
         /* ---------- hero: slide left to right ---------- */
         var slides = Array.prototype.slice.call(
-          document.querySelectorAll(".rs-hero__media img")
+          document.querySelectorAll(".rs-hero__media img, .rs-hero__media video")
         );
+        var heroEl = document.querySelector(".rs-hero");
+
+        // Data saver / reduced motion: poster frame only, no video download.
+        var conn = navigator.connection || {};
+        var saveData = !!conn.saveData || reduced;
+        if (saveData) {
+          slides.forEach(function (el) {
+            if (el.tagName === "VIDEO") {
+              el.removeAttribute("autoplay");
+              el.preload = "none";
+              el.pause();
+            }
+          });
+        }
+
+        // Keep exactly one slide active (so the Moondust slide can be deleted
+        // without touching anything else) and match the caption to it.
+        if (slides.length && !slides.some(function (el) { return el.classList.contains("is-active"); })) {
+          slides[0].classList.add("is-active");
+        }
+
+        function syncSlide(el) {
+          if (heroEl) {
+            heroEl.classList.toggle("is-moondust", el.getAttribute("data-caption") === "moondust");
+          }
+          slides.forEach(function (other) {
+            if (other.tagName !== "VIDEO") {
+              return;
+            }
+            if (other === el) {
+              if (!saveData) {
+                other.currentTime = 0;
+                var playing = other.play();
+                if (playing && playing.catch) {
+                  playing.catch(function () {});
+                }
+              }
+            } else {
+              // let the outgoing video keep playing until it has slid away
+              window.setTimeout(function () {
+                if (!other.classList.contains("is-active")) {
+                  other.pause();
+                }
+              }, 2200);
+            }
+          });
+        }
+
+        slides.forEach(function (el) {
+          if (el.classList.contains("is-active") && heroEl) {
+            heroEl.classList.toggle("is-moondust", el.getAttribute("data-caption") === "moondust");
+          }
+        });
 
         if (slides.length > 1 && !reduced) {
           var i = 0;
@@ -991,6 +1118,7 @@
             current.classList.remove("is-active");
             current.classList.add("is-leaving");
             next.classList.add("is-active");
+            syncSlide(next);
 
             // Snap the spent slide back to its parked position, unanimated, so
             // it is ready to come round again. transitionend is the accurate
@@ -1014,14 +1142,44 @@
             i = nextIndex;
           }
 
+          var DWELL_MS = 8000;
+
+          function tick() {
+            advance();
+            schedule();
+          }
+
+          // Photographs stay 8 s. A slide that is a video stays until the clip
+          // has played one full loop from where it started.
+          function schedule() {
+            window.clearTimeout(timer);
+            var el = slides[i];
+            var clip = el.tagName === "VIDEO" && !saveData;
+
+            if (clip && (el.paused || el.readyState < 3 || !isFinite(el.duration))) {
+              // not playing yet (still loading): time the loop from when it starts
+              el.addEventListener("playing", schedule, { once: true });
+              timer = window.setTimeout(function () {
+                el.removeEventListener("playing", schedule);
+                tick();
+              }, 20000);
+              return;
+            }
+
+            var delay = clip
+              ? Math.max(DWELL_MS, (el.duration - el.currentTime) * 1000 + 100)
+              : DWELL_MS;
+            timer = window.setTimeout(tick, delay);
+          }
+
           function start() {
             if (!timer) {
-              timer = window.setInterval(advance, 8000);
+              schedule();
             }
           }
 
           function stop() {
-            window.clearInterval(timer);
+            window.clearTimeout(timer);
             timer = null;
           }
 
@@ -1029,6 +1187,13 @@
             if (document.hidden) {
               stop();
             } else {
+              var el = slides[i];
+              if (el.tagName === "VIDEO" && !saveData) {
+                var playing = el.play();
+                if (playing && playing.catch) {
+                  playing.catch(function () {});
+                }
+              }
               start();
             }
           });
