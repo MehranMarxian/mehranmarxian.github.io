@@ -35,6 +35,23 @@ What the local preview does not show:
 - **The custom 404.** Local servers return their own 404; open `/404.html` directly to check it.
 - **Sibling sites.** `/Particle-Memory-VOID/…` and `/OpenLayer/` are served by other repos, so the pages link to them on the live domain.
 
+## Automated checks
+
+`.github/workflows/site-checks.yml` runs on every PR:
+1. `scripts/check_links.py`: every local link and asset on the live pages exists with exactly that capitalisation; sitemap entries exist (a live page missing from the sitemap is a warning).
+2. `html-validate` (config `.htmlvalidate.json`) over the live pages.
+3. `scripts/check_pages.mjs`: headless Chromium at 390 px and 1440 px; fails on sideways scrolling, JavaScript errors or local 404s on pages the PR changes (on every page if it touches `css/` or `js/`), warns elsewhere.
+
+"Live pages" = root pages without `noindex`, plus `404.html` and the archive posts the sitemap lists (`scripts/site_pages.py`). Run the same checks locally before pushing:
+
+```bash
+npm install --no-save --no-package-lock playwright@1.56.1 html-validate@9.7.1
+python3 scripts/check_links.py
+python3 scripts/site_pages.py | tr '\n' '\0' | xargs -0 npx html-validate
+python3 -m http.server 8899 &   # in another terminal on Windows
+node scripts/check_pages.mjs    # needs: npx playwright install chromium
+```
+
 ## Checks before a PR
 
 1. Open every page you touched at **1440 px and 390 px** wide (browser devtools, or headless Chromium with Playwright). No horizontal scroll on mobile.
