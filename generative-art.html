@@ -314,12 +314,6 @@
         cursor: default;
       }
 
-      /* Moondust "coming soon" card: like the VOID card, only its
-         archive-card__link is clickable — the card body itself is not. */
-      .archive-card--soon {
-        cursor: default;
-      }
-
       /* The Moondust teaser is a small looping video (a fraction of the old
          GIF's weight) and follows the same image treatment as the slideshows. */
       .archive-card__media video {
@@ -1243,7 +1237,7 @@
             </div>
           </article>
 
-<article class="archive-card archive-card--soon">
+<article class="archive-card archive-card--soon" data-card-link tabindex="0" role="link">
             <div class="archive-card__media">
               <video
                 autoplay
@@ -1402,6 +1396,18 @@
             start();
           });
 
+          card.addEventListener("mouseenter", stop);
+          card.addEventListener("mouseleave", start);
+          card.addEventListener("focusin", stop);
+          card.addEventListener("focusout", start);
+
+          render(0);
+          window.setTimeout(start, delay);
+        });
+
+        // The whole card opens its archive-card__link (slideshow cards and
+        // the Moondust card; the VOID card is left alone for its live demo).
+        Array.prototype.forEach.call(document.querySelectorAll("[data-slideshow], [data-card-link]"), function (card) {
           function openDestination() {
             var destination = card.querySelector(".archive-card__link");
             if (!destination) {
@@ -1430,14 +1436,6 @@
               openDestination();
             }
           });
-
-          card.addEventListener("mouseenter", stop);
-          card.addEventListener("mouseleave", start);
-          card.addEventListener("focusin", stop);
-          card.addEventListener("focusout", start);
-
-          render(0);
-          window.setTimeout(start, delay);
         });
 
         document.addEventListener("visibilitychange", function () {

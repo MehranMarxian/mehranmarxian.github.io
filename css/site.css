@@ -1282,6 +1282,9 @@ body.nav-over-hero .site-nav:not(.is-scrolled):not(.is-menu-open) .navbar-toggle
 
 .blog-article {
   display: grid;
+  /* one column that may shrink below its content's min width, so a wide
+     child can't push the article past a phone screen */
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(24px, 4vw, 48px);
   max-width: 980px;
   margin: 0 auto;
