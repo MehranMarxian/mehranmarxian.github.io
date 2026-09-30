@@ -105,7 +105,7 @@ Effort: S < 1 h, M = a few hours, L = a day or more.
 | 4 | **`PStoComfy2026.html` scrolls sideways on phones** (intro header and `.openlayer-meta` list are ~600 px wide at 390 px). | Visible mobile bug on the OpenLayer article. | S |
 | 5 | **Plain-text email** (`mehran.ahmadi@gmail.com`) in `mailto:` links on contact and Moondust and in JSON-LD, across 26 pages. The Moondust "wishlist" is a pre-filled email. | Scraper spam; a mailto wishlist loses sign-ups on phones without a mail app. | S–M |
 | 6 | **Google Analytics 4 is on every live page** with no consent notice or privacy note. | Pre-existing, so left alone. GA4 sets cookies; a privacy note or a cookieless alternative is your call. | S |
-| 7 | **Sitemap drift:** `Moondust.html` (your newest page) is missing; `lastmod` dates stop at 2026-09-09; it lists `home.html` (the archive homepage) at priority 0.9. | Search engines find the new page late. | S |
+| 7 | ~~**Sitemap drift:** `Moondust.html` missing, stale `lastmod` dates.~~ Fixed in `fix/sitemap-moondust`: `lastmod` now follows each page's last commit. Still open: `home.html` (the archive homepage) is listed at priority 0.9 (question 6). | Search engines find new pages late. | S |
 | 8 | **Root clutter:** 14 draft/test home pages and `indexpreloading.html` are public at the root (noindex, but reachable and crawl-budget noise); several reference files that no longer exist. `projects.html` redirects to `archive/projects.html`, which has 8 missing images, a missing stylesheet and a JS syntax error. | Confusing to maintain; broken pages reachable by old links. | S (with approval to move/delete) |
 | 9 | **Dead vendor files:** Bootstrap 4.4.1, jQuery 2.1.1/3.4.1, popper, modernizr, `js/main.js`, `css/style.css`, `css/reset.css` are used only by drafts/archive. The nav still uses Bootstrap class names (`navbar`, `collapse`) but is styled by `site.css` and driven by `site-nav.js`. | Dead weight, and a trap for anyone who thinks Bootstrap is in use. | S |
 | 10 | **Accessibility polish:** no skip-to-content link; link hover colour `#555` on black is about 2.8:1 contrast; hero video has no pause control (it stops for reduced-motion users, but WCAG 2.2.2 wants a control for anything that moves > 5 s). | Keyboard and low-vision users. | S |
@@ -116,7 +116,7 @@ Not a problem, recorded so nobody "fixes" it: `experiments.html`, `AI WORKS.html
 
 ## 6. Questions for Mehran
 
-1. **Primary domain:** your brief says `www.mehran-ahmadi.com`, but `CNAME` and every canonical use the apex `mehran-ahmadi.com` (so www redirects to apex). Keep the apex? (Recommended: yes, no change.)
+1. ~~**Primary domain:**~~ Decided 2026-09-30: keep the apex `mehran-ahmadi.com` as primary (`www` redirects to it). Canonicals, sitemap and OG URLs stay on the apex.
 2. **Version:** the footer shows 26.76 (bumped in "Moon dust added to home"). Is 26.76 right, and should every PR bump it, or only feature PRs?
 3. **Unused media (~313 MB):** may I move it out of the repo (after listing it for you), or should it stay?
 4. **Draft home pages and `archive/`:** move drafts into `archive/`, or delete them?
