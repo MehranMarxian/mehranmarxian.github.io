@@ -187,8 +187,9 @@
 
       .openlayer-features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
         gap: 4px 28px;
+        width: 100%;
         max-width: 760px;
         margin: 0 auto;
         padding: 0;
@@ -216,8 +217,9 @@
 
       .openlayer-pipeline {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
         gap: 14px;
+        width: 100%;
         max-width: 900px;
         margin: 0 auto;
         padding: 0;
