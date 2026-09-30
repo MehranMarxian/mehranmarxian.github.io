@@ -99,7 +99,7 @@ Effort: S < 1 h, M = a few hours, L = a day or more.
 
 | # | Issue | Why it matters | Effort |
 |---|---|---|---|
-| 1 | ~~**Repo weight.**~~ Done in `chore/remove-unused-media`: 336 media files (297 MB) that no live page used were removed with approval (list: project files `site/unused-media.md`). They remain in git history; the working tree is ~47 MB lighter than the history. | | M |
+| 1 | ~~**Repo weight.**~~ Done in `chore/remove-unused-media`: 336 media files (297 MB) that no live page used were removed with approval (list: project files `site/unused-media.md`). The working tree dropped from 344 MB to 60 MB; the files remain in git history. | | M |
 | 2 | **`Images/` and `images/` both exist** (differ only by case). On Windows they are the same folder, so a move or rename there can silently land in the wrong one; `blog.html` and `home.html` still load `images/mehran-ahmadi-photo-006.jpg`. | Case bugs only show up after deploy (Pages is case-sensitive, a Windows preview is not). | S |
 | 3 | **Heavy pages.** After a full scroll: `works.html` 6.7 MB, `index.html` 6.4 MB (Moondust hero video 1.6–2.5 MB + slideshow JPEGs up to 1.1 MB), `blog.html` 5.4 MB, `Melancholictoons.html` 4.5 MB, `portraits.html` 4.2 MB. `images/mehran-ahmadi-photo-006.jpg` is 1.8 MB. Most `<img>` have no `width`/`height`, so layout shifts while loading. | Lighthouse performance and CLS; mobile data. | M |
 | 4 | **`PStoComfy2026.html` scrolls sideways on phones** (intro header and `.openlayer-meta` list are ~600 px wide at 390 px). | Visible mobile bug on the OpenLayer article. | S |
