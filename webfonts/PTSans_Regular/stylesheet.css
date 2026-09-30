@@ -1,6 +1,8 @@
 @font-face { 
     font-family: 'PTSans Regular';
-    src: url('PTSans-Regular.ttf') format('truetype');
+    src: url('PTSans-Regular.woff2') format('woff2'),
+         url('PTSans-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 body, html {
