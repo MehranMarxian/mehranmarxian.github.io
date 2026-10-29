@@ -2,6 +2,7 @@
 
 One line per merged PR, newest first.
 
+- 2026-10-29 · Add the V4D viewer at `/v4d/` (a built copy of the private V4D app: WebGPU point viewer with the walker, presets and particle looks).
 - 2026-09-30 · Remove 336 unused media files (297 MB) that no live page references.
 - 2026-09-30 · Lighter pages: WebP versions of 51 heavy images, `width`/`height` on every image, PT Sans as WOFF2.
 - 2026-09-30 · Add PR checks (links with exact case, HTML validation, phone and desktop render) and fix the 36 markup errors they found.
