@@ -27,11 +27,13 @@ index.html                 Homepage: Moondust video hero slide + slideshow, work
 home.html                  Previous homepage, kept live as "Archive" (footer link, in sitemap)
 photography.html           Photography hub
   portraits.html, Documentryphotography.html, wall.html, empty-space.html
-generative-art.html        Generative-art hub (VOID card, Moondust card)
+generative-art.html        Generative-art hub (VOID card, V4D card, Moondust card)
   False-Restorations.html, Melancholictoons.html, the_animal_machine.html,
   head-reconstruction.html, you.html, brammbles.html
 photogrammetry.html        3D scan work (experiments.html is a copy, canonical -> photogrammetry)
-software.html              OpenLayer, VOID, Moondust, Window-Drift
+software.html              OpenLayer, VOID, Moondust, V4D, Window-Drift
+v4d/                       V4D viewer: built copy of the private V4D app, not hand-written
+v4d-virtual-fourth-dimension.html   V4D story, listed in the Journal
 Moondust.html              Moondust product page (wishlist = mailto link)
 PStoComfy2026.html         OpenLayer article
 works.html                 All-works index

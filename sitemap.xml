@@ -144,6 +144,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://mehran-ahmadi.com/v4d-virtual-fourth-dimension.html</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/V4D/v4d-01-exposure-red-cream-lines.webp</image:loc>
+      <image:title>Dense vertical lines of points shading from red to cream, V4D by Mehran Ahmadi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/V4D/v4d-03-figure-into-sculpture.webp</image:loc>
+      <image:title>A figure at the end of its own walk, the path behind it solid as a sculpture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mehran-ahmadi.com/Images/V4D/v4d-08-walker-echo-gold.webp</image:loc>
+      <image:title>A walking figure dissolving into a long trail of gold and crimson points</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mehran-ahmadi.com/v4d/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mehran-ahmadi.com/OpenLayer/</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>

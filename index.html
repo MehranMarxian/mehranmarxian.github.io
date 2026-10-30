@@ -345,6 +345,14 @@
         pointer-events: none;
       }
 
+      /* V4D slide: same mechanism, its own caption and .is-v4d class. */
+      .rs-hero.is-v4d > .rs-hero__inner:not(.rs-hero__inner--v4d),
+      .rs-hero:not(.is-v4d) > .rs-hero__inner--v4d {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+
       .rs-md-title {
         display: flex;
         flex-wrap: wrap;
@@ -733,6 +741,7 @@
             <source src="Images/Moondust/moondust-hero.mp4" type="video/mp4" />
           </video>
           <!-- MOONDUST SLIDE END -->
+          <img data-caption="v4d" src="Images/V4D/v4d-01-exposure-red-cream-lines.webp" width="2000" height="1125" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-01.webp" width="2000" height="1250" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-02.jpg" width="2000" height="1250" alt="" loading="lazy" />
           <img src="Images/home/mehran-ahmadi-visual-artist-home-03.webp" width="1920" height="1280" alt="" loading="lazy" />
@@ -756,6 +765,21 @@
           </div>
         </div>
         <!-- MOONDUST SLIDE END -->
+
+        <!-- caption shown while the V4D slide is up -->
+        <div class="rs-hero__inner rs-hero__inner--v4d">
+          <p class="rs-md-title">V4D <span>Virtual Fourth Dimension</span></p>
+          <p class="rs-md-tagline">The shutter never closes.</p>
+          <p class="rs-hero__lede">
+            A body walks through a room and every moment of it is kept: a block
+            of points you can expose again and again, as one long exposure, as
+            echoes, as a sculpture laid into depth, as dust.
+          </p>
+          <div class="rs-hero__actions">
+            <a class="rs-btn" href="v4d/">Open V4D</a>
+            <a class="rs-btn rs-btn--ghost" href="v4d-virtual-fourth-dimension.html">Read the story</a>
+          </div>
+        </div>
 
         <div class="rs-hero__inner">
           <!-- Kept for search engines and screen readers, which need a page
@@ -1085,6 +1109,7 @@
         function syncSlide(el) {
           if (heroEl) {
             heroEl.classList.toggle("is-moondust", el.getAttribute("data-caption") === "moondust");
+            heroEl.classList.toggle("is-v4d", el.getAttribute("data-caption") === "v4d");
           }
           slides.forEach(function (other) {
             if (other.tagName !== "VIDEO") {
@@ -1109,6 +1134,7 @@
         slides.forEach(function (el) {
           if (el.classList.contains("is-active") && heroEl) {
             heroEl.classList.toggle("is-moondust", el.getAttribute("data-caption") === "moondust");
+            heroEl.classList.toggle("is-v4d", el.getAttribute("data-caption") === "v4d");
           }
         });
 
