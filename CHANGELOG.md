@@ -2,6 +2,7 @@
 
 One line per merged PR, newest first.
 
+- 2026-10-30 · v26.80 Add V4D to the site: homepage slide, Generative Art card (replacing Melancholic Toons there), Journal story (`v4d-virtual-fourth-dimension.html`), Software entry.
 - 2026-10-29 · Add the V4D viewer at `/v4d/` (a built copy of the private V4D app: WebGPU point viewer with the walker, presets and particle looks).
 - 2026-09-30 · Remove 336 unused media files (297 MB) that no live page references.
 - 2026-09-30 · Lighter pages: WebP versions of 51 heavy images, `width`/`height` on every image, PT Sans as WOFF2.
