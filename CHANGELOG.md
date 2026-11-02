@@ -2,6 +2,7 @@
 
 One line per merged PR, newest first.
 
+- 2026-11-02 · v26.81 New favicon and app icons (sculpted head): recompressed `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`.
 - 2026-10-30 · v26.80 Add V4D to the site: homepage slide, Generative Art card (replacing Melancholic Toons there), Journal story (`v4d-virtual-fourth-dimension.html`), Software entry.
 - 2026-10-29 · Add the V4D viewer at `/v4d/` (a built copy of the private V4D app: WebGPU point viewer with the walker, presets and particle looks).
 - 2026-09-30 · Remove 336 unused media files (297 MB) that no live page references.
