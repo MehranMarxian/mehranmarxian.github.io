@@ -73,7 +73,8 @@ js/inline-video.js    looping videos: siteVideo.play/pause, iOS autoplay fallbac
 Images/<Series>/      artwork; Images/og/ = 1200x630 social cards
 webfonts/             self-hosted PT Sans (the only font)
 archive/              superseded pages; three journal posts here are still live
-v4d/                  V4D viewer: a build of the private V4D repo (`VITE_BASE=/v4d/ pnpm build` in apps/viewer, then copy dist/ here). Don't edit by hand; not a live page for the checks
+v4d/                  V4D viewer: a build of the private V4D repo (`node scripts/publish.mjs <this repo> v4d` in its apps/viewer). Don't edit by hand; not a live page for the checks
+v4d-next/             a preview build of the V4D viewer (same script, `v4d-next`): noindex, linked from nowhere, replaced or removed freely
 ```
 
 ## Design in one breath

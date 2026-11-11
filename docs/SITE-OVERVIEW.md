@@ -33,6 +33,7 @@ generative-art.html        Generative-art hub (VOID card, V4D card, Moondust car
 photogrammetry.html        3D scan work (experiments.html is a copy, canonical -> photogrammetry)
 software.html              OpenLayer, VOID, Moondust, V4D, Window-Drift
 v4d/                       V4D viewer: built copy of the private V4D app, not hand-written
+v4d-next/                  preview build of the V4D viewer (noindex, unlinked), for checking a version before it replaces v4d/
 v4d-virtual-fourth-dimension.html   V4D story, listed in the Journal
 Moondust.html              Moondust product page (wishlist = mailto link)
 PStoComfy2026.html         OpenLayer article
