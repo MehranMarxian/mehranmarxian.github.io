@@ -2,6 +2,7 @@
 
 One line per merged PR, newest first.
 
+- 2026-11-11 · Add a preview of the V4D viewer v0.6.0 (Atelier) at `/v4d-next/`: noindex and linked from nowhere; the live `/v4d/` (still v0.1.0) is unchanged.
 - 2026-11-02 · v26.81 New favicon and app icons (sculpted head): recompressed `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`.
 - 2026-10-30 · v26.80 Add V4D to the site: homepage slide, Generative Art card (replacing Melancholic Toons there), Journal story (`v4d-virtual-fourth-dimension.html`), Software entry.
 - 2026-10-29 · Add the V4D viewer at `/v4d/` (a built copy of the private V4D app: WebGPU point viewer with the walker, presets and particle looks).
